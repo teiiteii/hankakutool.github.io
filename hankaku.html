@@ -6,25 +6,26 @@
     <meta name="author" content="">
     <title>はんかくー</title>
 </head>
-<body>
+<body class="page_whole">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-    <title>Pricing example for Bootstrap</title>
+    <title>Pricing example for Bootstrap</title>	
+  <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 mx-auto">
-                <div class="card-deck mb-3 text-center">
-                    <div class="card mb-4 box-shadow" style="width: 10rem;">
-                        <div class="card-header" style="width: auto; height: 3rem;">
-                            <h4 class="my-0 font-weight-normal" style="line-height: 2rem; width: auto; text-align: center; height: auto;">攻撃側</h4>
+            <div class="col-lg-6">
+                <div class="card-deck">
+                    <div class="card" style="width:auto;">
+                        <div class="card-header" id= "attack_header" style="width: auto; height: 3rem;">
+                            <div class="card_title text-center" style="height:100%;">攻撃側</div>
                         </div>
                         <div class="card-body">
-                            <label style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; text-decoration-style: solid; font-size: 0.8em;">攻撃側ファイター</label>
+                            <label class="input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; ">攻撃側ファイター</label>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>
                                     <div class="form-group" style="">
@@ -49,11 +50,11 @@
             <div class="col-lg-6 mx-auto">
                 <div class="card-deck mb-3 text-center">
                     <div class="card mb-4 box-shadow" style="width: 10rem;">
-                        <div class="card-header" style="width: auto; height: 3rem;">
-                            <h4 class="my-0 font-weight-normal" style="line-height: 2rem; width: auto; text-align: center; height: auto;">攻撃側</h4>
+                        <div class="card-header" id="defend_header" style="width: auto; height: 3rem;">
+                            <h4 class="my-0 font-weight-normal" style="line-height: 2rem; width: auto; text-align: center; height: auto;">反撃側</h4>
                         </div>
                         <div class="card-body">
-                            <label style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; text-decoration-style: solid; font-size: 0.8em;">攻撃側ファイター</label>
+                            <label class="input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; text-decoration-style: solid;">攻撃側ファイター</label>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>
                                     <div class="form-group" style="">
