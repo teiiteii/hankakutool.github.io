@@ -1,0 +1,32 @@
+.page_whole{
+ background-color:#EFEFEF;
+ 
+}
+#attack_header{
+  background-color:#F85662;
+   
+}
+#defend_header{
+  background-color:#6CBAFD;
+}
+
+.box_card{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+	max-width: 40rem;
+}
+.box_header{
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+	display: table;
+    height: 2.2rem;	
+}
+.box_title{
+  font-size:1.2em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.input_title{
+  font-size:1.0em;
+}
