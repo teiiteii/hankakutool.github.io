@@ -40,7 +40,7 @@ function run()
     //alert("おっ 新ファイターかい？ ファイターは正しく入力してね")
 	return
   }
-
+  console.log("測定開始")
   init()
   create_view(attack, defend)
   
@@ -74,13 +74,13 @@ function run()
     {
       const block_stun = getBlockStun(skill)
            ,block_stun_difference = getBlockStunDifference(skill, block_stun)
-	       ,skill_type_name = getSkillTypeName(skill.skill_type)
+	       ,skill_genre_name = getSkillGenreName(skill.skill_genre)
 	       ,skill_full_name = getSkillFullName(skill)
       return {
 	    ...skill, 
 	    block_stun,
 		block_stun_difference,
-		skill_type_name,
+		skill_genre_name,
 		skill_full_name
       }
     })
@@ -89,7 +89,7 @@ function run()
       return {
 	    ...skill
 	   ,add_occurrence:getAddOccurrence(defend, skill)
-       ,skill_type_name:getSkillTypeName(skill.skill_type)
+       ,skill_genre_name:getSkillGenreName(skill.skill_genre)
 	   ,skill_full_name:getSkillFullName(skill)
 	  }
     })
@@ -97,7 +97,7 @@ function run()
  
   function getBlockStun(attack_skill)
   {
-	const skill_type = skill_types.find(s=>(s.skill_type == attack_skill.skill_type))
+	const skill_genre = skill_genres.find(s=>(s.skill_genre == attack_skill.skill_genre))
     if(isUndefined(attack_skill.base_damage))
     {
       return "基礎ダメージ未登録"
@@ -108,15 +108,15 @@ function run()
     }
 	let correction = 1.0
 
-	if(skill_type.is_air == true)
+	if(skill_genre.is_air == true)
 	{
 	  correction = 0.33
 	}
-	else if(skill_type.is_smach == true)
+	else if(skill_genre.is_smach == true)
 	{
 	  correction = 0.725
 	}
-	else if(skill_type.is_item_throw == true)
+	else if(skill_genre.is_item_throw == true)
 	{
 	  correction = 0.29
 	}
@@ -128,8 +128,8 @@ function run()
   
   function getBlockStunDifference(attack_skill,block_stun)
   {
-	const skill_type = skill_types.find(s=>(s.skill_type == attack_skill.skill_type))
-    if(skill_type.is_air == true)
+	const skill_genre = skill_genres.find(s=>(s.skill_genre == attack_skill.skill_genre))
+    if(skill_genre.is_air == true)
     {
       return attack_skill.landing_lag + attack.until_landing - block_stun
     }
@@ -141,37 +141,37 @@ function run()
   
   function getAddOccurrence(player, skill)
   {
-	const skill_type = skill_types.find(s=>(s.skill_type == skill.skill_type))
+	const skill_genre = skill_genres.find(s=>(s.skill_genre == skill.skill_genre))
 	var add_frame = 0
 
-	if(player.is_ground == true && isUndefined(skill_type.jump_frame) == false)
+	if(player.is_ground == true && isUndefined(skill_genre.jump_frame) == false)
 	{
-	  if(isUndefined(skill_type.is_b)  == true)
+	  if(isUndefined(skill_genre.is_b)  == true)
 	  {
-	     add_frame += skill_type.jump_frame
+	     add_frame += skill_genre.jump_frame
 	  }
 	  else if(player.is_jump_b)
 	  {
-	     add_frame += skill_type.jump_frame
+	     add_frame += skill_genre.jump_frame
 	  }
 	}
-    add_frame += (player.action == action_shield && isUndefined(skill_type.shield_add_frame) == false)   ? skill_type.shield_add_frame : 0
-	add_frame += (player.action == action_shield && isUndefined(skill_type.guard_cancel) == false)       ? skill_type.guard_cancel     : 0
-	add_frame += (isUndefined(skill_type.throw_minus_frame) == false) ? skill_type.throw_minus_frame: 0
+    add_frame += (player.action == action_shield && isUndefined(skill_genre.shield_add_frame) == false)   ? skill_genre.shield_add_frame : 0
+	add_frame += (player.action == action_shield && isUndefined(skill_genre.guard_cancel) == false)       ? skill_genre.guard_cancel     : 0
+	add_frame += (isUndefined(skill_genre.throw_minus_frame) == false) ? skill_genre.throw_minus_frame: 0
 
     return add_frame
   }
-  function getSkillTypeName(skill_type){return skill_types.find(s=>(s.skill_type == skill_type)).name}
+  function getSkillGenreName(skill_genre){return skill_genres.find(s=>(s.skill_genre == skill_genre)).name}
 
 
   function getSkillFullName(skill)
   {
-     const skill_type_name = getSkillTypeName(skill.skill_type)
+     const skill_genre_name = getSkillGenreName(skill.skill_genre)
      var add_name = ""
 	 add_name += (skill.is_reverse == true) ? "反転" : "" 	 
 	 add_name += (skill.is_meaty == true) ? "持続" : "" 
 	 add_name += (isUndefined(skill.name) == false) ? "[" + skill.name + "]": ""
-	 return (add_name == "") ? skill_type_name : skill_type_name + "(" + add_name + ")"
+	 return (add_name == "") ? skill_genre_name : skill_genre_name + "(" + add_name + ")"
   }
 
 
