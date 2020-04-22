@@ -1,0 +1,30 @@
+//function parameterToInput(parameters)
+//{
+//  Object.keys(parameters).forEach(id=>$("#" + id + "").val(parameters[id]))
+//}
+
+const parameterToInput = ({input_id, input_value})=>$("#" + input_id + "").val(input_value)
+
+function inputToUrlParameter()
+{
+  var parameter = "?"
+  $("input").each((index, element)=>{
+    if($(element).val() == "")
+    {
+       return
+    }
+    if(index >= 1)
+    {
+      parameter += "&"
+    }
+    parameter += $(element).attr("id") + "=" + $(element).val()
+  })
+  return parameter
+}
+
+function valExchange(a, b)
+{
+  const temp = a.val()
+  a.val(b.val())
+  b.val(temp)
+}
