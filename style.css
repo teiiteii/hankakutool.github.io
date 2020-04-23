@@ -106,11 +106,12 @@ h1 {
 	 width:100%;
 	 background: #E1B6B6;
 }
-.fighters{
+.fighter_search_text{
   padding:1rem;
 }
-.fighters:hover {
-	background-color:#000066; 	/*リンクにマウスが乗ったら背景色を変更する*/
+.fighter_search_text:hover {
+	background-color:#B8D9FF; 	/*リンクにマウスが乗ったら背景色を変更する*/
+	cursor:pointer
 }
 .caret_none{
 	caret-color:transparent;

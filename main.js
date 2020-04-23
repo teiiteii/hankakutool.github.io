@@ -13,26 +13,23 @@ $(document).ready( function()
   });
   run()
 
-
-  
    $(".js-modal-open").each(function(){
         $(this).on("click",function(i){
-            winScrollTop = $(window).scrollTop();
-            var target = $(this).data("target");
-            var modal = document.getElementById(target);
-            $(modal).fadeIn();
-			$("#fighter_search").focus();
+            winScrollTop = $(window).scrollTop()
+            const target = $(this).data("target")
+                 ,player = $(this).data("player")			
+                 ,modal = document.getElementById(target)
+			$(modal).attr('data-player',player)
+            $(modal).fadeIn()
+			$("#fighter_search").focus()
             return false;
         });
     });
     $('.js-modal-close').on('click',function(){
-        $('.js-modal').fadeOut();
-        $('body,html').stop().animate({scrollTop:winScrollTop}, 100);
+        $('.js-modal').fadeOut()
+        $('body,html').stop().animate({scrollTop:winScrollTop}, 100)
         return false;
     });
-	
-	$('.js-modal-open').click();
-
 });
 
 

@@ -1,6 +1,53 @@
 //当たるフレーム速さで隙が変わるか
 //2段技。連続技
+function fighter_search_input()
+{
+  const fighter_name = $("#fighter_search").val()
+  const searchedFighter = fighters.map((f)=>{
+  let index_of = f.name.indexOf(fighter_name)
+  let hiragana_index_of = f.hiragana.indexOf(fighter_name)	
+  index_of = (index_of == -1) ? hiragana_index_of:index_of
+  hiragana_index_of = (hiragana_index_of) == -1 ? index_of:hiragana_index_of
+  let ans_index_of = index_of < hiragana_index_of ? index_of:hiragana_index_of
+  if(index_of == -1 && hiragana_index_of == -1)
+  {
+	ans_index_of = undefined
+  }
+    return{
+      name:f.name
+     ,hiragana:f.hiragana	
+     ,index_of:ans_index_of
+    }
+  }).filter(f=>(isUndefined(f.index_of) == false))
 
+  searchedFighter.sort((a, b)=>
+  {
+    if(a.hiragana < b.hiragana) return -1
+    if(a.hiragana > b.hiragana) return 1
+    return 0
+  })
+
+  searchedFighter.sort((a, b)=>
+  {
+    if(a.index_of < b.index_of) return -1
+    if(a.index_of > b.index_of) return 1
+    return 0
+  })
+
+  $(".fighter_search_text").remove()
+  searchedFighter.forEach((s)=>{
+    const fighter_search_text = $("<div>",{class:"fighter_search_text"})
+	$(fighter_search_text).text(s.name)
+    $(fighter_search_text).on("click",function(i){
+      const fighter_text = "#" + $(fighter_select_modal).data("player") + "_fighter_text"
+	  $(fighter_text).val($(this).text())
+	  $('.js-modal-close').click()
+     });		
+	$(fighter_search_text).appendTo("#fighter_search_texts")
+
+  })
+  
+}
 function exchange_fighter()
 {
   valExchange($("#attack"), $("#defend"))
@@ -31,7 +78,7 @@ function run()
   }
   attack =
   {
-    fighter:fighters.find(s=>(s.name == $("#attack_fighter").val()))
+    fighter:fighters.find(s=>(s.name == $("#attack_fighter_text").val()))
    ,skills:null
    ,op:1.05
    ,until_landing:0
@@ -39,7 +86,7 @@ function run()
   
   defend = 
   {
-    fighter:fighters.find(s=>(s.name == $("#defend_fighter").val()))
+    fighter:fighters.find(s=>(s.name == $("#defend_fighter_text").val()))
    ,skills:null
    ,action:action_shield
    ,is_ground:true

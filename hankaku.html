@@ -39,7 +39,7 @@
                         </div>
                         <div class="card-body">
                             <label class="input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; ">攻撃側ファイター</label>
-<input type="text" id="attack_fighter" class="form-control form-control-sm js-modal-open caret_none" data-target="fighter_select_modal">
+<input type="text" id="attack_fighter_text" class="form-control form-control-sm js-modal-open caret_none" data-target="fighter_select_modal" data-player="attack">
                             </select>                           
 						   <ul class="list-unstyled mt-3 mb-4">
                                 <li>
@@ -119,10 +119,11 @@
     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
   </div>
 
-<input type="email" class="form-control" id="fighter_search" placeholder="ファイター名を入力"></div>
-  <div class="fighters" onclick="alert('1011')">パルテナ</div>
-  <div class="fighters">ゲームアンドウォッチ</div>
-  <div class="fighters">カービィ</div>
+<input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighter_search_input()"></div>
+<div id="fighter_search_texts">
+  <div class="fighter_search_text" onclick="alert('1011')">パルテナ</div>
+  <div class="fighter_search_text">ゲームアンドウォッチ</div>
+  <div class="fighter_search_text">カービィ</div>
   </div>   
 </div>  
 
