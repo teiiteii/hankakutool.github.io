@@ -30,3 +30,51 @@
 .input_title{
   font-size:1.0em;
 }
+.input_title{
+  font-size:1.0em;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+h1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1.6rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.radio-inline__input {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.radio-inline__label {
+	 text-align: center;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.4rem;
+    border-radius: 0.3rem;
+    transition: all .2s;
+}
+
+.radio-inline__input + .radio-inline__label {
+  background: #E1B6B6;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+.radio-inline__input:checked + .radio-inline__label {
+  background: #B54A4A;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
