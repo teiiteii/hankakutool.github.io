@@ -39,7 +39,9 @@
                         </div>
                         <div class="card-body">
                             <label class="input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; ">攻撃側ファイター</label>
-                            <ul class="list-unstyled mt-3 mb-4">
+<input type="text" id="attack_fighter" class="form-control form-control-sm js-modal-open caret_none" data-target="fighter_select_modal">
+                            </select>                           
+						   <ul class="list-unstyled mt-3 mb-4">
                                 <li>
                                     <div class="form-group" style="">
                                         <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height: 0rem; float: right;">↑↓</button>
@@ -101,7 +103,7 @@
             </div>
         </div>
     </div>
-<div id="modal1" class="modal js-modal">
+<div id="fighter_select_modal" class="modal js-modal">
   <div class="modal_background js-modal-close"></div>
   <div class="modal_content box_card">
 
@@ -117,9 +119,8 @@
     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
   </div>
 
-<input type="email" class="form-control" id="fighter_search" placeholder="ファイター名を入力">				
-			  </div>
-  <div class="fighters">パルテナ</div>
+<input type="email" class="form-control" id="fighter_search" placeholder="ファイター名を入力"></div>
+  <div class="fighters" onclick="alert('1011')">パルテナ</div>
   <div class="fighters">ゲームアンドウォッチ</div>
   <div class="fighters">カービィ</div>
   </div>   

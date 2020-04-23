@@ -112,3 +112,6 @@ h1 {
 .fighters:hover {
 	background-color:#000066; 	/*リンクにマウスが乗ったら背景色を変更する*/
 }
+.caret_none{
+	caret-color:transparent;
+}

@@ -6,6 +6,17 @@ function exchange_fighter()
   valExchange($("#attack"), $("#defend"))
   run()
 }
+function selected_fighter(fighter_id, attack_flg)
+{
+  if(attack_flg)
+  {
+    
+  }
+  else
+  {
+     
+  }
+}
 
 function run()
 {
@@ -20,7 +31,7 @@ function run()
   }
   attack =
   {
-    fighter:fighters.find(s=>(s.name == $("#attack").val()))
+    fighter:fighters.find(s=>(s.name == $("#attack_fighter").val()))
    ,skills:null
    ,op:1.05
    ,until_landing:0
@@ -28,7 +39,7 @@ function run()
   
   defend = 
   {
-    fighter:fighters.find(s=>(s.name == $("#defend").val()))
+    fighter:fighters.find(s=>(s.name == $("#defend_fighter").val()))
    ,skills:null
    ,action:action_shield
    ,is_ground:true
