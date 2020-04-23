@@ -15,12 +15,13 @@ $(document).ready( function()
 
 
   
-   $('.js-modal-open').each(function(){
-        $(this).on('click',function(i){
+   $(".js-modal-open").each(function(){
+        $(this).on("click",function(i){
             winScrollTop = $(window).scrollTop();
-            var target = $(this).data('target');
+            var target = $(this).data("target");
             var modal = document.getElementById(target);
             $(modal).fadeIn();
+			$("#fighter_search").focus();
             return false;
         });
     });
