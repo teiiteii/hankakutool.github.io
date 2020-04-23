@@ -18,7 +18,6 @@
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-	max-width: 40rem;
 }
 .box_header{
     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
@@ -51,11 +50,7 @@ h1 {
   line-height: 1.2;
 }
 
-p {
-  margin: 0 0 1.6rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid #ddd;
-}
+
 
 .radio-inline__input {
     clip: rect(1px, 1px, 1px, 1px);
@@ -101,8 +96,19 @@ p {
   top: 50%;
   transform: translate(-50%,-50%);
   width:80%;
-  height:80%;
+  height:100%;
   
 }
-
-
+.search_header{
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+	display: table;
+    height: 4.2rem;	
+	 width:100%;
+	 background: #E1B6B6;
+}
+.fighters{
+  padding:1rem;
+}
+.fighters:hover {
+	background-color:#000066; 	/*リンクにマウスが乗ったら背景色を変更する*/
+}

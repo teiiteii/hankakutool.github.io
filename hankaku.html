@@ -6,7 +6,9 @@
     <meta name="author" content="">
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  
+ <link rel="stylesheet" href="./style.css">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type = 'text/javascript' src="./common.js"></script>
 <script type = 'text/javascript' src="./common_jquery.js"></script>
@@ -31,7 +33,7 @@
         <div class="row">
             <div class="col-lg-6">
             
-                    <div class="box_card shadow-sm" style="width:auto;">
+                    <div class="box_card shadow-sm" style="width:auto; max-width:40rem;">
                         <div class="box_header" id= "attack_header" style="width: 100%;">
                             <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
                         </div>
@@ -49,7 +51,7 @@
                             </ul>
                             <div class="form-group" style=""></div>
                             <label class = "input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block;">攻撃側ファイター</label>
-                            <select class="form-control">
+                            <select class="custom-select custom-select-sm">
                                 <option value="value1">Text 1</option>
                                 <option value="value2">Text 2</option>
                                 <option value="value3">Text 3</option>
@@ -71,7 +73,7 @@
               
             </div>
             <div class="col-lg-6">
-                <div class="box_card" style="width:auto;">
+                <div class="box_card" style="width:auto; max-width:40rem;">
                         <div class="box_header" id= "defend_header" style="width: 100%;">
                             <p class="box_title text-center " style="width: auto; height:auto;">反撃側</p>
                         </div>
@@ -102,23 +104,27 @@
 <div id="modal1" class="modal js-modal">
   <div class="modal_background js-modal-close"></div>
   <div class="modal_content box_card">
-    <div class="box_header" id= "fighter_select_header" style="width: 100%;">
+
+                        <div class="box_header" id= "fighter_select_header" style="width: 100%;">
                             <p class="box_title text-center " style="width: auto; height:auto;">ファイター選択</p>
                         </div>
-    <p>内容</p>
-	<p>
-<select name="example3" size="5">
-<option value="サンプル1">選択肢のサンプル1</option>
-<option value="サンプル2">選択肢のサンプル2</option>
-<option value="サンプル3">選択肢のサンプル3</option>
-<option value="サンプル4">選択肢のサンプル4</option>
-<option value="サンプル5">選択肢のサンプル5</option>
-</select>
-</p>
+						
+						
+ 
+	 <div class="input-group mb-3">
+	 
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
   </div>
+
+<input type="email" class="form-control" id="lgFormGroupInput" placeholder="ファイター名を入力">				
+			  </div>
+  <div class="fighters">パルテナ</div>
+  <div class="fighters">ゲームアンドウォッチ</div>
+  <div class="fighters">カービィ</div>
+  </div>   
 </div>  
 
-	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
