@@ -9,6 +9,10 @@
 #defend_header{
   background-color:#6CBAFD;
 }
+#fighter_select_header{
+  background-color:#F7EE56;
+}
+
 
 .box_card{
     background-color: #fff;
@@ -64,7 +68,7 @@ p {
     padding: 0.25rem 0.75rem;
     margin-right: 0.4rem;
     border-radius: 0.3rem;
-    transition: all .2s;
+    transition: all .1s;
 }
 
 .radio-inline__input + .radio-inline__label {
@@ -77,4 +81,28 @@ p {
   color: #fff;
   text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
+
+.modal{
+  display:none;
+  height:100vh;
+  top:0;
+  width:100%;
+}
+.modal_background{
+   background: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.modal_content{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width:80%;
+  height:80%;
+  
+}
+
 

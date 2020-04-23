@@ -4,7 +4,7 @@ const skills =
   {fighter_id:1010, skill_genre:10904, time:45, begin:3, end:5, base_damage:8, landing_lag:6}, 
 
 
-  {fighter_id:1010, skill_genre:10902, time:37, begin:5, end:7, base_damage:1.4, landing_lag:15, continue_count:5 continue_number:1, attribute:"continue"},
+  {fighter_id:1010, skill_genre:10902, time:37, begin:5, end:7, base_damage:1.4, landing_lag:15, continue_count:5, continue_number:1, attribute:"continue"},
   {fighter_id:1010, skill_genre:10902, time:37, begin:1, end:2, base_damage:2, landing_lag:15},
   {fighter_id:1010, skill_genre:10902, time:37, begin:1, end:2, base_damage:2, landing_lag:15, attribute:"landing"},
   

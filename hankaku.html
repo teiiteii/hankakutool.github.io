@@ -4,18 +4,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type = 'text/javascript' src="./common.js"></script>
+<script type = 'text/javascript' src="./common_jquery.js"></script>
+<script type = 'text/javascript' src="./dat.js"></script>
+<script type = 'text/javascript' src="./draw.js"></script>
+<script type = 'text/javascript' src="./main.js"></script>
+<script type = 'text/javascript' src="./run.js"></script>
+<script type = 'text/javascript' src="./skill.js"></script>	
     <title>はんかくー</title>
 </head>
 <body class="page_whole">
+<a class="js-modal-open" data-target="modal1" href="">クリックでモーダルを表示</a>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
     <title>Pricing example for Bootstrap</title>	
-  <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
@@ -88,6 +99,26 @@
             </div>
         </div>
     </div>
+<div id="modal1" class="modal js-modal">
+  <div class="modal_background js-modal-close"></div>
+  <div class="modal_content box_card">
+    <div class="box_header" id= "fighter_select_header" style="width: 100%;">
+                            <p class="box_title text-center " style="width: auto; height:auto;">ファイター選択</p>
+                        </div>
+    <p>内容</p>
+	<p>
+<select name="example3" size="5">
+<option value="サンプル1">選択肢のサンプル1</option>
+<option value="サンプル2">選択肢のサンプル2</option>
+<option value="サンプル3">選択肢のサンプル3</option>
+<option value="サンプル4">選択肢のサンプル4</option>
+<option value="サンプル5">選択肢のサンプル5</option>
+</select>
+</p>
+  </div>
+</div>  
+
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
