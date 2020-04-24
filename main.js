@@ -21,6 +21,7 @@ $(document).ready( function()
                  ,modal = document.getElementById(target)
 			$(modal).attr('data-player',player)
             $(modal).fadeIn()
+			$("#fighter_search").val("")
 			$("#fighter_search").focus()
 			fighterSearchInput()
             return false;

@@ -20,8 +20,6 @@
     <title>はんかくー</title>
 </head>
 <body class="page_whole">
-<a class="js-modal-open" data-target="modal1" href="">クリックでモーダルを表示</a>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -37,21 +35,22 @@
                         <div class="box_header" id= "attack_header" style="width: 100%;">
                             <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
                         </div>
-                        <div class="card-body">
-                            <label class="input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block; ">攻撃側ファイター</label>
-<input type="text" id="attack_fighter_text" class="form-control form-control-sm js-modal-open caret_none" data-target="fighter_select_modal" data-player="attack">
-                            </select>                           
-						   <ul class="list-unstyled mt-3 mb-4">
-                                <li>
-                                    <div class="form-group" style="">
-                                        <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height: 0rem; float: right;">↑↓</button>
-                                        <input type="text" class="form-control" style="line-height: 24px; letter-spacing: 0px; text-decoration: none solid rgb(0, 0, 0); height: 2rem; width: 1rem; min-width: 0rem;">
-                                    </div>
+                        <div class="container-fluid">
+						<div class="row">
+						
+                            <label class="input_title" style="float: left; width: auto; height: auto; min-width: 0rem; min-height: 0rem; display: block; ">攻撃側ファイター</label>
+							</div>
+							<div class="row">
+							<div class="col-10">
+							<form class="form-inline">
+                           <input type="text" id="attack_fighter_text" class="form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack">
+						   <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem; ">↑↓</button>
+						   </form>
+						   </div>
+						 </div>
+                                     
                                     <div class="form-group" style=""></div>
-                                </li>
-                                <li></li>
-                            </ul>
-                            <div class="form-group" style=""></div>
+                              
                             <label class = "input_title" style="float: left; width: auto; height: auto; line-height: 0rem; min-width: 0rem; min-height: 0rem; display: block;">攻撃側ファイター</label>
                             <select class="custom-select custom-select-sm">
                                 <option value="value1">Text 1</option>
