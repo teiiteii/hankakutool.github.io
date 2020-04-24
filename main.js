@@ -1,10 +1,5 @@
 $(document).ready( function()
 {
-
-  $("<datalist>", {id:"fighter_datalist"}).appendTo( "body" )
-  fighters.forEach(f=>$('#fighter_datalist').append($('<option>').html(f.hiragana).val(f.name)))
-
-  $('#attack').append($('<list>').val("fighter_datalist"))
   const urlParameters = getUrlParameters()
   urlParameters.forEach(p=>parameterToInput(p))
 
@@ -20,7 +15,7 @@ $(document).ready( function()
                  ,player = $(this).attr('data-player')			
                  ,modal = document.getElementById(target)
 			$(modal).attr('data-player',player)
-            $(modal).fadeIn()
+            $(modal).fadeIn(100)
 			$("#fighter_search").val("")
 			$("#fighter_search").focus()
 			fighterSearchInput()
@@ -28,7 +23,7 @@ $(document).ready( function()
         });
     });
     $('.js-modal-close').on('click',function(){
-        $('.js-modal').fadeOut()
+        $('.js-modal').fadeOut(100)
         $('body,html').stop().animate({scrollTop:winScrollTop}, 100)
         return false;
     });

@@ -98,6 +98,7 @@ const searchedFighter = fighter_name == "" ? getHistoryFighter():getSearchedFigh
 	  return histry_fighters
   }	 	
 setHistoryFighter(selected_fighter_name)  
+run()
      });
 
 	$(fighter_search_text).appendTo("#fighter_search_texts")
