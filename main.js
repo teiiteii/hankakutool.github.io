@@ -16,8 +16,8 @@ $(document).ready( function()
    $(".js-modal-open").each(function(){
         $(this).on("click",function(i){
             winScrollTop = $(window).scrollTop()
-            const target = $(this).data("target")
-                 ,player = $(this).data("player")			
+            const target = $(this).attr('data-target')
+                 ,player = $(this).attr('data-player')			
                  ,modal = document.getElementById(target)
 			$(modal).attr('data-player',player)
             $(modal).fadeIn()
@@ -33,29 +33,5 @@ $(document).ready( function()
         return false;
     });
 });
-
-
-//  e=>(e.onclick = (c)=>
-//  {
-//             $('.js-modal').fadeIn();
-//        return false;
-//  }))
-//   $('.js-modal-open').each(function()
-//   {
-//      $(this).on("click", function()
-//	  {
-//	     let target = $(this).data("")
-//	  })
-//   })
-//   
-//   .on('click',function(){
-//        $('.js-modal').fadeIn();
-//        return false;
-//    });
-//    $('.js-modal-close').on('click',function(){
-//        $('.js-modal').fadeOut();
-//        return false;
-//    });
-
 
 

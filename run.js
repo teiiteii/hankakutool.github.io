@@ -72,7 +72,7 @@ const searchedFighter = fighter_name == "" ? getHistoryFighter():getSearchedFigh
     const fighter_search_text = $("<div>",{class:"fighter_search_text"})
 	$(fighter_search_text).text(s.name)
     $(fighter_search_text).on("click",function(i){
-      const fighter_text = "#" + $(fighter_select_modal).data("player") + "_fighter_text"
+      const fighter_text = "#" + $(fighter_select_modal).attr("data-player") + "_fighter_text"
 	  const selected_fighter_name = $(this).text()
 	  $(fighter_text).val(selected_fighter_name)
 	  $('.js-modal-close').click()
@@ -107,7 +107,7 @@ setHistoryFighter(selected_fighter_name)
 }
 function exchange_fighter()
 {
-  valExchange($("#attack"), $("#defend"))
+  valExchange($("#attack_fighter_text"), $("#defend_fighter_text"))
   run()
 }
 function selected_fighter(fighter_id, attack_flg)
