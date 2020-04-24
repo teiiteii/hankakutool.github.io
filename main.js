@@ -22,6 +22,7 @@ $(document).ready( function()
 			$(modal).attr('data-player',player)
             $(modal).fadeIn()
 			$("#fighter_search").focus()
+			fighterSearchInput()
             return false;
         });
     });

@@ -1,9 +1,12 @@
 //当たるフレーム速さで隙が変わるか
 //2段技。連続技
-function fighter_search_input()
+
+
+function fighterSearchInput()
 {
   const fighter_name = $("#fighter_search").val()
-  const searchedFighter = fighters.map((f)=>{
+  const getSearchedFighter = (fighter_name)=>{
+	  const searchedFighter = fighters.map((f)=>{
   let index_of = f.name.indexOf(fighter_name)
   let hiragana_index_of = f.hiragana.indexOf(fighter_name)	
   index_of = (index_of == -1) ? hiragana_index_of:index_of
@@ -33,16 +36,70 @@ function fighter_search_input()
     if(a.index_of > b.index_of) return 1
     return 0
   })
+  return searchedFighter
+  }
+  const histry_max = 5
+  const histry_fighter_key = "search_fighter"
+  
+  const getHistoryFighter = ()=>{
+	  const histry_fighters = []
+	  for(let i = 0; i <histry_max;i++)
+	  {
+	    const histry_fighter_name = (localStorage.getItem(histry_fighter_key + i))
+		if(histry_fighter_name != null && histry_fighter_name !=""){
+			histry_fighters.push({name:histry_fighter_name})
+	    }
+	  }
+	  return histry_fighters
+  }
+  
+  
+const searchedFighter = fighter_name == "" ? getHistoryFighter():getSearchedFighter(fighter_name)
+    $(".fighter_search_text").remove()
+  $(".fighter_search_history").remove()
 
-  $(".fighter_search_text").remove()
+	 const history_text = $("<p>",{class:"fighter_search_history"})
+	 const selected_histry_count = Object.keys(searchedFighter).length
+	 if(selected_histry_count >= 1)
+	 {
+	   $(history_text).text("履歴" + selected_histry_count +"件")	 
+	 }
+	 if(fighter_name=="")
+	 {
+	 	$(history_text).appendTo("#fighter_search_texts")  
+	 }
   searchedFighter.forEach((s)=>{
     const fighter_search_text = $("<div>",{class:"fighter_search_text"})
 	$(fighter_search_text).text(s.name)
     $(fighter_search_text).on("click",function(i){
       const fighter_text = "#" + $(fighter_select_modal).data("player") + "_fighter_text"
-	  $(fighter_text).val($(this).text())
+	  const selected_fighter_name = $(this).text()
+	  $(fighter_text).val(selected_fighter_name)
 	  $('.js-modal-close').click()
-     });		
+      const setHistoryFighter = (selected_fighter_name)=>{
+	  let histry_fighters = []
+	  for(let i = 0; i <histry_max;i++)
+	  {
+		 	    const histry_fighter_name = (localStorage.getItem(histry_fighter_key + i))
+		histry_fighters.push((histry_fighter_name == null || histry_fighter_name == "")? "":histry_fighter_name)
+	  }
+	  const exist_count = histry_fighters.filter(h=>(h != selected_fighter_name)).length	  
+	  histry_fighters = histry_fighters.filter(h=>(h != selected_fighter_name))
+	  histry_fighters.unshift(selected_fighter_name)
+	  if(exist_count == 0)
+	  {
+	  histry_fighters.pop()
+	  }
+	  for(i = 0; i < histry_fighters.length;i++)
+	  {
+	    localStorage.setItem(histry_fighter_key + i, histry_fighters[i])
+	  }
+	  
+	  return histry_fighters
+  }	 	
+setHistoryFighter(selected_fighter_name)  
+     });
+
 	$(fighter_search_text).appendTo("#fighter_search_texts")
 
   })
