@@ -20,8 +20,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6">
-        <div class="box_card shadow-sm" style="width:auto; max-width:40rem;">
-          <div class="box_header" id="attack_header" style="width: 100%;">
+        <div class="box_card" style="width:auto; max-width:40rem;">
+          <div class="box_header attack_background_color" id="attack_header" style="width: 100%;">
             <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
           </div>
           <div class="container-fluid">
@@ -48,8 +48,8 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="box_card shadow-sm" style="width:auto; max-width:40rem;">
-          <div class="box_header" id="defend_header" style="width: 100%;">
+        <div class="box_card" style="width:auto; max-width:40rem;">
+          <div class="box_header defend_background_color" id="defend_header" style="width: 100%;">
             <p class="box_title text-center " style="width: auto; height:auto;">反撃側</p>
           </div>
           <div class="container-fluid">
@@ -76,17 +76,95 @@
         </div>
       </div>
     </div>
-  </div>
-  <div id="fighter_select_modal" class="modal js-modal">
-    <div class="modal_background js-modal-close"></div>
-    <div class="modal_content box_card">
-      <div class="box_header" id="fighter_select_header" style="width: 100%;">
-        <p class="box_title text-center " style="width: auto; height:auto;">ファイター選択</p>
+    <div class="row">
+      <div class="col-lg-6 attack_result">
+        <!--↓追加-->
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box_card shadow-sm result_paling" style="width:auto; max-width:40rem;">
+              <div class="container-fluid">
+                <div class="row">
+				
+                  <table class="table table-sm">
+                    <tr>
+                      <th class="attack_background_color">攻撃技</th>
+                      <th>発生F</th>
+                      <th>前隙F</th>
+                      <th>後隙F</th>
+                      <th>全体F</th>
+                      <th>％</th>
+                    </tr>
+                    <tr>
+                      <td>上スマ</td>
+                      <td>9F～12F</td>
+                      <td>8F</td>
+                      <td>27F</td>
+                      <td>39F</td>
+                      <td>16.8%</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="row">
+                  <table class="table table-sm" style="table-layout:fixed;">
+                    <tr>
+                      <th style="width:1rem;" class="defend_background_color">反撃技</th>
+                      <th style="width:0.5rem" >猶予F</th>
+					  
+                      <th style="width:1rem">硬直差</th>
+					  
+                      <th style="width:1rem">発生F</th>
+                    </tr>
+                    <tr>
+                      <td>上スマ(反転)</td>
+                      <td>11F</td>
+                     <td>20F</td>
+ 					  
+                      <td>9F</td>
+                    </tr>
+                    <tr>
+                      <td>空N</td>
+                      <td>14F</td>
+                     <td>20F</td> 					 					  
+                      <td>6F（3F+硬直3F）</td>
+                    </tr>
+                    <tr>
+                      <td>空下</td>
+                      <td>12F</td>
+                     <td>20F</td>
+                      <td>8F（5F+硬直3F）</td>
+                    </tr>
+                    <tr>
+                      <td>空下</td>
+                      <td>16F</td>
+                     <td>20F</td>
+                      <td>4F（1F+硬直3F）</td>
+                    </tr>
+                    <tr>
+                      <td>空下</td>
+                      <td>16F</td>
+                     <td>20F</td>
+                      <td>4F（1F+硬直3F）</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span> </div> <input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"></div>
-      <div id="fighter_search_texts"> </div>
+      <!--↑追加-->
+      <div class="col-lg-6 defend_result"> </div>
     </div>
-  </div>
+    <div id="fighter_select_modal" class="modal js-modal">
+      <div class="modal_background js-modal-close"></div>
+      <div class="modal_content box_card">
+        <div class="box_header" id="fighter_select_header" style="width: 100%;">
+          <p class="box_title text-center " style="width: auto; height:auto;">ファイター選択</p>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span> </div> <input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"></div>
+        <div id="fighter_search_texts"> </div>
+      </div>
+    </div>
 </body>
 </html>

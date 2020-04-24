@@ -2,14 +2,14 @@
  background-color:#EFEFEF;
  
 }
-#attack_header{
+.attack_background_color{
   background-color:#F85662;
    
 }
-#defend_header{
+.defend_background_color{
   background-color:#6CBAFD;
 }
-#fighter_select_header{
+.fighter_select_header{
   background-color:#F7EE56;
 
 }
@@ -120,3 +120,16 @@ h1 {
 .caret_none{
 	caret-color:transparent;
 }
+
+.result_paling {
+    margin: 2em 0;
+
+    background: #FFF;
+    border: solid 0.1rem #e6e6fa;
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+
+<div class="box2">
+    <p>ここに文章</p>
+</div>
