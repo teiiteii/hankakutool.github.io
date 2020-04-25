@@ -17,9 +17,9 @@ $(document).ready( function()
 			$(modal).attr('data-player',player)
             $(modal).fadeIn(100)
 			$("#fighter_search").val("")
-			$("#fighter_search").focus()
 			fighterSearchInput()
 			$("body").addClass('fixed')
+			$("#fighter_search").focus()			
             return false;
         });
     });

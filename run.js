@@ -39,7 +39,7 @@ function fighterSearchInput()
   })
   return searchedFighter
   }
-  const histry_max = 20
+  const histry_max = 10
   const histry_fighter_key = "search_fighter"
   
   const getHistoryFighter = ()=>{
