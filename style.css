@@ -147,9 +147,10 @@ body.fixed {
 	background-color:#B8D9FF;
 	cursor:pointer
 }
+/*
 .fighter_search_text:active{
 	background-color:#B8D9FF;
-}
+}*/
 
 .caret_none{
 	caret-color:transparent;
