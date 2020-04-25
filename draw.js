@@ -1,133 +1,77 @@
-// 描画処理になった途端、クソコードどすなぁ
 function create_view(attack, defend)
 {
-   $(".result").remove()
-   const result = $("<div>",{class:"result"})
-   $(result).appendTo("body")
+   $("#attacks_result").children().remove()
    
    attack.skills.forEach((attack_skill, index)=>
    {
-	  view_skill(attack_skill)
-	  const table_id = "frame_table" + index
+	  const result_row = $("#result_row_original").clone()
+	  $(result_row).attr("id", "result_row" + index)
+	  $(result_row).css("visibility","visible");
       defend.skills.forEach((defend_skill, index)=>
 	  {
-	    view_frame(attack_skill, defend_skill, table_id, index)
+	    view_frame(attack, defend, attack_skill, defend_skill, result_row, index)
      })
-  })
-  
+	 
+	 const tbody = $(result_row).find(".defend_table").children()
+     const trs = $(tbody).find(".defend_tr")
+     $(result_row).find(".defend_tr").remove()
+	 
+	 trs.sort((tr1,tr2)=>{
+	   const sort1 = Number($(tr1).find(".sort").val())
+	   const sort2 = Number($(tr2).find(".sort").val())
+       return (sort1 > sort2) ? 1:-1
+    })
 
- // function view_frame_head(attack_skill, defend_skill)
- // {
-//	const table_tr = $("table tr")
- //   const th = $("th")
-//	$(th).
-//	
-//		
- // }   
-  function view_skill(attack_skill)
-  {
- 
-  }
-  function view_frame(attack_skill, defend_skill, table_id, index)
+	$(tbody).append($(trs))
+	$("#attacks_result").append($(result_row)) 
+  })
+
+  function view_frame(attack, defend, attack_skill, defend_skill, result_row, index)
   {
 	const block_stun_difference = attack_skill.block_stun_difference
 		 ,occurrence = defend_skill.begin + defend_skill.add_occurrence 
 		 ,frame_trap = block_stun_difference - occurrence
-
+         ,attack_tr = $("<tr>")
+		 ,attack_tds = [
+                		   {txt:`${attack_skill.skill_full_name}`,cls:`` ,sm_txt:``}
+	                      ,{txt:`${attack_skill.begin}F～${attack_skill.end}F`,cls:`` ,sm_txt:``}
+					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``}
+					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``}
+					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``}
+					      ,{txt:`${attack_skill.base_damage * 1.2}%`,cls:`` ,sm_txt:``}
+					   ]
+    const defend_tr = $("<tr>",{class:"defend_tr"})
+	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? `（${defend_skill.begin}F+硬直${defend_skill.add_occurrence}F）` : ''	
+		 ,defend_tds = [
+		                 {txt:`${defend_skill.skill_full_name}`,cls:`` ,sm_txt:``}
+	                    ,{txt:`${frame_trap}F`,cls:(frame_trap>=0) ? "grace_label grace_ok":"grace_label grace_ng" ,sm_txt:``}
+					    ,{txt:`${block_stun_difference}F`,cls:`` ,sm_txt:``}
+                        ,{txt:`${occurrence}F`,cls:`` ,sm_txt:defend_occurrence_text}
+					   ]	
+	const add_td = (tr, {txt, cls, sm_txt})=>
+	{
+		const td = $("<td>")
+		    , span = $("<span>")
+		    , sm_span = $("<span>")
+		$(span).text(txt)
+		$(span).addClass(cls)
+		$(sm_span).text(sm_txt)
+		$(sm_span).addClass("small_text")
+		$(span).append(sm_span)		
+		$(td).append(span)
+		$(tr).append($(td))
+	}
 	 if(index == 0)
 	 {
-       const p = $("<p>")
-       $(p).text(`${attack_skill.skill_full_name}に対する反確リスト`)
-	   
-	   const new_table1 = $("<table>")
-	        ,new_table1_th1 = $("<th>")
-	        ,new_table1_th2 = $("<th>")
-	        ,new_table1_th3 = $("<th>")
-            ,new_table1_th4 = $("<th>")
-            ,new_table1_th5 = $("<th>")
-            ,new_table1_th6 = $("<th>")
-            ,new_table1_th7 = $("<th>")
-			
-            ,new_table1_tr = $("<tr>")
-            ,new_table1_td1 = $("<td>")
-            ,new_table1_td2 = $("<td>")
-            ,new_table1_td3 = $("<td>")
-            ,new_table1_td4 = $("<td>")
-            ,new_table1_td5 = $("<td>")
-            ,new_table1_td6 = $("<td>")
+	   $(result_row).find(".th_attack_fighter_name").text(`${attack.adana}の攻撃技`)
+	   attack_tds.forEach(tds=>(add_td(attack_tr,tds,"")))
+	   $(result_row).find(".attack_table").append($(attack_tr))
 
-	   $(new_table1_th1).text("技名")
-	   $(new_table1_th2).text("発生F")		   
-   
-	   $(new_table1_th3).text("前隙F")
-	   $(new_table1_th4).text("後隙F") 
-	   $(new_table1_th5).text("全体F")		   
-	   $(new_table1_th6).text("ダメージ")
-	   
-	   $(new_table1_td1).text(attack_skill.skill_full_name)
-   
-	   $(new_table1_td2).text(`${attack_skill.begin}F-${attack_skill.end}F`)
-
-	   $(new_table1_td3).text(`${attack_skill.begin - 1}F`)		   
-	   $(new_table1_td4).text(`${attack_skill.time - attack_skill.end}F`)	   
-   	   $(new_table1_td5).text(`${attack_skill.time}F`)	
-
-	   $(new_table1_td6).text(`${attack_skill.base_damage * 1.2}%`)	
-
-	   $(new_table1_td1).appendTo($(new_table1_tr))
-	   $(new_table1_td2).appendTo($(new_table1_tr))
-	   $(new_table1_td3).appendTo($(new_table1_tr))
-	   $(new_table1_td4).appendTo($(new_table1_tr))
-	   $(new_table1_td5).appendTo($(new_table1_tr))
-	   $(new_table1_td6).appendTo($(new_table1_tr))
-	   
-	   $(new_table1_th1).appendTo($(new_table1))
-	   $(new_table1_th2).appendTo($(new_table1))
-	   $(new_table1_th3).appendTo($(new_table1))
-	   $(new_table1_th4).appendTo($(new_table1))
-	   $(new_table1_th5).appendTo($(new_table1))
-	   $(new_table1_th6).appendTo($(new_table1))	   
-	   $(new_table1_tr).appendTo($(new_table1))	
-
-       const new_table2 = $("<table>", {id:table_id})
-	        ,new_table2_th1 = $("<th>")
-	        ,new_table2_th2 = $("<th>")
-	        ,new_table2_th3 = $("<th>")
-            ,new_table2_th4 = $("<th>")
-	   $(new_table2_th1).text("技名")
-	   $(new_table2_th2).text("猶予F")	   
-	   $(new_table2_th3).text("硬直差")
-	   $(new_table2_th4).text("発生F")
-	   
-	   $(new_table2_th1).appendTo($(new_table2))
-	   $(new_table2_th2).appendTo($(new_table2))
-	   $(new_table2_th3).appendTo($(new_table2))
-	   $(new_table2_th4).appendTo($(new_table2))
-
-	   $(new_table1).appendTo($(result))	   
-	   $(new_table2).appendTo($(result))
+	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃技`)
 	 }
-	const table = $("#" + table_id)
-	     ,tr = $("<tr>")
-	     ,td1 = $("<td>")
-	     ,td2 = $("<td>")
-         ,td3 = $("<td>")
-         ,td4 = $("<td>")
-
-	let th4text = `${occurrence}F`
-    th4text += (defend_skill.add_occurrence > 0) ? `（発生${defend_skill.begin}F+硬直${defend_skill.add_occurrence}F）` : ''		 
-	$(td1).text(defend_skill.skill_full_name)
-	$(td2).text(`${frame_trap}F`)
-	$(td3).text(`${block_stun_difference}F`)
-	$(td4).text(th4text)
-	$(td1).appendTo($(tr))
-	$(td2).appendTo($(tr))
-	$(td3).appendTo($(tr))
-	$(td4).appendTo($(tr))	
-	$(tr).appendTo($(table))
-
+	 defend_tds.forEach(tds=>(add_td(defend_tr,tds,"")))
+	 $(result_row).find(".defend_table").append($(defend_tr))
+	 const skill_sort = $("<input>",{type:"hidden",class:"sort",value:frame_trap*-1})
+	 $(defend_tr).append($(skill_sort))
   }
 }
-
-
-

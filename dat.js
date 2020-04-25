@@ -113,7 +113,7 @@ const fighters =
  ,{fighter_id:1670, name:"キングクルール", height_rank:23000, hiragana:"きんぐくるーる", adana:"キンクル"}
  ,{fighter_id:1680, name:"しずえ", height_rank:20900, hiragana:"しずえ", adana:"しずえ"}
  ,{fighter_id:1690, name:"ガオガエン", height_rank:22000, hiragana:"がおがえん", adana:"ガオガエン"}
- ,{fighter_id:1700, name:"パックンフラワー", height_rank:22000, hiragana:"ぱっくんふらわー","パックン"}
+ ,{fighter_id:1700, name:"パックンフラワー", height_rank:22000, hiragana:"ぱっくんふらわー",adana:"パックン"}
  ,{fighter_id:1710, name:"ジョーカー", height_rank:22200, hiragana:"じょーかー", adana:"ジョーカー"}
  ,{fighter_id:1720, name:"勇者", height_rank:22000, hiragana:"ゆうしゃ", adana:"勇者"}
  ,{fighter_id:1730, name:"バンジョー&カズーイ", height_rank:21400, hiragana:"ばんじょーあんどかずーい", adana:"バンカズ"}

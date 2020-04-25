@@ -136,7 +136,7 @@ function run()
   }
   attack =
   {
-    fighter:fighters.find(s=>(s.name == $("#attack_fighter_text").val()))
+    ...fighters.find(s=>(s.name == $("#attack_fighter_text").val()))
    ,skills:null
    ,op:1.05
    ,until_landing:0
@@ -144,14 +144,14 @@ function run()
   
   defend = 
   {
-    fighter:fighters.find(s=>(s.name == $("#defend_fighter_text").val()))
+    ...fighters.find(s=>(s.name == $("#defend_fighter_text").val()))
    ,skills:null
    ,action:action_shield
    ,is_ground:true
    ,is_jump_b:false
   }
 
-  if(isUndefined(attack.fighter) || isUndefined(defend.fighter))
+  if(isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id))
   {
     //alert("おっ 新ファイターかい？ ファイターは正しく入力してね")
 	return
@@ -174,17 +174,17 @@ function run()
     if(is_criterion_attacker_spell)
     {
       attack_skills = [skills[selected_skill_id]]
-      defend_skills = skills.filter(s=>(s.fighter_id == defend.fighter.fighter_id))
+      defend_skills = skills.filter(s=>(s.fighter_id == defend.fighter_id))
     }
     else
     {
-      attack_skills = skills.filter(s=>(s.fighter_id == attack.fighter.fighter_id))
+      attack_skills = skills.filter(s=>(s.fighter_id == attack.fighter_id))
       defend_skills = [skills[selected_skill_id]]
     }
 	//テスト用
 	if(true){
-		      attack_skills = skills.filter(s=>(s.fighter_id == attack.fighter.fighter_id))
-           defend_skills = skills.filter(s=>(s.fighter_id == defend.fighter.fighter_id))
+		      attack_skills = skills.filter(s=>(s.fighter_id == attack.fighter_id))
+           defend_skills = skills.filter(s=>(s.fighter_id == defend.fighter_id))
 	}
     attack.skills = attack_skills.map((skill)=>
     {
