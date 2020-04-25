@@ -132,11 +132,17 @@ h1 {
 }
 .fighter_search_text{
   padding:1rem;
+
 }
 .fighter_search_text:hover {
-	background-color:#B8D9FF; 	/*リンクにマウスが乗ったら背景色を変更する*/
+	background-color:#B8D9FF;
 	cursor:pointer
 }
+
+.fighter_search_text:active{
+	background-color:#B8D9FF;
+}
+
 .caret_none{
 	caret-color:transparent;
 }
