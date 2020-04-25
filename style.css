@@ -121,7 +121,7 @@ h1 {
   transform: translate(-50%,-50%);
   width:75%;
   height:100%;
-  
+	overflow: scroll;
 }
 .search_header{
     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
@@ -134,11 +134,19 @@ h1 {
   padding:1rem;
 
 }
+
+
+body.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
 .fighter_search_text:hover {
 	background-color:#B8D9FF;
 	cursor:pointer
 }
-
 .fighter_search_text:active{
 	background-color:#B8D9FF;
 }

@@ -19,12 +19,14 @@ $(document).ready( function()
 			$("#fighter_search").val("")
 			$("#fighter_search").focus()
 			fighterSearchInput()
+			$("body").addClass('fixed')
             return false;
         });
     });
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut(100)
         $('body,html').stop().animate({scrollTop:winScrollTop}, 100)
+		$("body").removeClass('fixed')
         return false;
     });
 });
