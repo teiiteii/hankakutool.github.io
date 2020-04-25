@@ -9,12 +9,26 @@
 .defend_background_color{
   background-color:#6CBAFD;
 }
-.fighter_select_header{
+.fighter_background_color{
   background-color:#F7EE56;
 
 }
 
+.grace_ok{
+  background-color:#008D5C;
+}
+.grace_ng{
+  background-color:#CC4327;
+}
 
+.grace_label{
+  color: #FFFFFF;
+  border-radius:0.25rem;
+  padding:0 0.55rem;
+}
+.small_text{
+  font-size:0.85em;
+}
 .box_card{
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);

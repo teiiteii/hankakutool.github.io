@@ -86,11 +86,11 @@
                 <div class="row">
                   <table class="table table-sm">
                     <tr>
-                      <th class="attack_background_color">攻撃技</th>
-                      <th>発生F</th>
-                      <th>前隙F</th>
-                      <th>後隙F</th>
-                      <th>全体F</th>
+                      <th class="attack_background_color" >こどもリンクの攻撃技</th>
+                      <th>発生</th>
+                      <th>前隙</th>
+                      <th>後隙</th>
+                      <th>全体</th>
                       <th>％</th>
                     </tr>
                     <tr>
@@ -102,26 +102,27 @@
                       <td>16.8%</td>
                     </tr>
                   </table>
-                </div>
+	
+                </div>			
                 <div class="row">
                   <table class="table table-sm" style="table-layout:fixed;">
                     <tr>
-                      <th style="width:1rem;" class="defend_background_color">反撃技</th>
-                      <th style="width:0.5rem">猶予F</th>
+                      <th style="width:1rem;" class="defend_background_color">こどもリンクの反撃技</th>
+                      <th style="width:0.5rem">猶予</th>
                       <th style="width:1rem">硬直差</th>
-                      <th style="width:1rem">発生F</th>
+                      <th style="width:1rem">発生</th>
                     </tr>
                     <tr>
                       <td>上スマ(反転)</td>
-                      <td>11F</td>
+                      <td><span class="grace_label grace_ok">11F</span></td>
                       <td>20F</td>
                       <td>9F</td>
                     </tr>
                     <tr>
                       <td>空N</td>
-                      <td>14F</td>
+                      <td><span class="grace_label grace_ng">11F</span></td>
                       <td>20F</td>
-                      <td>6F（3F+硬直3F）</td>
+                      <td>6F<span class="small_text">（3F+硬直3F）</span></td>
                     </tr>
                     <tr>
                       <td>空下</td>
@@ -155,7 +156,7 @@
       <div class="modal_background js-modal-close"></div>
       <div class="modal_content box_card">
         <div class="box_header" id="fighter_select_header" style="width: 100%;">
-          <p class="box_title text-center " style="width: auto; height:auto;">ファイター選択</p>
+          <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span> </div> <input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"></div>
