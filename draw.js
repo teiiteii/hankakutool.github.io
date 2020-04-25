@@ -63,11 +63,11 @@ function create_view(attack, defend)
 	}
 	 if(index == 0)
 	 {
-	   $(result_row).find(".th_attack_fighter_name").text(`${attack.adana}の攻撃技`)
+	   $(result_row).find(".th_attack_fighter_name").text(`${attack.adana}の攻撃`)
 	   attack_tds.forEach(tds=>(add_td(attack_tr,tds,"")))
 	   $(result_row).find(".attack_table").append($(attack_tr))
 
-	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃技`)
+	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃`)
 	 }
 	 defend_tds.forEach(tds=>(add_td(defend_tr,tds,"")))
 	 $(result_row).find(".defend_table").append($(defend_tr))
