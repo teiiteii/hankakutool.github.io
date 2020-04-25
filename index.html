@@ -18,18 +18,17 @@
 </head>
 <body class="page_whole">
   <div class="container">
-
-        <div class="box_card mx-auto" style="max-width:40rem">
-          <div class="box_header attack_background_color" id="attack_header" style="width:100%">
-            <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
-          </div>
-          <div class="container-fluid">
-            <div class="row"> <label class="input_title">攻撃側ファイター</label> </div>
-            <div class="form-row">
-              <div class="col-8"> <input type="text" id="attack_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack"> </div>
-              <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
-            </div>
-            <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
+    <div class="box_card mx-auto" style="max-width:40rem">
+      <div class="box_header attack_background_color" id="attack_header" style="width:100%">
+        <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
+      </div>
+      <div class="container-fluid">
+        <div class="row"> <label class="input_title">攻撃側ファイター</label> </div>
+        <div class="form-row">
+          <div class="col-8"> <input type="text" id="attack_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack"> </div>
+          <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
+        </div>
+        <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
 					<div class="col">
          <div class="row"><select class="custom-select custom-select-sm">
                                 <option value="value1">Text 1</option>
@@ -44,44 +43,39 @@
           
 		  </div> </div>
 		  </div>>--></div>
-        </div>
-      </div>
-      <div class="container">
-
-        <div class="box_card mx-auto" style="max-width:40rem">
-          <div class="box_header defend_background_color" id="defend_header" style="width: 100%;">
-            <p class="box_title text-center " style="width: auto; height:auto;">反撃側</p>
-          </div>
-          <div class="container-fluid">
-            <div class="row"> <label class="input_title">反撃側ファイター</label> </div>
-            <div class="form-row">
-              <div class="col-8"> <input type="text" id="defend_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="defend"> </div>
-              <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
-            </div>
-            <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
-					<div class="col">
-         <div class="row"><select class="custom-select custom-select-sm">
-                                <option value="value1">Text 1</option>
-                                <option value="value2">Text 2</option>
-                                <option value="value3">Text 3</option>
-                            </select>    <div class="row">
-							<input id="item-1" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1" checked="checked" /> 
-							<label class="radio-inline__label" for="item-1">全て</label> <input id="item-2" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" /> 
-							<label class="radio-inline__label" for="item-2">地上技</label> <input id="item-3" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" />
-							<label class="radio-inline__label" for="item-3">空中技</label> <input id="item-4" class="radio-inline__input" type="radio" name="accessible-radio" value="item-4" /> 
-							<label class="radio-inline__label" for="item-4">B技</label> </label
-          
-		  </div> </div>
-		  </div>>--></div>
-        </div>
-      </div>
- 
-   <div class="container">
-
-      <div id="attacks_result" class="mx-auto" style="max-width:40rem">データまだ未登録です。マリオ、リンク、ルキナのテストデータは多少あります</div>
-
     </div>
-
+  </div>
+  <div class="container">
+    <div class="box_card mx-auto" style="max-width:40rem">
+      <div class="box_header defend_background_color" id="defend_header" style="width: 100%;">
+        <p class="box_title text-center " style="width: auto; height:auto;">反撃側</p>
+      </div>
+      <div class="container-fluid">
+        <div class="row"> <label class="input_title">反撃側ファイター</label> </div>
+        <div class="form-row">
+          <div class="col-8"> <input type="text" id="defend_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="defend"> </div>
+          <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
+        </div>
+        <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
+					<div class="col">
+         <div class="row"><select class="custom-select custom-select-sm">
+                                <option value="value1">Text 1</option>
+                                <option value="value2">Text 2</option>
+                                <option value="value3">Text 3</option>
+                            </select>    <div class="row">
+							<input id="item-1" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1" checked="checked" /> 
+							<label class="radio-inline__label" for="item-1">全て</label> <input id="item-2" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" /> 
+							<label class="radio-inline__label" for="item-2">地上技</label> <input id="item-3" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" />
+							<label class="radio-inline__label" for="item-3">空中技</label> <input id="item-4" class="radio-inline__input" type="radio" name="accessible-radio" value="item-4" /> 
+							<label class="radio-inline__label" for="item-4">B技</label> </label
+          
+		  </div> </div>
+		  </div>>--></div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="attacks_result" class="mx-auto" style="max-width:40rem">データまだ未登録です。マリオ、リンク、ルキナのテストデータは多少あります</div>
+  </div>
   <!--HTML終了#############################-->
   <!--start フレームリザルト-->
   <div id="result_row_original" class="row box_card shadow-sm result_paling" style="visibility:collapse; max-width:40rem">
