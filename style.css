@@ -4,14 +4,26 @@
 }
 .attack_background_color{
   background-color:#F85662;
+/*  background-color:#F85662;*/
    
 }
 .defend_background_color{
   background-color:#6CBAFD;
+/*  background-color:#6CBAFD;*/
+  
 }
 .fighter_background_color{
   background-color:#F7EE56;
+/*  background-color:#F7EE56;*/
+}
 
+.attack_table_background_color{
+border-left: solid 0.55rem #F85662;
+   
+}
+.defend_table_background_color{
+border-left: solid 0.55rem #6CBAFD;
+  
 }
 
 .grace_ok{
