@@ -39,7 +39,7 @@ function fighterSearchInput()
   })
   return searchedFighter
   }
-  const histry_max = 10
+  const histry_max = 30
   const histry_fighter_key = "search_fighter"
   
   const getHistoryFighter = ()=>{
@@ -70,7 +70,7 @@ const searchedFighter = fighter_name == "" ? getHistoryFighter():getSearchedFigh
 	 	$(history_text).appendTo("#fighter_search_texts")  
 	 }
   searchedFighter.forEach((s)=>{
-    const fighter_search_text = $("<p>",{class:"fighter_search_text", ontouchstart:""})
+    const fighter_search_text = $("<p>",{class:"fighter_search_text", /*ontouchstart:""*/})
 	$(fighter_search_text).text(s.name)
     $(fighter_search_text).on("click",function(i){
       const fighter_text = "#" + $(fighter_select_modal).attr("data-player") + "_fighter_text"
