@@ -31,12 +31,27 @@ $(document).ready( function()
     });
 // エンターキーで以下を処理する
 $("#fighter_search").keypress((e)=>{
-  if(e.which==13 && $(".fighter_search_text").length == 1){
-	  $(".fighter_search_text").click()
-// スマホのキーボードを閉じる
-//  $("#fighter_search").blur();
-   return false;
-}	})
+  if(e.which!=13)
+  {
+	return
+  }
+  if($(".fighter_search_text").length == 1){
+    $(".fighter_search_text").click()
+    return false;
+    }
+	$(".fighter_search_text").each((i,e)=>{
+  const fighter_name_input = $("#fighter_search").val()
+       ,fighter_name = fighter_name_input.replace(/\s+/g, "")
+       ,fighter = fighters.find(s=>(s.hiragana == fighter_name_input))
+	  if(fighter_name == $(e).text() || (isUndefined(fighter) == false && fighter_name == fighter.hiragana))
+	  {
+	    $(e).click()
+        return false;	 
+	  }
+	})
+	
+
+  })
 });
 
 

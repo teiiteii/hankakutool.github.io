@@ -4,7 +4,8 @@
 
 function fighterSearchInput()
 {
-  const fighter_name = $("#fighter_search").val()
+  const fighter_name_input = $("#fighter_search").val()
+       ,fighter_name = fighter_name_input.replace(/\s+/g, "");
   const getSearchedFighter = (fighter_name)=>{
 	  const searchedFighter = fighters.map((f)=>{
   let index_of = f.name.indexOf(fighter_name)
