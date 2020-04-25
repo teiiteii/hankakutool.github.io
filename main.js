@@ -29,6 +29,14 @@ $(document).ready( function()
 		$("body").removeClass('fixed')
         return false;
     });
+// エンターキーで以下を処理する
+$("#fighter_search").keypress((e)=>{
+  if(e.which==13 && $(".fighter_search_text").length == 1){
+	  $(".fighter_search_text").click()
+// スマホのキーボードを閉じる
+//  $("#fighter_search").blur();
+   return false;
+}	})
 });
 
 
