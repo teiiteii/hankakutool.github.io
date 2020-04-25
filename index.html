@@ -25,8 +25,8 @@
       <div class="container-fluid">
         <div class="row"> <label class="input_title">攻撃側ファイター</label> </div>
         <div class="form-row">
-          <div class="col-8"> <form action="/search" @submit="search"  role="search"><input type="text" id="attack_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack" style="background-color:#FFFFFF" readonly></form> </div>
-          <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
+          <div class="col-8"><input type="text" id="attack_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack" style="background-color:#FFFFFF" readonly></div>
+          <div class="col-4"><button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
         </div>
         <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
 					<div class="col">
@@ -53,7 +53,7 @@
       <div class="container-fluid">
         <div class="row"> <label class="input_title">反撃側ファイター</label> </div>
         <div class="form-row">
-          <div class="col-8"> <form action="/search"><input type="search" id="defend_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="defend" style="background-color:#FFFFFF" readonly></form> </div>
+          <div class="col-8"><input type="text" id="defend_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="defend" style="background-color:#FFFFFF" readonly></div>
           <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
         </div>
         <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
@@ -113,7 +113,7 @@
         <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
       </div>
       <div class="input-group mb-3">
-        <div class="input-group-prepend">  </div> <input type="search" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+        <div class="input-group-prepend">  </div> <form action="/search"><input type="search" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1"></form><i class="fa fa-search" aria-hidden="true"></i></span></div>
       <div id="fighter_search_texts"> </div>
     </div>
   </div>
