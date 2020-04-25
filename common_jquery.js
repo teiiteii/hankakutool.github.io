@@ -8,7 +8,7 @@ const parameterToInput = ({input_id, input_value})=>$("#" + input_id + "").val(i
 function inputToUrlParameter()
 {
   var parameter = "?"
-  $("input").each((index, element)=>{
+  $(".js_url_parameter").each((index, element)=>{
     if($(element).val() == "")
     {
        return
