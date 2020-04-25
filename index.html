@@ -14,7 +14,7 @@
   <script type='text/javascript' src="./main.js"></script>
   <script type='text/javascript' src="./run.js"></script>
   <script type='text/javascript' src="./skill.js"></script>
-  <title>はんかくー!</title>
+  <title>はんかくー!!</title>
 </head>
 <body class="page_whole">
   <div class="container">
@@ -112,8 +112,10 @@
       <div class="box_header" id="fighter_select_header" style="width: 100%;">
         <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
       </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">  </div><input type="search" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+      <form action="/search">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+      </form>
       <div id="fighter_search_texts"> </div>
     </div>
   </div>
