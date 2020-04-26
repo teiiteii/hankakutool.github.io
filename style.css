@@ -39,7 +39,7 @@ border-left: solid 0.40rem #88C6FD;
   padding:0 0.4rem;
 }
 .small_text{
-  font-size:0.85em;
+  font-size:0.8em;
 }
 .box_card{
     background-color: #fff;
@@ -64,9 +64,16 @@ border-left: solid 0.40rem #88C6FD;
   overflow: hidden;
 
 }
-
+.th_block_stun_difference{
+	  font-size:0.8em;
+}
+th.th_small{
+	  font-size:1em;
+}
 th{
-  /*font-size:0.85em;*/
+
+  font-size:0.98em;
+
 }
 
 h1 {
