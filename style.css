@@ -1,6 +1,21 @@
 .page_whole{
- background-color:#EFEFEF;
+ background-color:#94A78E;
  
+}
+.box_card{
+  
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+	 background-color:#FFFFFF;
+	
+}
+header {
+  text-align: center;
+   padding: 0.4rem 0;  
+}
+header .headline{
+   font-size:1em;
+   	font-weight:700;
 }
 .attack_background_color{
   background-color:#F85662;
@@ -27,11 +42,7 @@ border-left: solid 0.40rem #88C6FD;
 }
 
 
-.box_card{
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-}
+
 .box_header{
     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 	display: table;

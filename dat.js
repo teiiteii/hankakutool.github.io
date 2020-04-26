@@ -39,7 +39,7 @@ const fighters =
 [
   {fighter_id:1010, name:"マリオ", height_rank:21100, hiragana:"まりお", adana:"マリオ"}
  ,{fighter_id:1020, name:"ドンキーコング", height_rank:22900, hiragana:"どんきーこんぐ", adana:"ドンキー"}
- ,{fighter_id:1030, name:"リンク", height_rank:21500, hiragana:"りんく", adana:"リンクあ"}
+ ,{fighter_id:1030, name:"リンク", height_rank:21500, hiragana:"りんく", adana:"リンク"}
  ,{fighter_id:1040, name:"サムス", height_rank:22100, hiragana:"さむす", adana:"サムス"}
  ,{fighter_id:1041, name:"ダークサムス", height_rank:22500, hiragana:"だーくさむす", adana:"ﾀﾞｰｸｻﾑｽ"}
  ,{fighter_id:1050, name:"ヨッシー", height_rank:22000, hiragana:"よっしー", adana:"ヨッシー"}
