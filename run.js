@@ -237,8 +237,12 @@ function run()
 	{
 	  correction = 0.29
 	}
-
-   const block_stun = Math.floor((attack_skill.base_damage * attack.op * 0.8 * correction) + 2)
+   //(attack_skill.base_damage * attack.op * 0.8 * correction) + 2)
+   const calc1 = BigNumber(attack_skill.base_damage).times(attack.op)
+        ,calc2 = calc1.times(0.8).times(correction)
+		,calc_result = calc2.plus(2).toNumber()
+		
+   const block_stun = Math.floor(calc_result)
    return defend.action == action_just_shield ? block_stun + 3 : block_stun
   
   }

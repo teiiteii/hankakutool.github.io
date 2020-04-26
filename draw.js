@@ -34,11 +34,11 @@ function create_view(attack, defend)
          ,attack_tr = $("<tr>")
 		 ,attack_tds = [
                 		   {txt:`${attack_skill.skill_full_name}`,cls:`` ,sm_txt:``}
-	                      ,{txt:`${attack_skill.begin}F～${attack_skill.end}F`,cls:`` ,sm_txt:``}
+	                      ,{txt:`${attack_skill.begin}-${attack_skill.end}F`,cls:`` ,sm_txt:``}
 					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``}
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``}
 					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``}
-					      ,{txt:`${attack_skill.base_damage * 1.2}%`,cls:`` ,sm_txt:``}
+					      ,{txt:`${BigNumber(attack_skill.base_damage).times(1.2) == 0? "-":BigNumber(attack_skill.base_damage).times(1.2)}`,cls:`` ,sm_txt:``}
 					   ]
     const defend_tr = $("<tr>",{class:"defend_tr"})
 	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? ` (${defend_skill.begin}F+硬直)` : ''	
