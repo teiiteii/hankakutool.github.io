@@ -39,7 +39,7 @@ function fighterSearchInput()
   })
   return searchedFighter
   }
-  const histry_max = 30
+  const histry_max = 150
   const histry_fighter_key = "search_fighter"
   
   const getHistoryFighter = ()=>{
@@ -63,7 +63,7 @@ const searchedFighter = fighter_name == "" ? getHistoryFighter():getSearchedFigh
 	 const selected_histry_count = Object.keys(searchedFighter).length
 	 if(selected_histry_count >= 1)
 	 {
-	   $(history_text).text("履歴" + selected_histry_count +"件")	 
+	   $(history_text).text("履歴"/* + selected_histry_count +"件"*/)	 
 	 }
 	 if(fighter_name=="")
 	 {

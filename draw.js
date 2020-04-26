@@ -41,7 +41,7 @@ function create_view(attack, defend)
 					      ,{txt:`${attack_skill.base_damage * 1.2}%`,cls:`` ,sm_txt:``}
 					   ]
     const defend_tr = $("<tr>",{class:"defend_tr"})
-	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? `（${defend_skill.begin}F+硬直${defend_skill.add_occurrence}F）` : ''	
+	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? ` (${defend_skill.begin}F+硬直)` : ''	
 		 ,defend_tds = [
 		                 {txt:`${defend_skill.skill_full_name}`,cls:`` ,sm_txt:``}
 	                    ,{txt:`${frame_trap}F`,cls:(frame_trap>=0) ? "grace_label grace_ok":"grace_label grace_ng" ,sm_txt:``}

@@ -37,7 +37,8 @@ $("#fighter_search").keypress((e)=>{
   }
   if($(".fighter_search_text").length == 1){
     $(".fighter_search_text").click()
-    return false;
+	$("#fighter_search").blur()
+    return false
     }
 	$(".fighter_search_text").each((i,e)=>{
   const fighter_name_input = $("#fighter_search").val()
@@ -46,7 +47,8 @@ $("#fighter_search").keypress((e)=>{
 	  if(fighter_name == $(e).text() || (isUndefined(fighter) == false && fighter_name == fighter.hiragana))
 	  {
 	    $(e).click()
-        return false;	 
+		$("#fighter_search").blur()
+        return false 
 	  }
 	})
 	

@@ -36,7 +36,7 @@ border-left: solid 0.40rem #88C6FD;
 .grace_label{
   color: #FFFFFF;
   border-radius:0.25rem;
-  padding:0 0.55rem;
+  padding:0 0.4rem;
 }
 .small_text{
   font-size:0.85em;
@@ -65,7 +65,9 @@ border-left: solid 0.40rem #88C6FD;
 
 }
 
-
+th{
+  /*font-size:0.85em;*/
+}
 
 h1 {
   margin: 0;
