@@ -51,7 +51,6 @@ $("#fighter_search").keypress((e)=>{
         return false 
 	  }
 	})
-	$("#fighter_search").blur()
   })
 });
 

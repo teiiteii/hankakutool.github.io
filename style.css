@@ -53,16 +53,27 @@ border-left: solid 0.40rem #88C6FD;
 .th_block_stun_difference{
   font-size:0.75em;
   vertical-align:middle!important;
+  
 }
 
 th{
   font-size:0.97em;
+  text-align:center
+
+
+}
+tr{
+  text-align:center;
 }
 .small_text{
   font-size:0.85em;
 }
+.tr_th_left{
+text-align: left;
 
-.tr_skill{
+}
+.tr_th_right{
+text-align: right;
 
 }
 
