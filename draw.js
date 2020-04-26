@@ -33,7 +33,7 @@ function create_view(attack, defend)
 		 ,frame_trap = block_stun_difference - occurrence
          ,attack_tr = $("<tr>")
 		 ,attack_tds = [
-                		   {txt:`${attack_skill.skill_full_name}`,cls:`` ,sm_txt:``}
+                		   {txt:`${attack_skill.skill_full_name}`,cls:`tr_skill` ,sm_txt:``}
 	                      ,{txt:`${attack_skill.begin}-${attack_skill.end}F`,cls:`` ,sm_txt:``}
 					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``}
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``}

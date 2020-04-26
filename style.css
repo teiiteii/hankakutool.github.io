@@ -26,21 +26,7 @@ border-left: solid 0.40rem #88C6FD;
   
 }
 
-.grace_ok{
-  background-color:#008D5C;
-}
-.grace_ng{
-  background-color:#CC4327;
-}
 
-.grace_label{
-  color: #FFFFFF;
-  border-radius:0.25rem;
-  padding:0 0.4rem;
-}
-.small_text{
-  font-size:0.8em;
-}
 .box_card{
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
@@ -65,15 +51,32 @@ border-left: solid 0.40rem #88C6FD;
 
 }
 .th_block_stun_difference{
-	  font-size:0.8em;
+  font-size:0.75em;
+  vertical-align:middle!important;
 }
-th.th_small{
-	  font-size:1em;
-}
+
 th{
+  font-size:0.97em;
+}
+.small_text{
+  font-size:0.85em;
+}
 
-  font-size:0.98em;
+.tr_skill{
 
+}
+
+.grace_ok{
+  background-color:#008D5C;
+}
+.grace_ng{
+  background-color:#CC4327;
+}
+
+.grace_label{
+  color: #FFFFFF;
+  border-radius:0.25rem;
+  padding:0 0.4rem;
 }
 
 h1 {
