@@ -29,7 +29,7 @@ $(document).ready( function()
 		$("body").removeClass('fixed')
         return false;
     });
-// エンターキーで以下を処理する
+
 $("#fighter_search").keypress((e)=>{
   if(e.which!=13)
   {
@@ -51,8 +51,7 @@ $("#fighter_search").keypress((e)=>{
         return false 
 	  }
 	})
-	
-
+	$("#fighter_search").blur()
   })
 });
 
