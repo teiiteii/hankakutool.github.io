@@ -236,10 +236,9 @@ function run() {
 		 ,tw_defend = $("#defend_fighter_text").val()
 		 ,tw_attack_skill = $("[id='attack_skill_genre_select'] option:selected").text()
 		 ,text = (tw_attack == "" || tw_defend == "" || tw_attack_skill == "") ? "スマブラspの反撃確定をチェックするツール 🦉":`${tw_attack}の${tw_attack_skill}に${tw_defend}が反撃する時の結果↓🦉🦉` 	 
-	     
-	const twitter = `<a data-text="${text}" data-hashtags="${hashtags}" data-url="${url}" data-lang="{langage}" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`
+
+	const twitter = `<a style= data-text="${text}" data-hashtags="${hashtags}" data-url="${url}" data-lang="{langage}" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`
 	$("#twitter_button").html(twitter)
-	
 	
     function init() {
         const is_criterion_attacker_spell = true
