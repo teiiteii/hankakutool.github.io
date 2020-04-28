@@ -229,7 +229,7 @@ function run() {
     history.pushState(null, null, urlParameter);
 	$("#share_url_text").val(location.href)
 	$("#twitter_button").children().remove()
-	const hashtags = "スマブラ反確認エアッー"
+	const hashtags = "スマブラ反撃確認エアッー"
 	     ,url = location.href
 		 ,langage = "ja"
 		 ,tw_attack = $("#attack_fighter_text").val()
