@@ -73,69 +73,80 @@
         </div>
       </div>
     </div>
-  <div class="container">
-    <div id="attacks_result" class="mx-auto" style="max-width:30rem"></div>
-  </div>
     <div class="container">
-      <div class="box_card mx-auto" style="max-width:30rem">  
-	  <div class="col">
-        <div class="input-group">
-         <input type="text" id="share_url_text" class="form-control form-control-sm" readonly><span class="input-group-text clipboard_btn" data-clipboard-target="#share_url_text"><i class="fa fa-paste" aria-hidden="true"></i></span>
-        
-		 </div> <span id="twitter_button"></span>
-      </div>
+      <div id="attacks_result" class="mx-auto" style="max-width:30rem"></div>
     </div>
-  </div>  
-  <!--HTML終了#############################-->
-  <!--start フレームリザルト-->
-  <div id="result_row_original" class="row box_card shadow-sm result_paling" style="visibility:collapse; max-width:40rem">
     <div class="container">
-      <div class="row">
-        <div class="table-responsive">
-          <table class="attack_table table table-sm text-nowrap">
-            <tr>
-              <th class="th_attack_fighter_name attack_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
-              <th>発生</th>
-              <th>前隙</th>
-              <th>後隙</th>
-              <th>全体</th>
-              <th>％</th>
-            </tr>
-          </table>
+      <div class="box_card mx-auto" style="max-width:30rem">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col"> <label class="input_title">共有</label></div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="input-group"> <input type="text" id="share_url_text" class="form-control form-control-sm" readonly><span class="input-group-text clipboard_btn" data-clipboard-target="#share_url_text"><i class="fa fa-paste" aria-hidden="true"></i></span> </div> <span id="twitter_button"></span> </div>
+          </div>
+          <div class="row">
+            <div class="col"> <label class="input_title">ツールの更新情報</label></div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div style="text-align:center;"><a class="twitter-timeline" data-width="400" href="https://twitter.com/tete2020200?ref_src=twsrc%5Etfw">Tweets by tete2020200</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="table-responsive">
-          <table class="defend_table table table-sm text-nowrap">
-            <tr>
-              <th class="th_defend_fighter_name defend_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
-              <th class="tr_th_right" style="width:1rem;">猶予</th>
-              <th class="th_block_stun_difference">硬直差</th>
-              <th class="tr_th_left">発生</th>
-            </tr>
-          </table>
+    </div>
+    <!--HTML終了#############################-->
+    <!--start フレームリザルト-->
+    <div id="result_row_original" class="row box_card shadow-sm result_paling" style="visibility:collapse; max-width:40rem">
+      <div class="container">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="attack_table table table-sm text-nowrap">
+              <tr>
+                <th class="th_attack_fighter_name attack_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
+                <th>発生</th>
+                <th>前隙</th>
+                <th>後隙</th>
+                <th>全体</th>
+                <th>％</th>
+              </tr>
+            </table>
+          </div>
         </div>
+        <div class="row">
+          <div class="table-responsive">
+            <table class="defend_table table table-sm text-nowrap">
+              <tr>
+                <th class="th_defend_fighter_name defend_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
+                <th class="tr_th_right" style="width:1rem;">猶予</th>
+                <th class="th_block_stun_difference">硬直差</th>
+                <th class="tr_th_left">発生</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row error_message" style="visibility:hidden">反撃できる技がありません or 技が未登録</div>
       </div>
-      <div class="row error_message" style="visibility:hidden">反撃できる技がありません or 技が未登録</div>
     </div>
-  </div>
-  <!--end フレームリザルト-->
-  <!--start キャラ選択-->
-  <div id="fighter_select_modal" class="modal js-modal">
-    <div class="modal_background js-modal-close"></div>
-    <div class="modal_content box_card" style="max-width:30rem">
-      <div class="box_header" id="fighter_select_header" style="width: 100%;">
-        <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
+    <!--end フレームリザルト-->
+    <!--start キャラ選択-->
+    <div id="fighter_select_modal" class="modal js-modal">
+      <div class="modal_background js-modal-close"></div>
+      <div class="modal_content box_card" style="max-width:30rem">
+        <div class="box_header" id="fighter_select_header" style="width: 100%;">
+          <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
+        </div>
+        <form action="/search" onsubmit="return false" autocomplete="off">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1" onclick="alert('これは隠しメッセージです。\nキャラ名を入力して下のリストからキャラ選択してね。\nリストが1件の時orキャラ名を全部入力してエンター（改行）押すと直接入力できるよ。')"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+        </form>
+        <div id="fighter_search_texts"> </div>
       </div>
-      <form action="/search" onsubmit="return false" autocomplete="off">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1" onclick="alert('これは隠しメッセージです。\nキャラ名を入力して下のリストからキャラ選択してね。\nリストが1件の時orキャラ名を全部入力してエンター（改行）押すと直接入力できるよ。')"><i class="fa fa-search" aria-hidden="true"></i></span></div>
-      </form>
-      <div id="fighter_search_texts"> </div>
-	  
-	  <a class="twitter-timeline" href="https://twitter.com/tete2020200?ref_src=twsrc%5Etfw">Tweets by tete2020200</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-  </div>
-  <!--end キャラ選択-->
+    <!--end キャラ選択-->
 </body>
 </html>
