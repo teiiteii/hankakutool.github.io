@@ -227,7 +227,17 @@ function run() {
     //console.log(attack)
     //location.search = urlParameter
     history.pushState(null, null, urlParameter);
-
+	$("#share_url_text").val(location.href)
+	$("#twitter_button").children().remove()
+	const hashtags = "スマブラ反確認エアッー"
+	     ,url = location.href
+		 ,langage = "ja"
+		 ,text = "" 
+	
+	const twitter = `<a data-text="${text}" data-hashtags="${hashtags}" data-url="${url}" data-lang="{langage}" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`
+	$("#twitter_button").html(twitter)
+	
+	
     function init() {
         const is_criterion_attacker_spell = true
           , selected_skill_id = 0
