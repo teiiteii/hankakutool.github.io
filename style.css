@@ -17,11 +17,16 @@
 }
 header {
   text-align: center;
-   padding: 0.4rem 0;  
+   padding: 0.4rem 0;  	 color: #000000;  text-decoration: none;
 }
+header a{
+  color: #000000;
+}
+
 header .headline{
    font-size:1em;
    	font-weight:700;
+
 }
 .attack_background_color{
   background-color:#F85662;

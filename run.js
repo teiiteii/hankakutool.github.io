@@ -1,5 +1,7 @@
 //当たるフレーム速さで隙が変わるか
 //2段技。連続技
+
+const attack_skill_no_select_text = "▼ 攻撃技を選択"
  const skillSort = (a, b)=>{ 
     if (a.sort_no < b.sort_no){ return -1}
     if (a.sort_no > b.sort_no){return 1}
@@ -11,7 +13,7 @@ function updateSkillGenreSelect(player, fighter) {
     const sorted_skill_genres = [...skill_genres].sort((a,b)=>(skillSort(a,b)))
 	if(player == "attack")
 	{
-	$(pulldown).append(`<option value="none"></option>`)		
+	$(pulldown).append(`<option value="none">${attack_skill_no_select_text}</option>`)		
 	}
 	else
 	{
@@ -235,7 +237,7 @@ function run() {
 		 ,tw_attack = $("#attack_fighter_text").val()
 		 ,tw_defend = $("#defend_fighter_text").val()
 		 ,tw_attack_skill = $("[id='attack_skill_genre_select'] option:selected").text()
-		 ,text = (tw_attack == "" || tw_defend == "" || tw_attack_skill == "") ? "スマブラspの反撃確定をチェックするツール↓🦉":`${tw_attack}の${tw_attack_skill}に${tw_defend}が反撃確定できる技↓🦉🦉` 	 
+		 ,text = (tw_attack == "" || tw_defend == "" || tw_attack_skill == "" || tw_attack_skill == attack_skill_no_select_text) ? "スマブラspの反撃確定をチェックするツール↓🦉":`${tw_attack}の${tw_attack_skill}に${tw_defend}が反撃確定できる技↓🦉🦉` 	 
 
 	const twitter = `<a data-text="${text}" data-hashtags="${hashtags}" data-url="${url}" data-lang="{langage}" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`
 	$("#twitter_button").html(twitter)
