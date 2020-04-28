@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="スマブラSPの反撃確定確認ツールです">
-  <script type='text/javascript' src="./bignumber.min.js"></script>  
+  <script type='text/javascript' src="./bignumber.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
@@ -19,34 +19,28 @@
 </head>
 <body class="page_whole">
   <div class="container">
-<header class="mx-auto">
-  <h1 class="headline">
-    <a>スマブラ反撃チェッカー エアー！</a>
-  </h1>データまだ未登録です。マリオ、リンク、ルキナデータは多少あります。入力手伝ってほしいだなも
-</header>  
- 
+    <header class="mx-auto">
+      <h1 class="headline"> <a>スマブラ反撃チェッカー エアー！</a> </h1>データまだ未登録です。マリオ、リンク、ルキナデータは多少あります。入力手伝ってほしいだなも </header>
     <div class="box_card mx-auto" style="max-width:30rem">
       <div class="box_header attack_background_color" id="attack_header" style="width:100%">
         <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
       </div>
       <div class="container-fluid">
-        <div class="row"> <label class="input_title">攻撃側ファイター</label> </div>
+        <div class="row">
+          <div class="col"><label class="input_title">攻撃側ファイター</label> </div>
+        </div>
         <div class="form-row">
           <div class="col-8"><input type="text" id="attack_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack" style="background-color:#FFFFFF" readonly></div>
           <div class="col-4"><button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
         </div>
-         <div class="row"> <label class="input_title">攻撃技</label> </div> 
-					<div class="col">
-         <div class="row"><select id = "attack_skill_genre_select" class="custom-select custom-select-sm" onchange="attack_skill_genre_selected()">
-                            </select>    <div class="row">
-							<input id="item-1" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1" checked="checked" /> 
-							<label class="radio-inline__label" for="item-1">全て</label> <input id="item-2" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" /> 
-							<label class="radio-inline__label" for="item-2">地上技</label> <input id="item-3" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" />
-							<label class="radio-inline__label" for="item-3">空中技</label> <input id="item-4" class="radio-inline__input" type="radio" name="accessible-radio" value="item-4" /> 
-							<label class="radio-inline__label" for="item-4">B技</label> </label
-          
-		  </div> </div>
-		  </div></div>
+        <div class="row">
+          <div class="col"><label class="input_title">攻撃技</label> </div>
+        </div>
+        <div class="row">
+          <div class="col"><select id="attack_skill_genre_select" class="custom-select custom-select-sm" onchange="attack_skill_genre_selected()">
+                            </select> </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -55,79 +49,82 @@
         <p class="box_title text-center " style="width: auto; height:auto;">反撃側</p>
       </div>
       <div class="container-fluid">
-        <div class="row"> <label class="input_title">反撃側ファイター</label> </div>
+        <div class="row">
+          <div class="col"><label class="input_title">反撃側ファイター</label> </div>
+        </div>
         <div class="form-row">
           <div class="col-8"><input type="text" id="defend_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="defend" style="background-color:#FFFFFF" readonly></div>
           <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
         </div>
-		  <div class="row"> <label class="input_title">反撃技</label> </div> 
-					<div class="col">
-         <div class="row"><select id = "defend_skill_genre_select" class="custom-select custom-select-sm" onchange="run()">
+        <div class="row">
+          <div class="col"><label class="input_title">反撃技</label> </div>
+        </div>
+        <div class="row">
+          <div class="col"><select id="defend_skill_genre_select" class="custom-select custom-select-sm" onchange="run()">
                             </select> </div>
-        <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
-					<div class="col">
-         <div class="row"><select class="custom-select custom-select-sm">
-                                <option value="value1">Text 1</option>
-                                <option value="value2">Text 2</option>
-                                <option value="value3">Text 3</option>
-                            </select>    <div class="row">
-							<input id="item-1" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1" checked="checked" /> 
-							<label class="radio-inline__label" for="item-1">全て</label> <input id="item-2" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" /> 
-							<label class="radio-inline__label" for="item-2">地上技</label> <input id="item-3" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" />
-							<label class="radio-inline__label" for="item-3">空中技</label> <input id="item-4" class="radio-inline__input" type="radio" name="accessible-radio" value="item-4" /> 
-							<label class="radio-inline__label" for="item-4">B技</label> </label
-          
-		  </div> </div>
-		  </div>>--></div>
+        </div>
+        <div class="row">
+          <div class="col"><label class="input_title">空中-F表示数</label> </div>
+        </div>
+        <div class="row">
+          <div class="col"><select id="minus_grace_max_num" class="custom-select custom-select-sm" onchange="run()">
+                           <option value="0">0件</option><option value="1">1件</option><option value="2">2件</option><option value="3" selected>3件</option><option value="4">4件</option><option value="5">5件</option> </select> </div>
+        </div>
+		
+		
+      </div>
     </div>
-  </div>
-  <div class="container">
-    <div id="attacks_result" class="mx-auto" style="max-width:30rem"></div>
-  </div>
-  <!--HTML終了#############################-->
-  <!--start フレームリザルト-->
-  <div id="result_row_original" class="row box_card shadow-sm result_paling" style="visibility:collapse; max-width:40rem">
     <div class="container">
-
-      <div class="row">	<div class = "table-responsive">
-        <table class="attack_table table table-sm text-nowrap">
-          <tr>
-            <th class="th_attack_fighter_name attack_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
-            <th >発生</th>
-            <th >前隙</th>
-            <th >後隙</th>
-            <th >全体</th>
-            <th>％</th>
-          </tr>
-        </table>
-      </div> </div>
-      <div class="row"><div class = "table-responsive">
-        <table class="defend_table table table-sm text-nowrap">
-          <tr>
-            <th class="th_defend_fighter_name defend_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
-            <th class="tr_th_right" style="width:1rem;">猶予</th>
-            <th class="th_block_stun_difference">硬直差</th>
-            <th class="tr_th_left">発生</th>
-          </tr>
-        </table></div>
-      </div>
-    </div>  
-  </div>
-  <!--end フレームリザルト-->
-  <!--start キャラ選択-->
-  <div id="fighter_select_modal" class="modal js-modal">
-    <div class="modal_background js-modal-close"></div>
-    <div class="modal_content box_card" style="max-width:30rem">
-      <div class="box_header" id="fighter_select_header" style="width: 100%;">
-        <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
-      </div>
-      <form action="/search" onsubmit="return false" autocomplete="off">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span></div>
-      </form>
-      <div id="fighter_search_texts"> </div>
+      <div id="attacks_result" class="mx-auto" style="max-width:30rem"></div>
     </div>
-  </div>
-  <!--end キャラ選択-->
+    <!--HTML終了#############################-->
+    <!--start フレームリザルト-->
+    <div id="result_row_original" class="row box_card shadow-sm result_paling" style="visibility:collapse; max-width:40rem">
+      <div class="container">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="attack_table table table-sm text-nowrap">
+              <tr>
+                <th class="th_attack_fighter_name attack_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
+                <th>発生</th>
+                <th>前隙</th>
+                <th>後隙</th>
+                <th>全体</th>
+                <th>％</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="table-responsive">
+            <table class="defend_table table table-sm text-nowrap">
+              <tr>
+                <th class="th_defend_fighter_name defend_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
+                <th class="tr_th_right" style="width:1rem;">猶予</th>
+                <th class="th_block_stun_difference">硬直差</th>
+                <th class="tr_th_left">発生</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+		<div class="row error_message" style="visibility:hidden">反撃できる技がありません or 技が未登録</div>
+      </div>
+    </div>
+    <!--end フレームリザルト-->
+    <!--start キャラ選択-->
+    <div id="fighter_select_modal" class="modal js-modal">
+      <div class="modal_background js-modal-close"></div>
+      <div class="modal_content box_card" style="max-width:30rem">
+        <div class="box_header" id="fighter_select_header" style="width: 100%;">
+          <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
+        </div>
+        <form action="/search" onsubmit="return false" autocomplete="off">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+        </form>
+        <div id="fighter_search_texts"> </div>
+      </div>
+    </div>
+    <!--end キャラ選択-->
 </body>
 </html>

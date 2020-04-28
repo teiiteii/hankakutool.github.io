@@ -21,9 +21,38 @@ function create_view(attack, defend)
 	   const sort2 = Number($(tr2).find(".sort").val())
        return (sort1 > sort2) ? 1:-1
     })
+	let minus_grace_num = 0
+	const defend_tr_num = $(trs).length
+	const is_attack_skill_air = skill_genres.filter((s=>(s.skill_genre == attack_skill.skill_genre)))[0].is_air	   
+   $(trs).each((i,tr)=>{
 
+	   if($(tr).find(".grace_ng").length >= 1)
+	   {
+		   minus_grace_num++
+		   if(isUndefined(is_attack_skill_air) == true)
+		   {
+			  $(tr).hide();
+		   }else if(is_attack_skill_air == true && minus_grace_num >= defend.minus_grace_max_num)
+	   {
+	      $(tr).hide();
+	   }
+	
+	   }
+
+	 
+    })
+	   
+	   
 	$(tbody).append($(trs))
 	$("#attacks_result").append($(result_row)) 
+
+
+	 const is_defend_tr_draw = ($(trs).find(".grace_ok").length >= 1 || is_attack_skill_air == true)
+	   if(is_defend_tr_draw == false)
+	   {
+		  $(tbody).find("defend_tr").hide();
+  		   $(result_row).find(".error_message").css({"visibility":"visible"});
+	   }
   })
 
   function view_frame(attack, defend, attack_skill, defend_skill, result_row, index)

@@ -9,8 +9,19 @@ function updateSkillGenreSelect(player, fighter) {
     const pulldown = $(`#${player}_skill_genre_select`)
     $(pulldown).children("option").remove()
     const sorted_skill_genres = [...skill_genres].sort((a,b)=>(skillSort(a,b)))
-	$(pulldown).append(`<option value="">全て</option>`)
+	if(player == "attack")
+	{
+	$(pulldown).append(`<option value="none"></option>`)		
+	}
+	else
+	{
+	$(pulldown).append(`<option value="all">全て</option>`)
+	}
     sorted_skill_genres.forEach(s=>$(pulldown).append(`<option value="${s.skill_genre}">${s.full_name}</option>`))
+if(player == "attack")
+	{
+	$(pulldown).append(`<option value="all">全て</option>`)		
+	}
 }
 function getSkillBigGenre(skill)
 {
@@ -22,10 +33,15 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 	{
 		edit_skills = edit_skills.filter(s=>(s.fighter_id == fighter_id))
 	}
-	if(skill_genre != "" && isUndefined(skill_genre) == false)
+	if(skill_genre != "all" && isUndefined(skill_genre) == false)
 	{
 		edit_skills = edit_skills.filter(s=>(s.skill_genre == skill_genre))
 	}
+	if(skill_genre == "none")
+	{
+		edit_skills = []
+	}
+	
 	if(isUndefined(skill_big_genre) == false)
 	{
 		edit_skills = edit_skills.filter(s=>(getSkillBigGenre(s) == skill_big_genre))
@@ -183,18 +199,20 @@ function run() {
     {//  return
     }
     attack = {
-        ...fighters.find(s=>(s.name == $("#attack_fighter_text").val())),
-        skills: null,
-        op: 1.05,
-        until_landing: 0
+        ...fighters.find(s=>(s.name == $("#attack_fighter_text").val()))
+        ,skills: null
+        ,op: 1.05
+        ,until_landing: 0
     }
 
+    const minus_grace_max_num = $("#minus_grace_max_num").val()
     defend = {
-        ...fighters.find(s=>(s.name == $("#defend_fighter_text").val())),
-        skills: null,
-        action: action_shield,
-        is_ground: true,
-        is_jump_b: false
+        ...fighters.find(s=>(s.name == $("#defend_fighter_text").val()))
+        ,skills: null
+        ,action: action_shield
+        ,is_ground: true
+        ,is_jump_b: false
+		,minus_grace_max_num
     }
 
     if (isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
