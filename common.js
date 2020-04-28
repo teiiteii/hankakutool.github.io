@@ -3,6 +3,12 @@ function getUrlParameters()
   var ans = []
   const parameter_url = location.search.substring(1)
        ,parameters = parameter_url.split("&")
+  
+  if(parameters[0] == "")
+  {
+	  parameters.shift()
+  }
+  
   if(parameter_url == "")
   { 
      return ans

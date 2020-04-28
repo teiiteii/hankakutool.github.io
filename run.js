@@ -216,13 +216,13 @@ function run() {
     }
 
     if (isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
-        //alert("おっ 新ファイターかい？ ファイターは正しく入力してね")
-        return
-    }
+        //ファイター未入力
+    }else
+	{
     console.log("測定開始")
     init()
     create_view(attack, defend)
-
+	}
     console.log(defend)
     //console.log(attack)
     //location.search = urlParameter
