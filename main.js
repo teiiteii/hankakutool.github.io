@@ -1,9 +1,10 @@
 $(document).ready( function()
 {
   const urlParameters = getUrlParameters()
-  urlParameters.forEach(p=>parameterToInput(p))
-  updateSkillGenreSelect("attack", null)
+    updateSkillGenreSelect("attack", null)
   updateSkillGenreSelect("defend", null)
+  urlParameters.forEach(p=>parameterToInput(p))
+
 
   $("input").change(function() {
     run()
