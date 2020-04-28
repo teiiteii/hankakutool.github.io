@@ -130,7 +130,9 @@ form.output.textContent = frame_str_datas;
 	 
 	  const damages = f.damage.toString().split("/")
 	  const distinct_damages = damages.filter((d,i,array)=>(array.indexOf(d) === i))
-	 distinct_damages.forEach((d, index, array)=>{
+	  const sorted_damages = distinct_damages.map(Number).reverse()
+	  
+	 sorted_damages.forEach((d, index, array)=>{
 		 
 		const data=  {
 			...f
@@ -139,6 +141,7 @@ form.output.textContent = frame_str_datas;
 		 if(array.length>=2)
 		 {
 			 data["attribute1"] = "multiple_damage"
+			 data["damage_no"] = index + 1
 		 }
 		 result_frame_data.push(data)
 	  })})
@@ -185,6 +188,7 @@ form.output.textContent = frame_str_datas;
 		,test_message = isUndefined(f.test_message)? "":f.test_message
 		,test_persistences = undefined
 		,test_skill_genre_name = f.name1
+		
 
 	if(name2s.some(t=>(t.trim() == "弱1"))){alias = "弱1"}
 	if(name2s.some(t=>(t.trim() == "弱2"))){alias = "弱2"}
@@ -285,6 +289,7 @@ form.output.textContent = frame_str_datas;
 		,skill_genre
 		,fighter_id
 		,damage
+		,damage_no
 		,serial_num_str
 		,test_serial_num_strs
 		,name2
@@ -321,6 +326,7 @@ form.output.textContent = frame_str_datas;
 		d += getNum("end", end)		                           //発生終了フレ
 		d += getNum("time", time2)		                       //全体フレ
 		d += getNum("base_damage", damage)		               //基礎ダメージ
+		d += getNum("damage_no", damage_no)		               //同技のヒット位置で変わるダメージ順番		
 		d += getStr("alias", alias)		                        //別名
 
 		d += getNum("persistence_num", persistence_num)		    //持続技		

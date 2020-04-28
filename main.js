@@ -2,6 +2,8 @@ $(document).ready( function()
 {
   const urlParameters = getUrlParameters()
   urlParameters.forEach(p=>parameterToInput(p))
+  updateSkillGenreSelect("attack", null)
+  updateSkillGenreSelect("defend", null)
 
   $("input").change(function() {
     run()
@@ -29,7 +31,7 @@ $(document).ready( function()
 		$("body").removeClass('fixed')
         return false;
     });
-
+	
 $("#fighter_search").keypress((e)=>{
   if(e.which!=13)
   {

@@ -35,12 +35,9 @@
           <div class="col-8"><input type="text" id="attack_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="attack" style="background-color:#FFFFFF" readonly></div>
           <div class="col-4"><button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
         </div>
-        <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
+         <div class="row"> <label class="input_title">攻撃技</label> </div> 
 					<div class="col">
-         <div class="row"><select class="custom-select custom-select-sm">
-                                <option value="value1">Text 1</option>
-                                <option value="value2">Text 2</option>
-                                <option value="value3">Text 3</option>
+         <div class="row"><select id = "attack_skill_genre_select" class="custom-select custom-select-sm" onchange="attack_skill_genre_selected()">
                             </select>    <div class="row">
 							<input id="item-1" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1" checked="checked" /> 
 							<label class="radio-inline__label" for="item-1">全て</label> <input id="item-2" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2" /> 
@@ -49,7 +46,7 @@
 							<label class="radio-inline__label" for="item-4">B技</label> </label
           
 		  </div> </div>
-		  </div>>--></div>
+		  </div></div>
     </div>
   </div>
   <div class="container">
@@ -63,6 +60,10 @@
           <div class="col-8"><input type="text" id="defend_fighter_text" class="js_url_parameter form-control form-control-sm select_box caret_none js-modal-open" data-target="fighter_select_modal" data-player="defend" style="background-color:#FFFFFF" readonly></div>
           <div class="col-4"> <button type="button" class="btn" style="width: 3rem; height: 2rem; text-align: center; line-height:0rem;" onclick="exchange_fighter()">↑↓</button> </div>
         </div>
+		  <div class="row"> <label class="input_title">反撃技</label> </div> 
+					<div class="col">
+         <div class="row"><select id = "defend_skill_genre_select" class="custom-select custom-select-sm" onchange="run()">
+                            </select> </div>
         <!-- <div class="row"> <label class="input_title">攻撃技</label> </div> 
 					<div class="col">
          <div class="row"><select class="custom-select custom-select-sm">
