@@ -1,39 +1,35 @@
 const skill_genres =
 [
-  {skill_genre:10100, name:"ダッシュ投げ", guard_cancel:11, is_item_throw:true}
- ,{skill_genre:10101, name:"アイテム上投げ", guard_cancel:11, is_item_throw:true}
- ,{skill_genre:10102, name:"アイテム前投げ", guard_cancel:11, is_item_throw:true}
- ,{skill_genre:10103, name:"アイテム後投げ", guard_cancel:11, is_item_throw:true}
- ,{skill_genre:10104, name:"アイテム下投げ", guard_cancel:11, is_item_throw:true}
- ,{skill_genre:10105, name:"攻撃上がり", is_get_up:true}
- ,{skill_genre:10106, name:"起き上がり攻撃", is_get_up:true}
- ,{skill_genre:10200, name:"その場投げ", guard_cancel:0, shield_add_frame:4, throw_minus_frame:-2, is_throw:true}
- ,{skill_genre:10201, name:"アイテム弾き上投げ", guard_cancel:0, is_item_throw:true}
- ,{skill_genre:10202, name:"アイテム弾き前投げ", guard_cancel:0, is_item_throw:true}
- ,{skill_genre:10203, name:"アイテム弾き後投げ", guard_cancel:0, is_item_throw:true}
- ,{skill_genre:10204, name:"アイテム弾き下投げ", guard_cancel:0, is_item_throw:true}
- ,{skill_genre:10300, name:"弱", guard_cancel:11, is_jab:true}
- ,{skill_genre:10400, name:"DA", guard_cancel:11, is_da:true}
- ,{skill_genre:10500, name:"上強", guard_cancel:11, is_tilt:true}
- ,{skill_genre:10501, name:"横強", guard_cancel:11, is_tilt:true}
- ,{skill_genre:10502, name:"下強", guard_cancel:11, is_tilt:true}
- ,{skill_genre:10600, name:"上スマ", guard_cancel:0, is_smach:true}
- ,{skill_genre:10601, name:"横スマ", guard_cancel:11, is_smach:true}
- ,{skill_genre:10602, name:"下スマ", guard_cancel:11, is_smach:true}
- ,{skill_genre:10700, name:"上B", guard_cancel:0, jump_frame:3, is_b:true}
- ,{skill_genre:10701, name:"横B", guard_cancel:11, jump_frame:3, is_b:true}
- ,{skill_genre:10702, name:"下B", guard_cancel:11, jump_frame:3, is_b:true}
- ,{skill_genre:10703, name:"NB", guard_cancel:11, jump_frame:3, is_b:true}
- ,{skill_genre:10800, name:"空中限定上B", guard_cancel:0, jump_frame:3, is_b:true}
- ,{skill_genre:10801, name:"空中限定横B", guard_cancel:0, jump_frame:3, is_b:true}
- ,{skill_genre:10802, name:"空中限定下B", guard_cancel:0, jump_frame:3, is_b:true}
- ,{skill_genre:10803, name:"空中限定NB", guard_cancel:0, jump_frame:3, is_b:true}
- ,{skill_genre:10900, name:"空上", guard_cancel:0, jump_frame:3, is_air:true}
- ,{skill_genre:10901, name:"空前", guard_cancel:0, jump_frame:3, is_air:true}
- ,{skill_genre:10902, name:"空下", guard_cancel:0, jump_frame:3, is_air:true}
- ,{skill_genre:10903, name:"空後", guard_cancel:0, jump_frame:3, is_air:true}
- ,{skill_genre:10904, name:"空N", guard_cancel:0, jump_frame:3, is_air:true}
- ,{skill_genre:11000, name:"アイテム落とし", guard_cancel:0, jump_frame:3, is_item_throw:true}
+  {skill_genre:10100, name:"ダッシュ投げ", guard_cancel:11, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10101, name:"アイテム上投げ", guard_cancel:11, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10102, name:"アイテム前投げ", guard_cancel:11, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10103, name:"アイテム後投げ", guard_cancel:11, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10104, name:"アイテム下投げ", guard_cancel:11, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10105, name:"攻撃上がり", is_get_up:true,full_name:"?"}
+ ,{skill_genre:10106, name:"起き上がり攻撃", is_get_up:true,full_name:"?"}
+ ,{skill_genre:10200, name:"その場投げ", guard_cancel:0, shield_add_frame:4, throw_minus_frame:-2, is_throw:true,full_name:"?"}
+ ,{skill_genre:10201, name:"アイテム弾き上投げ", guard_cancel:0, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10202, name:"アイテム弾き前投げ", guard_cancel:0, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10203, name:"アイテム弾き後投げ", guard_cancel:0, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10204, name:"アイテム弾き下投げ", guard_cancel:0, is_item_throw:true,full_name:"?"}
+ ,{skill_genre:10300, name:"弱", guard_cancel:11, is_jab:true,full_name:"弱攻撃"}
+ ,{skill_genre:10400, name:"DA", guard_cancel:11, is_da:true,full_name:"ダッシュ攻撃"}
+ ,{skill_genre:10500, name:"上強", guard_cancel:11, is_tilt:true,full_name:"上強"}
+ ,{skill_genre:10501, name:"横強", guard_cancel:11, is_tilt:true,full_name:"横強"}
+ ,{skill_genre:10502, name:"下強", guard_cancel:11, is_tilt:true,full_name:"下強"}
+ ,{skill_genre:10600, name:"上スマ", guard_cancel:0, is_smach:true,full_name:"上スマッシュ"}
+ ,{skill_genre:10601, name:"横スマ", guard_cancel:11, is_smach:true,full_name:"横スマッシュ"}
+ ,{skill_genre:10602, name:"下スマ", guard_cancel:11, is_smach:true,full_name:"下スマッシュ"}
+ ,{skill_genre:10700, name:"上B", guard_cancel:0, jump_frame:3, is_b:true,full_name:"上B"}
+ ,{skill_genre:10701, name:"横B", guard_cancel:11, jump_frame:3, is_b:true,full_name:"横B"}
+ ,{skill_genre:10702, name:"下B", guard_cancel:11, jump_frame:3, is_b:true,full_name:"下B"}
+ ,{skill_genre:10703, name:"NB", guard_cancel:11, jump_frame:3, is_b:true,full_name:"NB"}
+ ,{skill_genre:10900, name:"空上", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空上"}
+ ,{skill_genre:10901, name:"空前", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空前"}
+ ,{skill_genre:10902, name:"空下", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空下"}
+ ,{skill_genre:10903, name:"空後", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空後"}
+ ,{skill_genre:10904, name:"空N", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空N"}
+ ,{skill_genre:11000, name:"アイテム落とし", guard_cancel:0, jump_frame:3, is_item_throw:true,full_name:"?"}
 ]
 const fighters = 
 [

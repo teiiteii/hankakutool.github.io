@@ -33,7 +33,7 @@ function create_view(attack, defend)
 		 ,frame_trap = block_stun_difference - occurrence
          ,attack_tr = $("<tr>")
 		 ,attack_tds = [
-                		   {txt:`${attack_skill.skill_full_name}`,cls:`tr_th_left` ,sm_txt:``,cls_td:`tr_th_left`}
+                		   {txt:`${attack_skill.skill_name}`,cls:`tr_th_left` ,sm_txt:`${(attack_skill.skill_detail_name == "")? "": "(" + attack_skill.skill_detail_name + ")"}`,cls_td:`tr_th_left`}
 	                      ,{txt:`${attack_skill.begin}-${attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
@@ -43,7 +43,7 @@ function create_view(attack, defend)
     const defend_tr = $("<tr>",{class:"defend_tr"})
 	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? ` (${defend_skill.begin}F+硬直)` : ''	
 		 ,defend_tds = [
-		                 {txt:`${defend_skill.skill_full_name}`,cls:`tr_th_left` ,sm_txt:``,cls_td:`tr_th_left`}
+		                 {txt:`${defend_skill.skill_name}`,cls:`tr_th_left` ,sm_txt:`${(defend_skill.skill_detail_name == "")? "": "(" + defend_skill.skill_detail_name + ")"}`,cls_td:`tr_th_left`}
 	                    ,{txt:`${frame_trap}F`,cls:(frame_trap>=0) ? "grace_label grace_ok":"grace_label grace_ng" ,sm_txt:``,cls_td:`tr_th_right`}
 					    ,{txt:`${block_stun_difference}F`,cls:`` ,sm_txt:``,cls_td:``}
                         ,{txt:`${occurrence}F`,cls:`` ,sm_txt:defend_occurrence_text,cls_td:`tr_th_left`}

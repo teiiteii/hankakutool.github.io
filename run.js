@@ -192,13 +192,17 @@ function run()
       const block_stun = getBlockStun(skill)
            ,block_stun_difference = getBlockStunDifference(skill, block_stun)
 	       ,skill_genre_name = getSkillGenreName(skill.skill_genre)
-	       ,skill_full_name = getSkillFullName(skill)
+	       ,skill_name = getSkillName(skill)
+	       ,skill_detail_name = getSkillDetailName(skill)
+		   
+		     
       return {
-	    ...skill, 
-	    block_stun,
-		block_stun_difference,
-		skill_genre_name,
-		skill_full_name
+	    ...skill
+	    ,block_stun
+		,block_stun_difference
+		,skill_genre_name
+		,skill_name
+		,skill_detail_name
       }
     })
     defend.skills = defend_skills.map((skill)=>
@@ -207,7 +211,8 @@ function run()
 	    ...skill
 	   ,add_occurrence:getAddOccurrence(defend, skill)
        ,skill_genre_name:getSkillGenreName(skill.skill_genre)
-	   ,skill_full_name:getSkillFullName(skill)
+	   ,skill_name:getSkillName(skill)
+	   ,skill_detail_name:getSkillDetailName(skill)  
 	  }
     })
   }
@@ -285,14 +290,18 @@ function run()
   function getSkillGenreName(skill_genre){return skill_genres.find(s=>(s.skill_genre == skill_genre)).name}
 
 
-  function getSkillFullName(skill)
+  function getSkillName(skill)
   {
-     const skill_genre_name = getSkillGenreName(skill.skill_genre)
-     var add_name = ""
-	 add_name += (skill.is_reverse == true) ? "反転" : "" 	 
-	 add_name += (skill.is_meaty == true) ? "持続" : "" 
-	 add_name += (isUndefined(skill.name) == false) ? "[" + skill.name + "]": ""
-	 return (add_name == "") ? skill_genre_name : skill_genre_name + "(" + add_name + ")"
+     let name = (isUndefined(skill.alias) == false) ? skill.alias:getSkillGenreName(skill.skill_genre)
+	 return name
+  }
+  function getSkillDetailName(skill)
+  {
+     let add_name = ""
+	 add_name += (isUndefined(skill.persistence_num) == false) ? "持続" : ""
+     add_name += (isUndefined(skill.serial_num_str) == false) ? "連続" : ""	 
+	
+	 return add_name
   }
 
 
