@@ -206,6 +206,9 @@ function run(frame_view_mode="") {
 	if(frame_view_mode == "defend")
 	{
 	  [attack_fighter_text] = [defend_fighter_text]
+	}else if(frame_view_mode == "attack")
+	{
+	  defend_fighter_text = attack_fighter_text
 	}
     attack = {
         ...fighters.find(s=>(s.name == attack_fighter_text))
@@ -230,6 +233,7 @@ function run(frame_view_mode="") {
 	}
     //ファイター未入力	
 	else if(isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
+      $("#attacks_result").children().remove()
     }else
 	{
     console.log("測定開始")
