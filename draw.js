@@ -50,8 +50,12 @@ function create_view(attack, defend)
 	 const is_defend_tr_draw = ($(trs).find(".grace_ok").length >= 1 || is_attack_skill_air == true)
 	   if(is_defend_tr_draw == false)
 	   {
+		  const hidden_block_stun_difference = $(result_row).find(".hidden_block_stun_difference")
+		  const block_stun_difference = hidden_block_stun_difference.val()
 		  $(tbody).find("defend_tr").hide();
+		  $(result_row).find(".error_message").text(`硬直差${block_stun_difference}Fに反撃できる技がありません or 技が未登録`)
   		   $(result_row).find(".error_message").css({"visibility":"visible"});
+		   
 	   }
   })
 
@@ -98,6 +102,9 @@ function create_view(attack, defend)
 	   $(result_row).find(".attack_table").append($(attack_tr))
 
 	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃`)
+	   
+	 const hidden_block_stun_difference = $(result_row).find(".hidden_block_stun_difference")
+	 hidden_block_stun_difference.val(block_stun_difference)
 	 }
 	 defend_tds.forEach(tds=>(add_td(defend_tr,tds,"")))
 	 $(result_row).find(".defend_table").append($(defend_tr))
