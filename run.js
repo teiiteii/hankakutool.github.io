@@ -29,7 +29,7 @@ function getSkillBigGenre(skill)
 {
   return Number(skill.skill_genre.toString().substr(0,3))
 }
-function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include){
+function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack){
 	let edit_skills = skills
 	if(isUndefined(fighter_id) == false)
 	{
@@ -44,10 +44,12 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 		edit_skills = []
 	}
 	
-	if(isUndefined(skill_big_genre) == false)
-	{
-		edit_skills = edit_skills.filter(s=>(getSkillBigGenre(s) == skill_big_genre))
-	}
+	//技大分類で絞る。未実装
+	//if(isUndefined(skill_big_genre) == false)
+	//{
+	//	edit_skills = edit_skills.filter(s=>(getSkillBigGenre(s) == skill_big_genre))
+	//}
+
 	if(is_damage_no_include == false)
 	{
 	    edit_skills = edit_skills.filter(s=>((isUndefined(s.damage_no) == true || s.damage_no == 1)))
@@ -55,13 +57,15 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 	
 	if(is_shift_include == false)
 	{
-	    edit_skills = edit_skills.filter(s=>(isUndefined(s.shift)))
+        edit_skills = edit_skills.filter(s=>(isUndefined(s.shift)))
+	    edit_skills = edit_skills.filter(s=>(isUndefined(s.persistence_num)))
 	}
 
-	if(is_shift_include == false)
+	if(is_landing_attack == false)
 	{
-	    edit_skills = edit_skills.filter(s=>(isUndefined(s.persistence_num)))
-	}		
+	    edit_skills = edit_skills.filter(s=>(isUndefined(s.is_landing_attack)))
+	}
+	
 
 	return edit_skills
 }
@@ -278,11 +282,11 @@ function run(frame_view_mode="") {
 		
 		{
 		  const select_skill_genre = (frame_view_mode != "") ? "all" :$(attack_skill_genre_select).val()
-		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true)
+		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true)
 		}
 		{
 		  const select_skill_genre = $(defend_skill_genre_select).val()
-		  defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined,false,false,false)
+		  defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined,false,false,false,false)
 		}
 		
         attack.skills = attack_skills.map((skill)=>{
