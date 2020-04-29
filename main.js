@@ -56,6 +56,9 @@ $("#fighter_search").keypress((e)=>{
 	})
   })
      const clipboard = new Clipboard('.clipboard_btn');
+	 clipboard.on('success',(e)=>{
+     e.clearSelection();
+     });
 });
 
 
