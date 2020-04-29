@@ -1,4 +1,4 @@
-function create_view(attack, defend)
+function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 {
    $("#attacks_result").children().remove()
    
@@ -41,12 +41,10 @@ function create_view(attack, defend)
 
 	 
     })
-	   
-	   
+	
 	$(tbody).append($(trs))
 	$("#attacks_result").append($(result_row)) 
-
-
+	
 	 const is_defend_tr_draw = ($(trs).find(".grace_ok").length >= 1 || is_attack_skill_air == true)
 	   if(is_defend_tr_draw == false)
 	   {
@@ -55,9 +53,35 @@ function create_view(attack, defend)
 		  $(tbody).find("defend_tr").hide();
 		  $(result_row).find(".error_message").text(`硬直差${block_stun_difference}に反撃できる技がありません or 技が未登録`)
   		   $(result_row).find(".error_message").css({"visibility":"visible"});
-		   
 	   }
   })
+  
+  if(is_frame_view_mode == true)
+  {
+  frameViewMode()
+  }
+  
+  function frameViewMode()
+  {
+	  
+	  const attack_trs = $(".attack_table").find("tr")
+	       ,result_row0 = $("#result_row0")
+	       ,result_row0_tr_th = $("#result_row0").find(".attack_tr_th")
+	  $("[id *= 'result_row']").addClass("d-none")
+	  $(result_row0).removeClass("d-none")
+	  $(result_row0).find(".defend_table").addClass("d-none")
+	  $(result_row0).find(".row error_message").addClass("d-none")
+	  $(result_row0).find("tr").addClass("d-none")
+	  $(result_row0).find(".attack_tr_th").removeClass("d-none")
+      $(result_row0).find(".attack_tr_th").removeClass("attack_tr_th")
+	  $(result_row0).find("tbody").append($(attack_trs))
+	  $(result_row0).find(".attack_tr_th").addClass("d-none")  
+	  
+	  if(is_attack_color == false)
+	  {
+	    $(result_row0).find(".th_attack_fighter_name").addClass("defend_table_background_color")  
+	  }
+  }
 
   function view_frame(attack, defend, attack_skill, defend_skill, result_row, index)
   {
@@ -112,6 +136,7 @@ function create_view(attack, defend)
 
 	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃`)
 	 }
+
 	 defend_tds.forEach(tds=>(add_td(defend_tr,tds,"")))
 	 $(result_row).find(".defend_table").append($(defend_tr))
 	 const skill_sort = $("<input>",{type:"hidden",class:"sort",value:frame_trap*-1})

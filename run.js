@@ -191,7 +191,7 @@ function selected_fighter(fighter_id, attack_flg) {
     }
 }
 
-function run() {
+function run(frame_view_mode="") {
     const urlParameter = inputToUrlParameter()
       , action_shield = 1
       , action_just_shield = 2
@@ -200,8 +200,15 @@ function run() {
     // if(urlParameter == prevUrlParameter)
     {//  return
     }
+	
+	let attack_fighter_text = $("#attack_fighter_text").val()
+	   ,defend_fighter_text = $("#defend_fighter_text").val()
+	if(frame_view_mode == "defend")
+	{
+	  [attack_fighter_text] = [defend_fighter_text]
+	}
     attack = {
-        ...fighters.find(s=>(s.name == $("#attack_fighter_text").val()))
+        ...fighters.find(s=>(s.name == attack_fighter_text))
         ,skills: null
         ,op: 1.05
         ,until_landing: 0
@@ -209,7 +216,7 @@ function run() {
 
     const minus_grace_max_num = $("#minus_grace_max_num").val()
     defend = {
-        ...fighters.find(s=>(s.name == $("#defend_fighter_text").val()))
+        ...fighters.find(s=>(s.name == defend_fighter_text))
         ,skills: null
         ,action: action_shield
         ,is_ground: true
@@ -217,13 +224,17 @@ function run() {
 		,minus_grace_max_num
     }
 
-    if (isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
-        //ファイター未入力
+    if (frame_view_mode != "" && attack_fighter_text == "")
+	{
+		alert("技表を見るにはファイターの入力が必要です")
+	}
+    //ファイター未入力	
+	else if(isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
     }else
 	{
     console.log("測定開始")
     init()
-    create_view(attack, defend)
+    create_view(attack, defend, frame_view_mode !="", frame_view_mode=="attack")
 	}
     console.log(defend)
     //console.log(attack)
@@ -262,8 +273,7 @@ function run() {
         }
 		
 		{
-		  const select_skill_genre = $(attack_skill_genre_select).val()
-		  
+		  const select_skill_genre = (frame_view_mode != "") ? "all" :$(attack_skill_genre_select).val()
 		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true)
 		}
 		{
