@@ -1,7 +1,7 @@
 //当たるフレーム速さで隙が変わるか
 //2段技。連続技
 
-const attack_skill_no_select_text = "↓ 攻撃技を選択"
+const attack_skill_no_select_text = ""
  const skillSort = (a, b)=>{ 
     if (a.sort_no < b.sort_no){ return -1}
     if (a.sort_no > b.sort_no){return 1}
