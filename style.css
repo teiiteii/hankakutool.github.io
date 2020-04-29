@@ -9,6 +9,7 @@
 	 background-color:#FFFFFF;
 	
 }
+
 .player_box{
   background-color:#f0f0f0;	
 }
@@ -79,6 +80,11 @@ border-left: solid 0.40rem #88C6FD;
   white-space: nowrap;
   overflow: hidden;
 
+}
+.appendix_bottun{
+	  font-size:0.8em;
+	  padding-left : 0.2rem;
+	 line-height: 0px;
 }
 .th_block_stun_difference{
   font-size:0.75em;
