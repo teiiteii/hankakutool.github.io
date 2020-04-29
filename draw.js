@@ -5,11 +5,11 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
    attack.skills.forEach((attack_skill, index)=>
    {
 	  const result_row = $("#result_row_original").clone()
-	  $(result_row).attr("id", "result_row" + index)
-	  $(result_row).css("visibility","visible");
+	  $(result_row).attr("id", "result_row_clone_" + index)
+	  $(result_row).removeClass("d-none")
       defend.skills.forEach((defend_skill, index)=>
 	  {
-	    view_frame(attack, defend, attack_skill, defend_skill, result_row, index)
+	    view_frame(attack, defend, attack_skill, defend_skill, result_row, index, is_frame_view_mode)
      })
 	 
 	 const tbody = $(result_row).find(".defend_table").children()
@@ -64,8 +64,8 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
   function frameViewMode()
   {
 	  
-	  const attack_trs = $(".attack_table").find("tr")
-	       ,result_row0 = $("#result_row0")
+	  const result_row0 = $("#result_row_clone_0")
+	       ,attack_trs = $("[id *= 'result_row_clone']").find(".attack_table").find("tr")
 	       ,result_row0_tr_th = $("#result_row0").find(".attack_tr_th")
 	  $("[id *= 'result_row']").addClass("d-none")
 	  $(result_row0).removeClass("d-none")
@@ -76,22 +76,22 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
       $(result_row0).find(".attack_tr_th").removeClass("attack_tr_th")
 	  $(result_row0).find("tbody").append($(attack_trs))
 	  $(result_row0).find(".attack_tr_th").addClass("d-none")  
-	  
+	  $(result_row0).find(".row_frame_view_mode").removeClass("d-none")
 	  if(is_attack_color == false)
 	  {
 	    $(result_row0).find(".th_attack_fighter_name").addClass("defend_table_background_color")  
 	  }
   }
 
-  function view_frame(attack, defend, attack_skill, defend_skill, result_row, index)
+  function view_frame(attack, defend, attack_skill, defend_skill, result_row, index, is_frame_view_mode)
   {
-	const is_add_info_draw = true
+	const is_add_info_draw = is_frame_view_mode
 	,block_stun_difference = attack_skill.block_stun_difference
 	     ,block_stun = attack_skill.block_stun
 		 ,occurrence = defend_skill.begin + defend_skill.add_occurrence 
 		 ,frame_trap = block_stun_difference - occurrence
          ,attack_tr = $("<tr>")
-		 ,attack_tds = [
+	let attack_tds = [
                 		   {txt:`${attack_skill.skill_name}`,cls:`tr_th_left` ,sm_txt:`${(attack_skill.skill_detail_name == "")? "": "(" + attack_skill.skill_detail_name + ")"}`,cls_td:`tr_th_left`}
 	                      ,{txt:`${attack_skill.begin}-${attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``,cls_td:``}
@@ -125,6 +125,10 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 	}
 	 if(index == 0)
 	 {
+	   if(is_add_info_draw == true)
+	   {
+	   attack_tds = attack_tds.map((a, index)=>({...a, cls_td: (index == 0) ? a.cls_td:a.cls_td + " tr_th_right"}))
+	   }
 	   $(result_row).find(".th_attack_fighter_name").text(`${attack.adana}の攻撃`)
 	   attack_tds.forEach(tds=>(add_td(attack_tr,tds,"")))
 	   $(result_row).find(".attack_table").append($(attack_tr))
