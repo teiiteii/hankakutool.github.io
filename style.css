@@ -87,18 +87,26 @@ border-left: solid 0.40rem #88C6FD;
 	 line-height: 0px;
 }
 .appendix_bottun:active {background-color:#B8D9FF;} /*クリック中のリンクの色*/
-.th_block_stun_difference{
+
+.appendix_bottun:hover {
+	cursor:pointer
+}
+.th_small{
   font-size:0.75em;
-  vertical-align:middle!important;
   
 }
 
 th{
   font-size:0.97em;
-  text-align:center
-
+  text-align:center;
+  vertical-align:middle!important;
 
 }
+important_padding0_left_right
+{
+	padding:0px 0px!important;
+}
+
 tr{
   text-align:center;
 }

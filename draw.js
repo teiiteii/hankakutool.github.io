@@ -50,10 +50,10 @@ function create_view(attack, defend)
 	 const is_defend_tr_draw = ($(trs).find(".grace_ok").length >= 1 || is_attack_skill_air == true)
 	   if(is_defend_tr_draw == false)
 	   {
-		  const hidden_block_stun_difference = $(result_row).find(".hidden_block_stun_difference")
-		  const block_stun_difference = hidden_block_stun_difference.val()
+		  const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
+		  const block_stun_difference = attack_block_stun_difference.text()
 		  $(tbody).find("defend_tr").hide();
-		  $(result_row).find(".error_message").text(`硬直差${block_stun_difference}Fに反撃できる技がありません or 技が未登録`)
+		  $(result_row).find(".error_message").text(`硬直差${block_stun_difference}に反撃できる技がありません or 技が未登録`)
   		   $(result_row).find(".error_message").css({"visibility":"visible"});
 		   
 	   }
@@ -61,7 +61,9 @@ function create_view(attack, defend)
 
   function view_frame(attack, defend, attack_skill, defend_skill, result_row, index)
   {
-	const block_stun_difference = attack_skill.block_stun_difference
+	const is_add_info_draw = true
+	,block_stun_difference = attack_skill.block_stun_difference
+	     ,block_stun = attack_skill.block_stun
 		 ,occurrence = defend_skill.begin + defend_skill.add_occurrence 
 		 ,frame_trap = block_stun_difference - occurrence
          ,attack_tr = $("<tr>")
@@ -72,6 +74,8 @@ function create_view(attack, defend)
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${BigNumber(attack_skill.base_damage).times(1.2) == 0? "-":BigNumber(attack_skill.base_damage).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
+					      ,{txt:`${block_stun}F`,cls:`val_attack_block_stun` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}
+					      ,{txt:`${block_stun_difference}F`,cls:`val_attack_block_stun_difference` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}						  
 					   ]
     const defend_tr = $("<tr>",{class:"defend_tr"})
 	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? ` (${defend_skill.begin}F+硬直)` : ''	
@@ -100,11 +104,13 @@ function create_view(attack, defend)
 	   $(result_row).find(".th_attack_fighter_name").text(`${attack.adana}の攻撃`)
 	   attack_tds.forEach(tds=>(add_td(attack_tr,tds,"")))
 	   $(result_row).find(".attack_table").append($(attack_tr))
+	   if(is_add_info_draw == false)
+	   {
+		   $(result_row).find(".th_attack_block_stun_difference").addClass("d-none")
+		   $(result_row).find(".th_attack_block_stun").addClass("d-none")		   
+	   }
 
 	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃`)
-	   
-	 const hidden_block_stun_difference = $(result_row).find(".hidden_block_stun_difference")
-	 hidden_block_stun_difference.val(block_stun_difference)
 	 }
 	 defend_tds.forEach(tds=>(add_td(defend_tr,tds,"")))
 	 $(result_row).find(".defend_table").append($(defend_tr))
