@@ -9,6 +9,8 @@ $("#op_select").select2({
     tags: true,
     tokenSeparators: [',', ' ']
 })
+//$('#op_select').select2().val([8.545,7.65]).trigger("change")
+
 
 $("#op_select").on("select2:select select2:unselect", function (e) {
 
@@ -35,14 +37,16 @@ $("#op_select").on("select2:select select2:unselect", function (e) {
 	else{
 	run()
 	}
-})
+  })
 
+  // run実行
+  $('#op_select').trigger('select2:select')
 
   $("input").change(function() {
     run()
   });
   
-  run()
+
 
    $(".js-modal-open").each(function(){
         $(this).on("click",function(i){

@@ -3,7 +3,15 @@
 //  Object.keys(parameters).forEach(id=>$("#" + id + "").val(parameters[id]))
 //}
 
-const parameterToInput = ({input_id, input_value})=>$("#" + input_id + "").val(input_value)
+const parameterToInput = ({input_id, input_value})=>{
+	if(input_id == "op_select")
+	{
+	const nums = input_value.split(",").map(Number)
+	$('#op_select').select2().val(nums)
+     return	
+	}
+	$("#" + input_id + "").val(input_value)
+}
 
 function inputToUrlParameter()
 {
