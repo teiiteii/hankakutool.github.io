@@ -251,6 +251,7 @@ function run(frame_view_mode="") {
     //ファイター未入力	
 	else if(isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
       $("#attacks_result").children().remove()
+	  $(".memo_row").addClass("d-none")	
     }else
 	{
     console.log("測定開始")
@@ -307,7 +308,7 @@ function run(frame_view_mode="") {
               , block_stun_difference = getBlockStunDifference(skill, block_stun)
               , skill_genre_name = getSkillGenreName(skill.skill_genre)
               , skill_name = getSkillName(skill)
-              , skill_detail_name = getSkillDetailName(skill)
+              , skill_detail_name = getSkillDetailName(skill, "attack")
 
             return {
                 ...skill,

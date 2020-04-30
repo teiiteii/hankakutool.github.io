@@ -3,19 +3,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="スマブラSPの反撃確定確認ツールです">
-  <script type='text/javascript' src="./bignumber.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./data/style.css">
+  <script type='text/javascript' src="./program/bignumber.min.js"></script>  
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
-  <script type='text/javascript' src="./common.js"></script>
-  <script type='text/javascript' src="./common_jquery.js"></script>
-  <script type='text/javascript' src="./dat.js"></script>
-  <script type='text/javascript' src="./draw.js"></script>
-  <script type='text/javascript' src="./main.js"></script>
-  <script type='text/javascript' src="./run.js"></script>
-  <script type='text/javascript' src="./skill.js"></script>
+  <script type='text/javascript' src="./program/common.js"></script>
+  <script type='text/javascript' src="./program/common_jquery.js"></script>
+  <script type='text/javascript' src="./data/dat.js"></script>
+  <script type='text/javascript' src="./data/memo.js"></script>
+  <script type='text/javascript' src="./program/draw.js"></script>
+  <script type='text/javascript' src="./program/main.js"></script>
+  <script type='text/javascript' src="./program/run.js"></script>
+  <script type='text/javascript' src="./data/skill.js"></script>
   <title>スマブラ反撃確認エアッー</title>
 </head>
 <body class="page_whole">
@@ -23,7 +24,7 @@
     <header class="mx-auto">
       <h1 class="headline"> <a href="https://teiiteii.github.io/hankakutool.github.io/">スマブラ反撃確認エアッー</a> </h1>
     </header>
-	<!--攻撃側-->
+    <!--攻撃側-->
     <div class="box_card mx-auto player_box" style="max-width:24rem">
       <div class="box_header attack_background_color" id="attack_header" style="width:100%">
         <p class="box_title text-center " style="width: auto; height:auto;">攻撃側</p>
@@ -88,16 +89,23 @@
         </div>
       </div>
     </div>
-	<!--フレーム表-->
+    <!--フレーム表-->
     <div class="container" style="max-width:26rem">
       <div id="attacks_result" class="mx-auto" style="max-width:30rem"></div>
     </div>
     <div style="margin:1.5rem;" />
-
-	<!--共有-->
+    <!--共有-->
     <div class="container">
       <div class="box_card mx-auto share_box" style="max-width:24rem">
         <div class="container-fluid">
+          <div class="row memo_row d-none">
+            <div class="col"> <label class="input_title">技コメント</label></div>
+          </div>
+          <div class="row memo_row d-none">
+            <div class="col">
+              <p class="memo" style="background-color: #FFFFFF">技コメント</p>
+            </div>
+          </div>
           <div class="row">
             <div class="col"> <label class="input_title">結果を共有</label></div>
           </div>
@@ -109,14 +117,6 @@
           </div>
           <div class="row">
             <div class="col"> <span id="twitter_button"></span> </div>
-          </div>
-          <div class="row">
-            <div class="col"> <label class="input_title">作者コメント</label></div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <p style="background-color: #FFFFFF">データ登録作業中です。ピカチュウは多少あります。今は地上空中技を追加中です</p>
-            </div>
           </div>
           <div class="row">
             <div class="col"> <label class="input_title">ツールの更新情報</label></div>
@@ -146,7 +146,7 @@
                   <th class="th_next_gap">後隙</th>
                   <th>全体</th>
                   <th>％</th>
-                  <th class="th_small th_attack_block_stun_difference">硬直差</th>				  
+                  <th class="th_small th_attack_block_stun_difference">硬直差</th>
                   <th class="th_small th_attack_block_stun">ガード<br>硬直</th>
                 </tr>
               </tbody>
@@ -160,39 +160,45 @@
                 <tr>
                   <th class="th_defend_fighter_name defend_table_background_color tr_th_left th_small" style="width:1rem;">データ未登録です</th>
                   <th class="tr_th_right" style="width:1rem;">猶予</th>
-                  <th class="th_small" >硬直差</th>
-                  <th class="tr_th_left" >発生</th>
+                  <th class="th_small">硬直差</th>
+                  <th class="tr_th_left">発生</th>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div class="row error_message" style="visibility:hidden"></div>
-  
+        <div class="row">
           <div class="col-12">
             <div class="row_frame_view_mode d-none input-group"><span class="input-group-text appendix_bottun mx-auto" onclick="run();$('body,html').animate({scrollTop: 0}, 0);" ontouchstart=""><i class="fas fa-book" aria-hidden="true"></i><span class="appendix_bottun_text">技一覧を閉じる</span></span>
-			</div>
-			
-		          <div class="normal_mode d-none input-group"><span class="input-group-text appendix_bottun mx-auto" onclick="$('body,html').animate({scrollTop: 0}, 0);" ontouchstart=""><i class="fas fa-arrow-up" aria-hidden="true"></i><span class="appendix_bottun_text">TOPに戻る</span></span></div>
+            </div>
           </div>
-		 		
-      </div>
-    </div>
-    <!--end フレームリザルト-->
-    <!--start キャラ選択-->
-    <div id="fighter_select_modal" class="modal js-modal">
-      <div class="modal_background js-modal-close"></div>
-      <div class="modal_content box_card" style="max-width:30rem">
-        <div class="box_header" id="fighter_select_header" style="width: 100%;">
-          <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
         </div>
-        <form action="/search" onsubmit="return false" autocomplete="off">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1" onclick="alert('キャラ名を入力して下のリストからキャラ選択してね。\nリストが1件の時orキャラ名を全部入力してエンター（改行）押すと直接入力できるよ。')"><i class="fa fa-search" aria-hidden="true"></i></span></div>
-        </form>
-        <div id="fighter_search_texts"> </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="normal_mode d-none input-group"><span class="input-group-text appendix_bottun mx-auto" onclick="$('body,html').animate({scrollTop: 0}, 0);" ontouchstart=""><i class="fas fa-arrow-up" aria-hidden="true"></i><span class="appendix_bottun_text">TOPに戻る</span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!--end キャラ選択-->
+  </div>
+  </div>
+  <!--end フレームリザルト-->
+  <!--start キャラ選択-->
+  <div id="fighter_select_modal" class="modal js-modal">
+    <div class="modal_background js-modal-close"></div>
+    <div class="modal_content box_card" style="max-width:30rem">
+      <div class="box_header" id="fighter_select_header" style="width: 100%;">
+        <p class="box_title text-center fighter_background_color" style="width: auto; height:auto;">ファイター選択</p>
+      </div>
+      <form action="/search" onsubmit="return false" autocomplete="off">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend"></div><input type="text" class="form-control" id="fighter_search" placeholder="ファイター名を入力" onInput="fighterSearchInput()"><span class="input-group-text" id="basic-addon1" onclick="alert('キャラ名を入力して下のリストからキャラ選択してね。\nリストが1件の時orキャラ名を全部入力してエンター（改行）押すと直接入力できるよ。')"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+      </form>
+      <div id="fighter_search_texts"> </div>
+    </div>
+  </div>
+  <!--end キャラ選択-->
 </body>
 </html>

@@ -53,10 +53,15 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 	   {
 		  const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
 		  const block_stun_difference = attack_block_stun_difference.text()
-		  $(tbody).find("defend_tr").hide();
 		  $(result_row).find(".error_message").html(`硬直差${block_stun_difference}に反撃できません。or 未登録技`)
   		   $(result_row).find(".error_message").css({"visibility":"visible"});
 	   }
+	   if(is_defend_tr_draw == true && attack_skill.not_attack_view == "serial"){
+		  $(result_row).find(".defend_table").hide();
+		  $(result_row).find(".error_message").html(`攻撃側が特殊な技のため結果なしです。`)
+  		   $(result_row).find(".error_message").css({"visibility":"visible"});		   
+	   }
+	 drawMemo(attack_skill)
   })
   
   if(is_frame_view_mode == true)
@@ -152,5 +157,16 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 	 $(result_row).find(".defend_table").append($(defend_tr))
 	 const skill_sort = $("<input>",{type:"hidden",class:"sort",value:frame_trap*-1})
 	 $(defend_tr).append($(skill_sort))
+  }
+  
+  function drawMemo(attack_skill){
+	  const memos = memo.filter(m=>(m.fighter_id == attack_skill.fighter_id &&  m.skill_genre == attack_skill.skill_genre))
+      if(memos.length == 0)
+	  {
+	    $(".memo_row").addClass("d-none")		
+	  }else{
+	    $(".memo_row").removeClass("d-none")
+		  $(".memo").html(memos[0].memo + "<br><br><br>") 
+	  }
   }
 }

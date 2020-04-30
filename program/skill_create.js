@@ -39,7 +39,7 @@ const run_data5 = run5(run_data4)
 const frame_str_datas = run_data5.map(f=>(getFrameData(f)))
 
 frame_str_datas.reduce((strs,str)=>(strs+str))
-form.output.textContent = ", + "frame_str_datas; 
+form.output.textContent = ", " + frame_str_datas; 
   console.log(run_data5)   
     })
     })

@@ -49,7 +49,7 @@ const skills =
 ,{tesf:"ピカチュウ", tess:"上スマッシュ", fighter_id:1080, skill_genre:10600, begin:10, end:12, time:44, base_damage:14, damage_no:2, tes_val:"", }
 ,{tesf:"ピカチュウ", tess:"上スマッシュ", fighter_id:1080, skill_genre:10600, begin:13, end:14, time:44, base_damage:11, persistence_num:1, tes_val:"持続1", }
 ,{tesf:"ピカチュウ", tess:"上スマッシュ", fighter_id:1080, skill_genre:10600, begin:15, end:17, time:44, base_damage:7, persistence_num:2, tes_val:"持続2", }
-,{tesf:"ピカチュウ", tess:"下スマッシュ", fighter_id:1080, skill_genre:10602, begin:8, end:9, time:65, base_damage:2, serial_num_str:"1-5", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"8-9, 11-12, 14-15, 17-18, 20-21", tes_val:"Hit 1-5", }
+,{tesf:"ピカチュウ", tess:"下スマッシュ", fighter_id:1080, skill_genre:10602, begin:8, end:9, time:65, base_damage:2, serial_num_str:"1-5", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"8-9, 11-12, 14-15, 17-18, 20-21", tes_val:"Hit 1-5", not_attack_view:"serial"}
 ,{tesf:"ピカチュウ", tess:"下スマッシュ", fighter_id:1080, skill_genre:10602, begin:23, end:23, time:65, base_damage:3, serial_num_str:"6", tes_message:"(連続ヒットする技)", tes_val:"Hit 6", }
 
 ]
