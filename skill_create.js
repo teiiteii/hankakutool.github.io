@@ -39,7 +39,7 @@ const run_data5 = run5(run_data4)
 const frame_str_datas = run_data5.map(f=>(getFrameData(f)))
 
 frame_str_datas.reduce((strs,str)=>(strs+str))
-form.output.textContent = frame_str_datas; 
+form.output.textContent = ", + "frame_str_datas; 
   console.log(run_data5)   
     })
     })
@@ -102,7 +102,7 @@ form.output.textContent = frame_str_datas;
  function run2(frame_data){
 	 const result_frame_data = frame_data.map((f)=>{
 		 
-	if(f.time1.includes("Rehit") == false)
+	if(f.time1.toString().includes("Rehit") == false)
 	{
 		return {...f}
 	}
@@ -221,7 +221,7 @@ form.output.textContent = frame_str_datas;
 			test_message+="(連続ヒットする技)"
 	}})
 	
-	let time1 = f.time1.trim()
+	let time1 = f.time1.toString().trim()
 	   ,start
 	   ,end
 	   

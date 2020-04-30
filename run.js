@@ -29,7 +29,7 @@ function getSkillBigGenre(skill)
 {
   return Number(skill.skill_genre.toString().substr(0,3))
 }
-function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack){
+function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack,is_serial_num_str_include){
 	let edit_skills = skills
 	if(isUndefined(fighter_id) == false)
 	{
@@ -50,6 +50,18 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 	//	edit_skills = edit_skills.filter(s=>(getSkillBigGenre(s) == skill_big_genre))
 	//}
 
+    if(is_persistence_num_include == false)
+    {
+      edit_skills = edit_skills.filter(s=>(isUndefined(s.persistence_num)))
+    }
+
+    if(is_serial_num_str_include == false)
+    {
+      edit_skills = edit_skills.filter((s)=>((isUndefined(s.serial_num_str) || s.serial_num_str.substring(0,1) == "1")))
+	}
+	
+    // 持続除いた後にダメージ別処理はしたい。後ろ向きの場合、ドンキーの上強など早い技があるが開発スピード優先。無視
+	// 持続技と違って同フレームに発生する
 	if(is_damage_no_include == false)
 	{
 	    edit_skills = edit_skills.filter(s=>((isUndefined(s.damage_no) == true || s.damage_no == 1)))
@@ -58,13 +70,14 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 	if(is_shift_include == false)
 	{
         edit_skills = edit_skills.filter(s=>(isUndefined(s.shift)))
-	    edit_skills = edit_skills.filter(s=>(isUndefined(s.persistence_num)))
+
 	}
 
 	if(is_landing_attack == false)
 	{
 	    edit_skills = edit_skills.filter(s=>(isUndefined(s.is_landing_attack)))
 	}
+	
 	
 
 	return edit_skills
@@ -282,11 +295,11 @@ function run(frame_view_mode="") {
 		
 		{
 		  const select_skill_genre = (frame_view_mode != "") ? "all" :$(attack_skill_genre_select).val()
-		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true)
+		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true)
 		}
 		{
 		  const select_skill_genre = $(defend_skill_genre_select).val()
-		  defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined,false,false,false,false)
+		  defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined,false,false,false,false,false)
 		}
 		
         attack.skills = attack_skills.map((skill)=>{
@@ -312,7 +325,7 @@ function run(frame_view_mode="") {
                 add_occurrence: getAddOccurrence(defend, skill),
                 skill_genre_name: getSkillGenreName(skill.skill_genre),
                 skill_name: getSkillName(skill),
-                skill_detail_name: getSkillDetailName(skill)
+                skill_detail_name: getSkillDetailName(skill, "defend")
             }
         }
         )
@@ -379,12 +392,14 @@ function run(frame_view_mode="") {
         let name = (isUndefined(skill.alias) == false) ? skill.alias : getSkillGenreName(skill.skill_genre)
         return name
     }
-    function getSkillDetailName(skill) {
+    function getSkillDetailName(skill,player) {
         let add_name = ""
-        add_name += (isUndefined(skill.persistence_num) == false) ? "持続" : ""
-        add_name += (isUndefined(skill.serial_num_str) == false) ? "連続" : ""
+        add_name += (isUndefined(skill.persistence_num) == false) ? "持続" : ""	 	
+		add_name += (player == "attack" && isUndefined(skill.serial_num_str) == false) ? "Hit" + skill.serial_num_str: ""
         add_name += (isUndefined(skill.shift) == false) ? {"up":"上シフト","under":"下シフト","all":"全シフト"}[skill.shift] : ""
-        add_name += (isUndefined(skill.damage_no) == false) ? {"1":"最大","2":"大","3":"中","3":"小","3":"最低"}[skill.damage_no] : ""		
+        //add_name += (isUndefined(skill.damage_no) == false) ? {"1":"最大","2":"大","3":"中","3":"小","3":"最低"}[skill.damage_no] : ""		
+        add_name += (player == "attack" && isUndefined(skill.damage_no) == false) ? `ダメ${skill.damage_no}` : ""
+
         return add_name
     }
 

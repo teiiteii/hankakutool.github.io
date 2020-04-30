@@ -86,10 +86,10 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
   function view_frame(attack, defend, attack_skill, defend_skill, result_row, index, is_frame_view_mode)
   {
 	const is_add_info_draw = is_frame_view_mode
-	,block_stun_difference = attack_skill.block_stun_difference
-	     ,block_stun = attack_skill.block_stun
-		 ,occurrence = defend_skill.begin + defend_skill.add_occurrence 
-		 ,frame_trap = block_stun_difference - occurrence
+	     ,block_stun_difference = attack_skill.block_stun_difference   //硬直差 硬直差の基本[全体F - 発生F - ガード硬直]
+	     ,block_stun = attack_skill.block_stun                         //ガード硬直
+		 ,occurrence = defend_skill.begin + defend_skill.add_occurrence//発生 
+		 ,frame_trap = block_stun_difference - occurrence              //反撃確定の猶予
          ,attack_tr = $("<tr>")
 	let attack_tds = [
                 		   {txt:`${attack_skill.skill_name}`,cls:`tr_th_left` ,sm_txt:`${(attack_skill.skill_detail_name == "")? "": "(" + attack_skill.skill_detail_name + ")"}`,cls_td:`tr_th_left`}
