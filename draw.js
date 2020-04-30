@@ -94,8 +94,8 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 	let attack_tds = [
                 		   {txt:`${attack_skill.skill_name}`,cls:`tr_th_left` ,sm_txt:`${(attack_skill.skill_detail_name == "")? "": "(" + attack_skill.skill_detail_name + ")"}`,cls_td:`tr_th_left`}
 	                      ,{txt:`${attack_skill.begin}-${attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
-					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``,cls_td:``}
-					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
+					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
+					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
 					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${BigNumber(attack_skill.base_damage).times(1.2) == 0? "-":BigNumber(attack_skill.base_damage).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${block_stun}F`,cls:`val_attack_block_stun` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}
@@ -129,16 +129,19 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 	   {
 	   attack_tds = attack_tds.map((a, index)=>({...a, cls_td: (index == 0) ? a.cls_td:a.cls_td + " tr_th_right"}))
 	   }
-	   $(result_row).find(".th_attack_fighter_name").text(`${attack.adana}の攻撃`)
+	   $(result_row).find(".th_attack_fighter_name").text(`攻:${attack.adana}`)
 	   attack_tds.forEach(tds=>(add_td(attack_tr,tds,"")))
 	   $(result_row).find(".attack_table").append($(attack_tr))
 	   if(is_add_info_draw == false)
 	   {
 		   $(result_row).find(".th_attack_block_stun_difference").addClass("d-none")
 		   $(result_row).find(".th_attack_block_stun").addClass("d-none")		   
+	   }else{
+		   $(result_row).find(".th_prev_gap").addClass("d-none")
+		   $(result_row).find(".th_next_gap").addClass("d-none")
 	   }
 
-	   $(result_row).find(".th_defend_fighter_name").text(`${defend.adana}の反撃`)
+	   $(result_row).find(".th_defend_fighter_name").text(`反:${defend.adana}`)
 	 }
 
 	 defend_tds.forEach(tds=>(add_td(defend_tr,tds,"")))

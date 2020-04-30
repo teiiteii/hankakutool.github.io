@@ -84,20 +84,18 @@
           <div class="col"><select id="minus_grace_max_num" class="js_url_parameter custom-select custom-select-sm" onchange="run()">
                            <option value="0">0件</option><option value="1">1件</option><option value="2">2件</option><option value="3" selected>3件</option><option value="4">4件</option><option value="5">5件</option> </select> </div>
         </div>
-		
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="max-width:24rem">
       <div id="attacks_result" class="mx-auto" style="max-width:30rem"></div>
     </div>
     <div style="margin:1.5rem;" />
-
-<div class="row">
-		      <div class="col-12">
-            <div class="input-group"><span class="input-group-text appendix_bottun mx-auto" onclick="$('body,html').animate({scrollTop: 0}, 0);" ontouchstart=""><i class="fas fa-arrow-up" aria-hidden="true"></i><span class="appendix_bottun_text">TOPに戻る</span></span>
-            </div>
-          </div>
-		</div>
+    <div class="row">
+      <div class="col-12">
+        <div class="input-group"><span class="input-group-text appendix_bottun mx-auto" onclick="$('body,html').animate({scrollTop: 0}, 0);" ontouchstart=""><i class="fas fa-arrow-up" aria-hidden="true"></i><span class="appendix_bottun_text">TOPに戻る</span></span>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="box_card mx-auto share_box" style="max-width:30rem">
         <div class="container-fluid">
@@ -136,17 +134,17 @@
     </div>
     <!--HTML終了#############################-->
     <!--start フレームリザルト-->
-    <div id="result_row_original" class="row box_card shadow-sm result_paling d-none" style="max-width:40rem">
-      <div class="container">
+    <div id="result_row_original" class="row box_card shadow-sm result_paling d-none">
+      <div class="container-fluid">
         <div class="row">
           <div class="table-responsive">
             <table class="attack_table table table-sm text-nowrap">
               <tbody>
                 <tr class="attack_tr_th">
-                  <th class="th_attack_fighter_name attack_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
+                  <th class="th_attack_fighter_name attack_table_background_color tr_th_left th_small" style="width:1rem;">データ未登録です</th>
                   <th>発生</th>
-                  <th>前隙</th>
-                  <th>後隙</th>
+                  <th class="th_prev_gap">前隙</th>
+                  <th class="th_next_gap">後隙</th>
                   <th>全体</th>
                   <th>％</th>
                   <th class="th_small th_attack_block_stun">ガード<br>硬直</th>
@@ -161,23 +159,22 @@
             <table class="defend_table table table-sm text-nowrap">
               <tbody>
                 <tr>
-                  <th class="th_defend_fighter_name defend_table_background_color tr_th_left" style="width:10rem;">データ未登録です</th>
+                  <th class="th_defend_fighter_name defend_table_background_color tr_th_left th_small" style="width:1rem;">データ未登録です</th>
                   <th class="tr_th_right" style="width:1rem;">猶予</th>
-                  <th class="th_small">硬直差</th>
-                  <th class="tr_th_left">発生</th>
+                  <th class="th_small" style="width:1rem;">硬直差</th>
+                  <th class="tr_th_left" style="width:1rem;">発生</th>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div class="row error_message" style="visibility:hidden"></div>
-		<div class="row_frame_view_mode d-none">
-		      <div class="col-12">
+        <div class="row_frame_view_mode d-none">
+          <div class="col-12">
             <div class="input-group"><span class="input-group-text appendix_bottun mx-auto" onclick="run();$('body,html').animate({scrollTop: 0}, 0);" ontouchstart=""><i class="fas fa-book" aria-hidden="true"></i><span class="appendix_bottun_text">技一覧を閉じる</span></span>
             </div>
           </div>
-		</div>
-		
+        </div>
       </div>
     </div>
     <!--end フレームリザルト-->
