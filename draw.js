@@ -2,7 +2,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 {
    $("#attacks_result").children().remove()
    
-   attack.skills.forEach((attack_skill, index)=>
+   attack.skills.forEach((attack_skill, index, array)=>
    {
 	  const result_row = $("#result_row_original").clone()
 	  $(result_row).attr("id", "result_row_clone_" + index)
@@ -41,7 +41,10 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 
 	 
     })
-	
+		 if(index == array.length - 1)
+	   {
+	     $(result_row).find(".normal_mode").removeClass("d-none")		   
+	   }
 	$(tbody).append($(trs))
 	$("#attacks_result").append($(result_row)) 
 	
@@ -51,7 +54,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 		  const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
 		  const block_stun_difference = attack_block_stun_difference.text()
 		  $(tbody).find("defend_tr").hide();
-		  $(result_row).find(".error_message").text(`硬直差${block_stun_difference}に反撃できる技がありません or 技が未登録`)
+		  $(result_row).find(".error_message").html(`硬直差${block_stun_difference}に反撃できません。or 未登録技`)
   		   $(result_row).find(".error_message").css({"visibility":"visible"});
 	   }
   })
@@ -98,8 +101,9 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
 					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${BigNumber(attack_skill.base_damage).times(1.2) == 0? "-":BigNumber(attack_skill.base_damage).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
+					      ,{txt:`${block_stun_difference}F`,cls:`val_attack_block_stun_difference` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}	
 					      ,{txt:`${block_stun}F`,cls:`val_attack_block_stun` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}
-					      ,{txt:`${block_stun_difference}F`,cls:`val_attack_block_stun_difference` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}						  
+						  
 					   ]
     const defend_tr = $("<tr>",{class:"defend_tr"})
 	     ,defend_occurrence_text = (defend_skill.add_occurrence > 0) ? ` (${defend_skill.begin}F+硬直)` : ''	

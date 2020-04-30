@@ -95,7 +95,10 @@ border-left: solid 0.40rem #88C6FD;
   font-size:0.75em;
   
 }
-
+.th_small2{
+  font-size:0.25em;
+  
+}
 th{
   font-size:0.97em;
   text-align:center;
