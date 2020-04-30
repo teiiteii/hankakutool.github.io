@@ -5,10 +5,43 @@ $(document).ready( function()
   updateSkillGenreSelect("defend", null)
   urlParameters.forEach(p=>parameterToInput(p))
 
+$("#op_select").select2({
+    tags: true,
+    tokenSeparators: [',', ' ']
+})
+
+$("#op_select").on("select2:select select2:unselect", function (e) {
+
+    const items = $(this).val();       
+    const item_nums = items.map(Number);
+	if(item_nums.length == 0)
+	{
+			$("#op").text(105)
+	}else{
+	const op_sum = item_nums.reduce((a,b)=>(BigNumber(a).plus(b)))
+	const op = BigNumber(100).minus(op_sum).toNumber()
+	$("#op").text(op)
+	
+	}
+	
+	if($(".row_frame_view_mode").hasClass("attack"))
+	{
+	run("attack")
+		
+	}else if($(".row_frame_view_mode").hasClass("defend"))
+	{
+	run("defend")
+	}
+	else{
+	run()
+	}
+})
+
 
   $("input").change(function() {
     run()
   });
+  
   run()
 
    $(".js-modal-open").each(function(){

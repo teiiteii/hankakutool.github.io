@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="./data/style.css">
-  <script type='text/javascript' src="./program/bignumber.min.js"></script>  
+  <script type='text/javascript' src="./program/bignumber.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css">
   <script type='text/javascript' src="./program/common.js"></script>
   <script type='text/javascript' src="./program/common_jquery.js"></script>
   <script type='text/javascript' src="./data/dat.js"></script>
@@ -49,6 +51,32 @@
         <div class="row">
           <div class="col"><select id="attack_skill_genre_select" class="js_url_parameter custom-select custom-select-sm" onchange="attack_skill_genre_selected()">
                             </select> </div>
+        </div>
+        <div class="row">
+          <div class="col"><label class="input_title">OP相殺:ダメージ<span id="op">105</span>%</label> </div>
+        </div>
+        <div class="row">
+          <div class="col"> <select id="op_select" class="form-control" multiple="multiple">
+  <option value="9.0">1番[9.0]</option>
+  <option value="7.65">1番ガード [7.65]</option>
+  <option value="8.545">2番[8.545]</option>
+  <option value="7.26325">2番ガード [7.26325]</option>
+  <option value="7.635">3番[7.635]</option>
+  <option value="6.48975‬">3番ガード[‭6.48975‬]</option>  
+  <option value="6.79">4番[6.79]</option>
+  <option value="5.7715">S番ガード [‭5.7715‬]</option>
+  <option value="5.945">5番[5.945]</option>
+  <option value="‭5.05325">5番ガード[‭5.05325‬]</option>
+  <option value="5.035">6番[5.035]</option>
+  <option value="4.27975">6番ガード[‭4.27975‬]</option>
+  <option value="4.255">7番[4.255]</option>
+  <option value="3.61675">7番ガード [‭3.61675‬]</option>
+  <option value="3.345">8番[3.345]</option>
+  <option value="2.84325">8番ガード[‭2.84325‬]</option>
+  <option value="2.5">9番[2.5]</option>
+  <option value="‭2.125">9番ガード[‭2.125‬]</option>
+
+</select> </div>
         </div>
       </div>
     </div>

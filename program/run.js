@@ -227,10 +227,13 @@ function run(frame_view_mode="") {
 	{
 	  defend_fighter_text = attack_fighter_text
 	}
+	
+	const op_val_int = Number($("#op").text())
+	const op_val = BigNumber(op_val_int).times(0.01).toNumber()
     attack = {
         ...fighters.find(s=>(s.name == attack_fighter_text))
         ,skills: null
-        ,op: 1.05
+        ,op: op_val
         ,until_landing: 0
     }
 
@@ -252,11 +255,13 @@ function run(frame_view_mode="") {
 	else if(isUndefined(attack.fighter_id) || isUndefined(defend.fighter_id)) {
       $("#attacks_result").children().remove()
 	  $(".memo_row").addClass("d-none")	
+	  
     }else
 	{
     console.log("測定開始")
     init()
-    create_view(attack, defend, frame_view_mode !="", frame_view_mode=="attack")
+    create_view(attack, defend, frame_view_mode !="", frame_view_mode=="attack", frame_view_mode)
+	
 	}
     console.log(defend)
     //console.log(attack)
@@ -287,13 +292,7 @@ function run(frame_view_mode="") {
         } else {
             attack_skills = skills.filter(s=>(s.fighter_id == attack.fighter_id))
             defend_skills = [skills[selected_skill_id]]
-        }
-        //テスト用
-        if (true) {
-            attack_skills = skills.filter(s=>(s.fighter_id == attack.fighter_id))
-            defend_skills = skills.filter(s=>(s.fighter_id == defend.fighter_id))
-        }
-		
+        }		
 		{
 		  const select_skill_genre = (frame_view_mode != "") ? "all" :$(attack_skill_genre_select).val()
 		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true)

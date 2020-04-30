@@ -1,5 +1,6 @@
-function create_view(attack, defend, is_frame_view_mode, is_attack_color)
+function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_view_mode_player)
 {
+   $(".memo_row").addClass("d-none")
    $("#attacks_result").children().remove()
    
    attack.skills.forEach((attack_skill, index, array)=>
@@ -61,14 +62,20 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 		  $(result_row).find(".error_message").html(`攻撃側が特殊な技のため結果なしです。`)
   		   $(result_row).find(".error_message").css({"visibility":"visible"});		   
 	   }
-	 drawMemo(attack_skill)
+	 drawMemo(attack_skill, is_frame_view_mode)
   })
+  $(".row_frame_view_mode").removeClass("attack")
+  $(".row_frame_view_mode").removeClass("defend")  
   
+  //最終処理
   if(is_frame_view_mode == true)
   {
   frameViewMode()
+  $(".row_frame_view_mode").addClass(frame_view_mode_player)  
   }
   
+
+
   function frameViewMode()
   {
 	  
@@ -105,7 +112,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
 					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``,cls_td:``}
-					      ,{txt:`${BigNumber(attack_skill.base_damage).times(1.2) == 0? "-":BigNumber(attack_skill.base_damage).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
+					      ,{txt:`${BigNumber(attack_skill.base_damage) == 0? "-":BigNumber(attack_skill.base_damage).times(attack.op).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${block_stun_difference}F`,cls:`val_attack_block_stun_difference` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}	
 					      ,{txt:`${block_stun}F`,cls:`val_attack_block_stun` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}
 						  
@@ -157,14 +164,15 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color)
 	 $(result_row).find(".defend_table").append($(defend_tr))
 	 const skill_sort = $("<input>",{type:"hidden",class:"sort",value:frame_trap*-1})
 	 $(defend_tr).append($(skill_sort))
+	 
   }
   
-  function drawMemo(attack_skill){
+  function drawMemo(attack_skill, is_frame_view_mode){
 	  const memos = memo.filter(m=>(m.fighter_id == attack_skill.fighter_id &&  m.skill_genre == attack_skill.skill_genre))
       if(memos.length == 0)
 	  {
 	    $(".memo_row").addClass("d-none")		
-	  }else{
+	  }else if(is_frame_view_mode == false){
 	    $(".memo_row").removeClass("d-none")
 		  $(".memo").html(memos[0].memo + "<br><br><br>") 
 	  }
