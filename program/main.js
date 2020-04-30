@@ -13,7 +13,7 @@ $("#op_select").select2({
 $("#op_select").on("select2:select select2:unselect", function (e) {
 
     const items = $(this).val();       
-    const item_nums = items.map(Number);
+    const item_nums = items.map(m=>(Number(m)));
 	if(item_nums.length == 0)
 	{
 			$("#op").text(105)
