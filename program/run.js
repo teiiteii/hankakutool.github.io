@@ -344,7 +344,7 @@ function run(frame_view_mode="") {
             return 0
         }
         let correction = 1.0
-
+		　 , op = attack.op
         if(isUndefined(attack_skill.correction) == false){
 			correction = attack_skill.correction
 		} else if(skill_genre.is_air == true) {
@@ -354,8 +354,14 @@ function run(frame_view_mode="") {
         } else if (skill_genre.is_item_throw == true) {
             correction = 0.29
         }
+		if(isUndefined(attack_skill.op) == false){
+		  op = attack_skill.op
+		}
+		if(attack_skill.is_op_invalid == true){
+		　　op = 1.05
+		}
 
-        const calc1 = BigNumber(attack_skill.base_damage).times(attack.op)
+        const calc1 = BigNumber(attack_skill.base_damage).times(op)
           , calc2 = calc1.times(0.8).times(correction)
           , calc_result = calc2.plus(2).toNumber()
 
@@ -403,9 +409,12 @@ function run(frame_view_mode="") {
         add_name += (isUndefined(skill.persistence_num) == false) ? (["始","持続","持続2","持続3"])[skill.persistence_num] : ""	 	
 		add_name += (player == "attack" && isUndefined(skill.serial_num_str) == false) ? "Hit" + skill.serial_num_str: ""
         add_name += (isUndefined(skill.shift) == false) ? {"up":"上シフト","under":"下シフト","all":"全シフト"}[skill.shift] : ""
-        add_name += (isUndefined(skill.defend_position) == false) ? {"ground":"対地","air":"対空"}[skill.defend_position] : ""
+        add_name += (isUndefined(skill.defend_position) == false) ? {"ground":"対地","air":"対空","ground_only":"[対地のみ]","air_only":"[対空のみ]"}[skill.defend_position] : ""
+        add_name += (skill.is_landing_attack == true) ? `着地` : ""		
+		
 		add_name += (skill.cancel == "empty_attack_again") ? "空振り再攻撃" : ""			
         add_name += (player == "attack" && isUndefined(skill.damage_no) == false) ? `ダメ${skill.damage_no}` : ""
+        add_name += (player == "attack" && skill.is_op_invalid == true) ? `OP無効` : ""
 
         return add_name
     }

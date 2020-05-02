@@ -105,13 +105,14 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
 		 ,occurrence = defend_skill.begin + defend_skill.add_occurrence//発生 
 		 ,frame_trap = block_stun_difference - occurrence              //反撃確定の猶予
          ,attack_tr = $("<tr>")
+		 ,op = (attack_skill.is_op_invalid == true) ? 1.05:(isUndefined(attack_skill.op) == false) ? attack_skill.op:attack.op
 	let attack_tds = [
                 		   {txt:`${attack_skill.skill_name}`,cls:`tr_th_left` ,sm_txt:`${(attack_skill.skill_detail_name == "")? "": "(" + attack_skill.skill_detail_name + ")"}`,cls_td:`tr_th_left`}
 	                      ,{txt:`${attack_skill.begin}-${attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${attack_skill.begin - 1}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
 					      ,{txt:`${attack_skill.time - attack_skill.end}F`,cls:`` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "d-none":""}`}
 					      ,{txt:`${attack_skill.time}F`,cls:`` ,sm_txt:``,cls_td:``}
-					      ,{txt:`${BigNumber(attack_skill.base_damage) == 0? "-":BigNumber(attack_skill.base_damage).times(attack.op).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
+					      ,{txt:`${BigNumber(attack_skill.base_damage) == 0? "-":BigNumber(attack_skill.base_damage).times(op).times(1.2)}`,cls:`` ,sm_txt:``,cls_td:``}
 					      ,{txt:`${block_stun_difference}F`,cls:`val_attack_block_stun_difference` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}	
 					      ,{txt:`${block_stun}F`,cls:`val_attack_block_stun` ,sm_txt:``,cls_td:`${(is_add_info_draw == true) ? "":"d-none"}`}
 						  

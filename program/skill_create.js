@@ -218,7 +218,10 @@ form.output.textContent = ", " + frame_str_datas;
 	if(name2s.some(t=>(t.trim() == "上シフト"))){shift = "up"}
 	if(name2s.some(t=>(t.trim() == "下シフト"))){shift = "under"}
 	if(name2s.some(t=>(t.trim() == "対地"))){defend_position = "ground"}
+	if(name2s.some(t=>(t.trim() == "対地のみ"))){defend_position = "ground_only"}	
 	if(name2s.some(t=>(t.trim() == "対空"))){defend_position = "air"}
+	if(name2s.some(t=>(t.trim() == "対空のみ"))){defend_position = "air_only"}
+	
 	name2s.forEach(t=>{
 		if(t.includes("Hit"))
 		{

@@ -30,6 +30,9 @@ const skill_genres =
  ,{skill_genre:10903, name:"空後", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空後" ,sort_no:13}
  ,{skill_genre:10904, name:"空N", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空N" ,sort_no:9}
  ,{skill_genre:11000, name:"アイテム落とし", guard_cancel:0, jump_frame:3, is_item_throw:true,full_name:"?" ,sort_no:30}
+ ,{skill_genre:11100, name:"上アピ", guard_cancel:11, full_name:"上アピール" ,sort_no:999}
+ ,{skill_genre:11101, name:"横アピ", guard_cancel:11, full_name:"横アピール" ,sort_no:999}
+ ,{skill_genre:11102, name:"下アピ", guard_cancel:11, full_name:"下アピール" ,sort_no:999}
 ]
 const fighters = 
 [
