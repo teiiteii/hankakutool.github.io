@@ -130,8 +130,9 @@ form.output.textContent = ", " + frame_str_datas;
 	 
 	  const damages = f.damage.toString().split("/")
 	  const distinct_damages = damages.filter((d,i,array)=>(array.indexOf(d) === i))
-	  const sorted_damages = distinct_damages.map(Number).sort().reverse()
-	  
+	  const num_damages = distinct_damages.map(Number)
+	  const sorted_damages = distinct_damages.map(Number).sort((a,b)=>(a < b ? 1: -1))
+
 	 sorted_damages.forEach((d, index, array)=>{
 		 
 		const data=  {
@@ -168,6 +169,7 @@ form.output.textContent = ", " + frame_str_datas;
 			...f
 			,time2:time2s[1]
 			,test_message:"(全体フレームのカッコ外した行)"
+			,cancel:"empty_attack_again"//再攻撃時用のデータ
 		 })
 		 	
 		  
@@ -188,6 +190,7 @@ form.output.textContent = ", " + frame_str_datas;
 		,test_message = isUndefined(f.test_message)? "":f.test_message
 		,test_persistences = undefined
 		,test_skill_genre_name = f.name1
+		,defend_position = undefined
 		
 
 	if(name2s.some(t=>(t.trim() == "弱1"))){alias = "弱1"}
@@ -202,6 +205,8 @@ form.output.textContent = ", " + frame_str_datas;
 	if(name2s.some(t=>(t.trim() == "剣ビーム"))){alias = "剣ビーム"}
 	if(name2s.some(t=>(t.trim() == "剣ビーム"))&&name2s.some(t=>(t.trim() == "最大"))){alias = "剣ビーム最大"}	
 	if(name2s.some(t=>(t.trim() == "着地"))){is_landing_attack=true}
+	
+	if(name2s.some(t=>(t.trim() == "始"))){  persistence_num = 0}
 	if(name2s.some(t=>(t.trim() == "持続"))){  persistence_num = 1}
 	if(name2s.some(t=>(t.trim() == "持続1"))){ persistence_num = 1}
 	if(name2s.some(t=>(t.trim() == "持続2"))){ persistence_num = 2}
@@ -212,8 +217,8 @@ form.output.textContent = ", " + frame_str_datas;
 	if(name2s.some(t=>(t.trim() == "全シフト"))){shift = "all"}
 	if(name2s.some(t=>(t.trim() == "上シフト"))){shift = "up"}
 	if(name2s.some(t=>(t.trim() == "下シフト"))){shift = "under"}
-	if(name2s.some(t=>(t.trim() == "対地"))){shift = "vs_ground"}
-	if(name2s.some(t=>(t.trim() == "対空"))){shift = "vs_air"}
+	if(name2s.some(t=>(t.trim() == "対地"))){defend_position = "ground"}
+	if(name2s.some(t=>(t.trim() == "対空"))){defend_position = "air"}
 	name2s.forEach(t=>{
 		if(t.includes("Hit"))
 		{
@@ -226,7 +231,7 @@ form.output.textContent = ", " + frame_str_datas;
 	   ,end
 	   
 // 連続ヒット技でひとまとめにされているデータの1つ目を発生とする
-	if(isUndefined(serial_num_str) == false && serial_num_str.includes("-"))
+	if((isUndefined(serial_num_str) == false && serial_num_str.includes("-")) || alias === "百裂")
 	{
 		test_message+="(連続ヒットまとめ技)"	
 		time1 = f.time1.split(",")[0]
@@ -270,6 +275,7 @@ form.output.textContent = ", " + frame_str_datas;
 		,skill_genre
 		,fighter_id
 		,test_serial_num_strs
+		,defend_position
 	}	
  })
  return result_frame_data
@@ -294,7 +300,9 @@ form.output.textContent = ", " + frame_str_datas;
 		,test_serial_num_strs
 		,name2
 		,time2
- ,fighter_name}){
+ ,fighter_name
+ ,defend_position
+ ,cancel}){
 		
 		const getStr = ((name,val)=>{
 			if(isUndefined(val)) 
@@ -333,6 +341,8 @@ form.output.textContent = ", " + frame_str_datas;
 		d += getStr("serial_num_str", serial_num_str)		    //Hit文字を除いた連続ヒット技
 		d += getStr("shift", shift)                              // シフト攻撃	
 		d += getBol("is_landing_attack", is_landing_attack)	     //着地攻撃	
+		d += getStr("defend_position", defend_position)	     //相手の位置
+		d += getStr("cancel", cancel)	                     //技キャンセル
 		d += getStr("tes_message", test_message)		         //テストメッセージ
 	    d += getStr("test_serial_num_strs", test_serial_num_strs)//テスト用Hit文字を除いた連続ヒットまとめ技
         d += getStr("tes_val", name2)		                 //技種類属性		

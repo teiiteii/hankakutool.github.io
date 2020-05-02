@@ -20,7 +20,7 @@ function updateSkillGenreSelect(player, fighter) {
 	$(pulldown).append(`<option value="all">全て</option>`)
 	}
     sorted_skill_genres.forEach(s=>$(pulldown).append(`<option value="${s.skill_genre}">${s.full_name}</option>`))
-if(player == "attack")
+    if(player == "attack")
 	{
 	$(pulldown).append(`<option value="all">全て</option>`)		
 	}
@@ -29,7 +29,7 @@ function getSkillBigGenre(skill)
 {
   return Number(skill.skill_genre.toString().substr(0,3))
 }
-function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack,is_serial_num_str_include){
+function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack,is_serial_num_str_include,is_empty_attack_again){
 	let edit_skills = skills
 	if(isUndefined(fighter_id) == false)
 	{
@@ -52,7 +52,7 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 
     if(is_persistence_num_include == false)
     {
-      edit_skills = edit_skills.filter(s=>(isUndefined(s.persistence_num)))
+      edit_skills = edit_skills.filter(s=>((isUndefined(s.persistence_num)) || (s.persistence_num == 0)))
     }
 
     if(is_serial_num_str_include == false)
@@ -78,7 +78,10 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 	    edit_skills = edit_skills.filter(s=>(isUndefined(s.is_landing_attack)))
 	}
 	
-	
+	if(is_empty_attack_again == false)
+	{
+		edit_skills = edit_skills.filter(s=>((isUndefined(s.cancel) || s.cancel != "empty_attack_again")))
+	}
 
 	return edit_skills
 }
@@ -295,11 +298,12 @@ function run(frame_view_mode="") {
         }		
 		{
 		  const select_skill_genre = (frame_view_mode != "") ? "all" :$(attack_skill_genre_select).val()
-		  attack_skills = getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true)
+		  attack_skills = frame_view_mode !="" ? getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true,true )  //フレーム表用
+                                                :getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true,false)  //攻撃側用
 		}
 		{
 		  const select_skill_genre = $(defend_skill_genre_select).val()
-		  defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined,false,false,false,false,false)
+		  defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined,false,false,false,false,false,false)
 		}
 		
         attack.skills = attack_skills.map((skill)=>{
@@ -341,14 +345,16 @@ function run(frame_view_mode="") {
         }
         let correction = 1.0
 
-        if (skill_genre.is_air == true) {
+        if(isUndefined(attack_skill.correction) == false){
+			correction = attack_skill.correction
+		} else if(skill_genre.is_air == true) {
             correction = 0.33
         } else if (skill_genre.is_smach == true) {
             correction = 0.725
         } else if (skill_genre.is_item_throw == true) {
             correction = 0.29
         }
-        //(attack_skill.base_damage * attack.op * 0.8 * correction) + 2)
+
         const calc1 = BigNumber(attack_skill.base_damage).times(attack.op)
           , calc2 = calc1.times(0.8).times(correction)
           , calc_result = calc2.plus(2).toNumber()
@@ -394,10 +400,11 @@ function run(frame_view_mode="") {
     }
     function getSkillDetailName(skill,player) {
         let add_name = ""
-        add_name += (isUndefined(skill.persistence_num) == false) ? "持続" : ""	 	
+        add_name += (isUndefined(skill.persistence_num) == false) ? (["始","持続","持続2","持続3"])[skill.persistence_num] : ""	 	
 		add_name += (player == "attack" && isUndefined(skill.serial_num_str) == false) ? "Hit" + skill.serial_num_str: ""
         add_name += (isUndefined(skill.shift) == false) ? {"up":"上シフト","under":"下シフト","all":"全シフト"}[skill.shift] : ""
-        //add_name += (isUndefined(skill.damage_no) == false) ? {"1":"最大","2":"大","3":"中","3":"小","3":"最低"}[skill.damage_no] : ""		
+        add_name += (isUndefined(skill.defend_position) == false) ? {"ground":"対地","air":"対空"}[skill.defend_position] : ""
+		add_name += (skill.cancel == "empty_attack_again") ? "空振り再攻撃" : ""			
         add_name += (player == "attack" && isUndefined(skill.damage_no) == false) ? `ダメ${skill.damage_no}` : ""
 
         return add_name

@@ -50,17 +50,17 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
 	$("#attacks_result").append($(result_row)) 
 	
 	 const is_defend_tr_draw = ($(trs).find(".grace_ok").length >= 1 || is_attack_skill_air == true)
-	   if(is_defend_tr_draw == false)
+	   if(is_defend_tr_draw == false && is_frame_view_mode == false)
 	   {
 		  const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
 		  const block_stun_difference = attack_block_stun_difference.text()
 		  $(result_row).find(".error_message").html(`硬直差${block_stun_difference}に反撃できません。or 未登録技`)
-  		   $(result_row).find(".error_message").css({"visibility":"visible"});
+  		   $(result_row).find(".error_message").removeClass("d-none");
 	   }
 	   if(is_defend_tr_draw == true && attack_skill.not_attack_view == "serial"){
 		  $(result_row).find(".defend_table").hide();
 		  $(result_row).find(".error_message").html(`攻撃側が特殊な技のため結果なしです。`)
-  		   $(result_row).find(".error_message").css({"visibility":"visible"});		   
+  		   $(result_row).find(".error_message").removeClass("d-none");	   
 	   }
 	 drawMemo(attack_skill, is_frame_view_mode)
   })
