@@ -300,6 +300,7 @@ function run(frame_view_mode="") {
 		  const select_skill_genre = (frame_view_mode != "") ? "all" :$(attack_skill_genre_select).val()
 		  attack_skills = frame_view_mode !="" ? getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true,true )  //フレーム表用
                                                 :getFilterSkills(attack.fighter_id, select_skill_genre, undefined,true, true,true,true,true,false)  //攻撃側用
+		  const attack_skills = attack_skills.concat(newShortJumpAirAttackSkills(attack_skills))
 		}
 		{
 		  const select_skill_genre = $(defend_skill_genre_select).val()
@@ -335,6 +336,15 @@ function run(frame_view_mode="") {
         )
     }
 
+    function newShortJumpAirAttackSkills(skills){
+	  const sky_skill_genre = 109
+      const sky_skills = [...(skills.filter(s=>(getSkillBigGenre(s) == sky_skill_genre) && isUndefined(s.is_landing_attack)))]
+	  sky_skills.forEach(s=>{
+	  s.base_damage = BigNumber(s.base_damage).times(0.85).toNumber()
+	  s.is_short_jump_air_attack = true
+	  })
+	  return sky_skills
+	}
     function getBlockStun(attack_skill) {
         const skill_genre = skill_genres.find(s=>(s.skill_genre == attack_skill.skill_genre))
         if (isUndefined(attack_skill.base_damage)) {
@@ -406,6 +416,7 @@ function run(frame_view_mode="") {
     }
     function getSkillDetailName(skill,player) {
         let add_name = ""
+	    add_name += (skill.is_short_jump_air_attack == true) ? `小ジャンプ` : ""	
         add_name += (isUndefined(skill.persistence_num) == false) ? (["始","持続","持続2","持続3"])[skill.persistence_num] : ""	 	
 		add_name += (player == "attack" && isUndefined(skill.serial_num_str) == false) ? "Hit" + skill.serial_num_str: ""
         add_name += (isUndefined(skill.shift) == false) ? {"up":"上シフト","under":"下シフト","all":"全シフト"}[skill.shift] : ""
