@@ -86,11 +86,10 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
 	  $(result_row0).removeClass("d-none")
 	  $(result_row0).find(".defend_table").addClass("d-none")
 	  $(result_row0).find(".row error_message").addClass("d-none")
-	  $(result_row0).find("tr").addClass("d-none")
 	  $(result_row0).find(".attack_tr_th").removeClass("d-none")
       $(result_row0).find(".attack_tr_th").removeClass("attack_tr_th")
 	  $(result_row0).find("tbody").append($(attack_trs))
-	  $(result_row0).find(".attack_tr_th").addClass("d-none")  
+	  $(result_row0).find(".attack_tr_th").addClass("d-none")
 	  $(result_row0).find(".row_frame_view_mode").removeClass("d-none")
 	  if(is_attack_color == false)
 	  {
