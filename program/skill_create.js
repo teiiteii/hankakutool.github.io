@@ -130,7 +130,7 @@ form.output.textContent = ", " + frame_str_datas;
 	 
 	  const damages = f.damage.toString().split("/")
 	  const distinct_damages = damages.filter((d,i,array)=>(array.indexOf(d) === i))
-	  const sorted_damages = distinct_damages.map(Number).reverse()
+	  const sorted_damages = distinct_damages.map(Number).sort().reverse()
 	  
 	 sorted_damages.forEach((d, index, array)=>{
 		 
