@@ -94,18 +94,18 @@ const fighters =
  ,{fighter_id:1440, name:"ウルフ", height_rank:21600, hiragana:"うるふ", adana:"ウルフ"}
  ,{fighter_id:1450, name:"むらびと", height_rank:21000, hiragana:"むらびと", adana:"むらびと"}
  ,{fighter_id:1460, name:"ロックマン", height_rank:21200, hiragana:"ろっくまん", adana:"ロックマン"}
- ,{fighter_id:1470, name:"Wii Fitトレーナー", height_rank:22300, hiragana:"うぃーふぃっととれーなー", adana:"フィットレ"}
+ ,{fighter_id:1470, name:"Wii Fit トレーナー", height_rank:22300, hiragana:"うぃーふぃっととれーなー", adana:"フィットレ"}
  ,{fighter_id:1480, name:"ロゼッタ&チコ", height_rank:22900, hiragana:"ろぜったあんどちこ", adana:"ロゼチコ"}
  ,{fighter_id:1490, name:"リトル・マック", height_rank:21300, hiragana:"りとる・まっく", adana:"リトルマック"}
  ,{fighter_id:1500, name:"ゲッコウガ", height_rank:20500, hiragana:"げっこうが", adana:"ゲッコウガ"}
- ,{fighter_id:1510, name:"Mii 格闘タイプ", height_rank:21600, hiragana:"みーかくとうたいぷ", adana:"格闘Mii"}
- ,{fighter_id:1520, name:"Mii 剣術タイプ", height_rank:21400, hiragana:"みーけんじゅつたいぷ", adana:"剣術Mii"}
- ,{fighter_id:1530, name:"Mii 射撃タイプ", height_rank:21400, hiragana:"みーしゃげきたいぷ", adana:"射撃Mii"}
+ ,{fighter_id:1510, name:"格闘Mii", height_rank:21600, hiragana:"みーかくとうたいぷ", adana:"格闘Mii"}
+ ,{fighter_id:1520, name:"剣術Mii", height_rank:21400, hiragana:"みーけんじゅつたいぷ", adana:"剣術Mii"}
+ ,{fighter_id:1530, name:"射撃Mii", height_rank:21400, hiragana:"みーしゃげきたいぷ", adana:"射撃Mii"}
  ,{fighter_id:1540, name:"パルテナ", height_rank:22200, hiragana:"ぱるてな", adana:"パルテナ"}
  ,{fighter_id:1550, name:"パックマン", height_rank:21000, hiragana:"ぱっくまん", adana:"パックマン"}
  ,{fighter_id:1560, name:"ルフレ", height_rank:22000, hiragana:"るふれ", adana:"ルフレ"}
  ,{fighter_id:1570, name:"シュルク", height_rank:22200, hiragana:"しゅるく", adana:"シュルク"}
- ,{fighter_id:1580, name:"クッパJr", height_rank:21600, hiragana:"くっぱじゅにあ", adana:"クッパjr"}
+ ,{fighter_id:1580, name:"クッパ Jr.", height_rank:21600, hiragana:"くっぱじゅにあ", adana:"クッパjr"}
  ,{fighter_id:1590, name:"ダックハント", height_rank:20600, hiragana:"だっくはんと", adana:"ダックハント"}
  ,{fighter_id:1600, name:"リュウ", height_rank:22000, hiragana:"りゅう", adana:"リュウ"}
  ,{fighter_id:1601, name:"ケン", height_rank:22000, hiragana:"けん", adana:"ケン"}
@@ -124,5 +124,5 @@ const fighters =
  ,{fighter_id:1720, name:"勇者", height_rank:22000, hiragana:"ゆうしゃ", adana:"勇者"}
  ,{fighter_id:1730, name:"バンジョー&カズーイ", height_rank:21400, hiragana:"ばんじょーあんどかずーい", adana:"バンカズ"}
  ,{fighter_id:1740, name:"テリー", height_rank:22000, hiragana:"てりー", adana:"テリー"}
- ,{fighter_id:1750, name:"ベレト/ベレス", height_rank:22200, hiragana:"べれと／べれす", adana:"ベレス"}
+ ,{fighter_id:1750, name:"ベレト／ベレス", height_rank:22200, hiragana:"べれと／べれす", adana:"ベレス"}
 ]
