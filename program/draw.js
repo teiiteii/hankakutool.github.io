@@ -33,7 +33,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
 		   if(isUndefined(is_attack_skill_air) == true)
 		   {
 			  $(tr).hide();
-		   }else if(is_attack_skill_air == true && minus_grace_num >= defend.minus_grace_max_num)
+		   }else if(is_attack_skill_air == true && minus_grace_num > defend.minus_grace_max_num)
 	   {
 	      $(tr).hide();
 	   }
