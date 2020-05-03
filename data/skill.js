@@ -44,6 +44,18 @@ const skills =
 ,{tesf:"リンク", tess:"下スマッシュ", fighter_id:1030, skill_genre:10602, begin:24, end:25, time:54, base_damage:12, damage_no:1, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
 ,{tesf:"リンク", tess:"下スマッシュ", fighter_id:1030, skill_genre:10602, begin:24, end:25, time:54, base_damage:11, damage_no:2, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
 ,{tesf:"リンク", tess:"下スマッシュ", fighter_id:1030, skill_genre:10602, begin:24, end:25, time:54, base_damage:10, damage_no:3, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
+, {tesf:"リンク", tess:"空N", fighter_id:1030, skill_genre:10904, begin:7, end:8, time:38, base_damage:11, landing_lag:6, landing_occurrence_begin:4, landing_occurrence_end:35, damage_no:1, tes_val:"", }
+,{tesf:"リンク", tess:"空N", fighter_id:1030, skill_genre:10904, begin:7, end:8, time:38, base_damage:9, landing_lag:6, landing_occurrence_begin:4, landing_occurrence_end:35, damage_no:2, tes_val:"", }
+,{tesf:"リンク", tess:"空N", fighter_id:1030, skill_genre:10904, begin:9, end:31, time:38, base_damage:6, landing_lag:6, landing_occurrence_begin:4, landing_occurrence_end:35, persistence_num:1, tes_val:"持続", }
+,{tesf:"リンク", tess:"空前", fighter_id:1030, skill_genre:10901, begin:16, end:17, time:51, base_damage:8, landing_lag:11, landing_occurrence_begin:1, landing_occurrence_end:52, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
+,{tesf:"リンク", tess:"空前", fighter_id:1030, skill_genre:10901, begin:24, end:25, time:51, base_damage:10, landing_lag:11, landing_occurrence_begin:1, landing_occurrence_end:52, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
+,{tesf:"リンク", tess:"空後", fighter_id:1030, skill_genre:10903, begin:6, end:8, time:30, base_damage:5, landing_lag:6, landing_occurrence_begin:1, landing_occurrence_end:28, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
+,{tesf:"リンク", tess:"空後", fighter_id:1030, skill_genre:10903, begin:15, end:17, time:30, base_damage:7, landing_lag:6, landing_occurrence_begin:1, landing_occurrence_end:28, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
+,{tesf:"リンク", tess:"空上", fighter_id:1030, skill_genre:10900, begin:11, end:13, time:59, base_damage:15, landing_lag:14, landing_occurrence_begin:11, landing_occurrence_end:42, tes_val:"", }
+,{tesf:"リンク", tess:"空上", fighter_id:1030, skill_genre:10900, begin:14, end:40, time:59, base_damage:13, landing_lag:14, landing_occurrence_begin:11, landing_occurrence_end:42, persistence_num:1, tes_val:"持続", }
+,{tesf:"リンク", tess:"空下", fighter_id:1030, skill_genre:10902, begin:14, end:19, time:79, base_damage:18, landing_lag:19, landing_occurrence_begin:10, landing_occurrence_end:64, tes_val:"", }
+,{tesf:"リンク", tess:"空下", fighter_id:1030, skill_genre:10902, begin:20, end:64, time:79, base_damage:15, landing_lag:19, landing_occurrence_begin:10, landing_occurrence_end:64, persistence_num:1, tes_val:"持続", }
+,{tesf:"リンク", tess:"空下", fighter_id:1030, skill_genre:10902, begin:20, end:64, time:79, base_damage:11, landing_lag:19, landing_occurrence_begin:10, landing_occurrence_end:64, tes_val:"バウンド", }
 
 , {tesf:"ドンキーコング", tess:"弱攻撃", fighter_id:1020, skill_genre:10300, begin:5, end:6, time:24, base_damage:4, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ドンキーコング", tess:"弱攻撃", fighter_id:1020, skill_genre:10300, begin:4, end:5, time:34, base_damage:6, alias:"弱2", tes_val:"弱2", }
