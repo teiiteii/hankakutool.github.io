@@ -420,7 +420,7 @@ function run(frame_view_mode="") {
     function getSkillDetailName(skill,player) {
         let add_name = ""
         add_name += (player == "attack" && isUndefined(skill.detail_name) == false) ? skill.detail_name: ""
-        add_name += (isUndefined(skill.persistence_num) == false) ? (["始","持続","持続2","持続3"])[skill.persistence_num] : ""
+        add_name += (isUndefined(skill.persistence_num) == false) ? (["始","持続","持続2","持続3","持続4","持続5","持続6","持続7","持続8","〆"])[skill.persistence_num] : ""
 		add_name += (player == "attack" && isUndefined(skill.serial_num_str) == false) ? "Hit" + skill.serial_num_str: ""
         add_name += (isUndefined(skill.shift) == false) ? {"up":"上シフト","under":"下シフト","all":"全シフト"}[skill.shift] : ""
         add_name += (isUndefined(skill.defend_position) == false) ? {"ground":"対地","air":"対空","ground_only":"[対地のみ]","air_only":"[対空のみ]"}[skill.defend_position] : ""

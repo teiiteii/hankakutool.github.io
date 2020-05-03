@@ -38,6 +38,24 @@ $(document).ready(function() {
       frame_str_datas.reduce((strs, str) => (strs + str))
       form.output.textContent = ", " + frame_str_datas;
       console.log(run_data5)
+
+	  var str = ", " + frame_str_datas
+
+var listener = function(e){
+
+    e.clipboardData.setData("text/plain" , str);
+    // 本来のイベントをキャンセル
+    e.preventDefault();
+    // 終わったら一応削除
+    document.removeEventListener("copy", listener);
+}
+
+// コピーのイベントが発生したときに、クリップボードに書き込むようにしておく
+document.addEventListener("copy" , listener);
+
+// コピー
+document.execCommand("copy");
+
     })
   })
   // jsonデータの足りないデータ行（技種類と判定持続フレームと全体フレーム）にデータ追加
@@ -111,7 +129,7 @@ $(document).ready(function() {
   function run2(frame_data) {
     const result_frame_data = frame_data.map((f) => {
 
-      if (f.time1.toString().includes("Rehit") == false) {
+      if (f.time1.toString().indexOf("Rehit") == -1) {
         return {
           ...f
         }
@@ -120,11 +138,11 @@ $(document).ready(function() {
 
 
       const occurrences = f.time1.toString().split(/\((.+)\)/)
-      const name1 = occurrences[0].trim()
+      const time1 = occurrences[0].trim()
       const rehit = occurrences[1].replace("Rehit:", "").trim()
       return {
         ...f,
-        name1,
+        time1,
         rehit
       }
     })
@@ -202,7 +220,8 @@ $(document).ready(function() {
         test_skill_genre_name = f.name1,
         defend_position = undefined,
         landing_occurrence_begin = undefined,
-        landing_occurrence_end = undefined
+        landing_occurrence_end = undefined,
+        detail_name = undefined
 
       if (name2s.some(t => (t.trim() == "弱1"))) {
         alias = "弱1"
@@ -231,6 +250,15 @@ $(document).ready(function() {
       if (name2s.some(t => (t.trim() == "横スマ2"))) {
         alias = "横スマ2"
       }
+      if (name2s.some(t => (t.trim() == "横強1"))) {
+        alias = "横強1"
+      }
+      if (name2s.some(t => (t.trim() == "横強2"))) {
+        alias = "横強2"
+      }
+      if (name2s.some(t => (t.trim() == "衝撃"))) {
+        alias = "衝撃"
+      }
       if (name2s.some(t => (t.trim() == "剣ビーム"))) {
         alias = "剣ビーム"
       }
@@ -244,6 +272,10 @@ $(document).ready(function() {
       if (name2s.some(t => (t.trim() == "始"))) {
         persistence_num = 0
       }
+      if (name2s.some(t => (t.trim() == "〆"))) {
+        persistence_num = 9
+      }
+
       if (name2s.some(t => (t.trim() == "持続"))) {
         persistence_num = 1
       }
@@ -285,6 +317,127 @@ $(document).ready(function() {
       }
       if (name2s.some(t => (t.trim() == "対空のみ"))) {
         defend_position = "air_only"
+      }
+      if (name2s.some(t => (t.trim() == "空中ワイヤー"))) {
+        alias = "空中ワイヤー"
+      }
+      if (name2s.some(t => (t.trim() == "右足"))) {
+        detail_name = "右足"
+      }
+      if (name2s.some(t => (t.trim() == "左足"))) {
+        detail_name = "左足"
+      }
+      if (name2s.some(t => (t.trim() == "爆発"))) {
+        detail_name = "爆発"
+      }
+      if (name2s.some(t => (t.trim() == "打ち上げ"))) {
+        detail_name = "打ち上げ"
+      }
+      if (name2s.some(t => (t.trim() == "連"))) {
+        detail_name = "連"
+      }
+      if (name2s.some(t => (t.trim() == "カス当て"))) {
+        detail_name = "カス当て"
+      }
+      if (name2s.some(t => (t.trim() == "本当て"))) {
+        detail_name = "本当て"
+      }
+      if (name2s.some(t => (t.trim() == "本当て1"))) {
+        detail_name = "本当て1"
+      }
+      if (name2s.some(t => (t.trim() == "本当て2"))) {
+        detail_name = "本当て2"
+      }
+
+      if (name2s.some(t => (t.trim() == "赤"))) {
+        detail_name = "赤"
+      }
+      if (name2s.some(t => (t.trim() == "黄青"))) {
+        detail_name = "黄青"
+      }
+      if (name2s.some(t => (t.trim() == "白"))) {
+        detail_name = "白"
+      }
+      if (name2s.some(t => (t.trim() == "紫"))) {
+        detail_name = "紫"
+      }
+      if (name2s.some(t => (t.trim() == "蕪1"))) {
+        detail_name = "カブ1"
+      }
+      if (name2s.some(t => (t.trim() == "蕪2"))) {
+        detail_name = "カブ2"
+      }
+      if (name2s.some(t => (t.trim() == "蕪3"))) {
+        detail_name = "カブ3"
+      }
+      if (name2s.some(t => (t.trim() == "チコ"))) {
+        detail_name = "チコ"
+      }
+      if (name2s.some(t => (t.trim() == "風"))) {
+        detail_name = "風"
+      }
+      if (name2s.some(t => (t.trim() == "風判定"))) {
+        detail_name = "風"
+      }
+      if (name2s.some(t => (t.trim() == "バウンド"))) {
+        detail_name = "バウンド"
+      }
+      if (name2s.some(t => (t.trim() == "サンダー"))) {
+        detail_name = "サンダー"
+      }
+      if (name2s.some(t => (t.trim() == "青銅"))) {
+        detail_name = "青銅"
+      }
+      if (name2s.some(t => (t.trim() == "最終"))) {
+        detail_name = "最終"
+      }
+      if (name2s.some(t => (t.trim() == "弱1 (強)"))) {
+        alias = "弱1 (強)"
+      }
+      if (name2s.some(t => (t.trim() == "弱1 (弱)"))) {
+        alias = "弱1 (弱)"
+      }
+      if (name2s.some(t => (t.trim() == "密着"))) {
+        detail_name = "密着"
+      }
+      if (name2s.some(t => (t.trim() == "強"))) {
+        detail_name = "強"
+      }
+      if (name2s.some(t => (t.trim() == "弱"))) {
+        detail_name = "弱"
+      }
+      if (name2s.some(t => (t.trim() == "派生1"))) {
+        detail_name = "派生1"
+      }
+      if (name2s.some(t => (t.trim() == "派生2"))) {
+        detail_name = "派生2"
+      }
+      if (name2s.some(t => (t.trim() == "派生3"))) {
+        detail_name = "派生3"
+      }
+      if (name2s.some(t => (t.trim() == "派生4"))) {
+        detail_name = "派生4"
+      }
+      if (name2s.some(t => (t.trim() == "空振り時"))) {
+        detail_name = "空振り時"
+      }
+      if (name2s.some(t => (t.trim() == "敵ヒット時"))) {
+        detail_name = "敵ヒット時"
+      }
+      if (name2s.some(t => (t.trim() == "アルセーヌ"))) {
+        detail_name = "アルセーヌ"
+      }
+      if (name2s.some(t => (t.trim() == "会心の一撃"))) {
+        detail_name = "会心の一撃"
+      }      
+      if (name2s.some(t => (t.trim() == "空前1"))) {
+        alias = "空前1"
+      }
+      if (name2s.some(t => (t.trim() == "空前2"))) {
+        alias = "空前2"
+      }
+      if (name2s.some(t => (t.trim() == "空前3"))) {
+        alias = "空前3"
       }
 
       name2s.forEach(t => {
@@ -346,7 +499,8 @@ $(document).ready(function() {
         test_serial_num_strs,
         defend_position,
         landing_occurrence_begin,
-        landing_occurrence_end
+        landing_occurrence_end,
+        detail_name
       }
     })
     return result_frame_data
@@ -378,7 +532,9 @@ $(document).ready(function() {
     landing_lag,
     landing_occurrence,
     landing_occurrence_begin,
-    landing_occurrence_end
+    landing_occurrence_end,
+    rehit,
+    detail_name
   }) {
 
     const getStr = ((name, val) => {
@@ -414,6 +570,8 @@ $(document).ready(function() {
 
     d += getNum("damage_no", damage_no) //同技のヒット位置で変わるダメージ順番
     d += getStr("alias", alias) //別名
+    d += getStr("detail_name", detail_name) //別名（カッコ内）
+    d += getNum("rehit", rehit) //再ヒット
     d += getNum("persistence_num", persistence_num) //持続技
     d += getStr("serial_num_str", serial_num_str) //Hit文字を除いた連続ヒット技
     d += getStr("shift", shift) // シフト攻撃
