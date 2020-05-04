@@ -3134,9 +3134,9 @@ const skills =
 ,{tesf:"ピット", tess:"弱攻撃", fighter_id:1280, skill_genre:10300, begin:5, end:6, time:29, base_damage:2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ピット", tess:"弱攻撃", fighter_id:1280, skill_genre:10300, begin:3, end:3, time:31, base_damage:4, alias:"弱3", tes_val:"弱3", }
 ,{tesf:"ピット", tess:"弱攻撃", fighter_id:1280, skill_genre:10300, begin:3, end:3, time:4, base_damage:0, alias:"百裂始", persistence_num:0, tes_val:"百裂, 始", }
-,{tesf:"ピット", tess:"弱攻撃", fighter_id:1280, skill_genre:10300, begin:2, end:2, time:16, base_damage:0.5, alias:"百裂", detail_name:"連", tes_message:"(連続ヒットまとめ技)", test_serial_num_strs:"2, 4, 6, 8, 10, 12, 14, 16", tes_val:"百裂, 連", }
+,{tesf:"ピット", tess:"弱攻撃", fighter_id:1280, skill_genre:10300, begin:2, end:2, time:16, base_damage:0.5, alias:"百裂", detail_name:"連", tes_message:"(連続ヒットまとめ技)", test_serial_num_strs:"2, 4, 6, 8, 10, 12, 14, 16", tes_val:"百裂, 連",correction:3 }
 ,{tesf:"ピット", tess:"弱攻撃", fighter_id:1280, skill_genre:10300, begin:4, end:5, time:47, base_damage:2, alias:"百裂〆", persistence_num:9, tes_val:"百裂, 〆", }
-,{tesf:"ピット", tess:"ダッシュ攻撃", fighter_id:1280, skill_genre:10400, begin:7, end:9, time:38, base_damage:11, tes_val:"", }
+,{tesf:"ピット", tess:"ダッシュ攻撃", fighter_id:1280, skill_genre:10400, begin:7, end:9, time:38, base_damage:11, tes_val:"", correction:1.37}
 ,{tesf:"ピット", tess:"横強", fighter_id:1280, skill_genre:10501, begin:10, end:14, time:39, base_damage:10, damage_no:1, tes_val:"", }
 ,{tesf:"ピット", tess:"横強", fighter_id:1280, skill_genre:10501, begin:10, end:14, time:39, base_damage:7, damage_no:2, tes_val:"", }
 ,{tesf:"ピット", tess:"上強", fighter_id:1280, skill_genre:10500, begin:6, end:8, time:32, base_damage:4, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
@@ -3172,7 +3172,9 @@ const skills =
 ,{tesf:"アイスクライマー", tess:"ダッシュ攻撃", fighter_id:1150, skill_genre:10400, begin:11, end:14, time:41, base_damage:6, tes_val:"", }
 ,{tesf:"アイスクライマー", tess:"横強", fighter_id:1150, skill_genre:10501, begin:9, end:10, time:32, base_damage:9, shift:"all", tes_val:"全シフト", }
 ,{tesf:"アイスクライマー", tess:"上強", fighter_id:1150, skill_genre:10500, begin:8, end:9, time:48, base_damage:0.8, serial_num_str:"1-6", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"8-9, 11-12,14-15, 17-18, 20-21, 23-24", tes_val:"Hit 1-6", }
-,{tesf:"アイスクライマー", tess:"上強", fighter_id:1150, skill_genre:10500, begin:27, end:27, time:48, base_damage:4, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", }
+,{tesf:"アイスクライマー", tess:"上強", fighter_id:1150, skill_genre:10500, begin:27, end:27, time:48, base_damage:4, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", correction:2, detail_name:"本体"}
+,{tesf:"アイスクライマー", tess:"上強", fighter_id:1150, skill_genre:10500, begin:27, end:27, time:48, base_damage:4, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", correction:2.8,detail_name:"パートナー"}
+
 ,{tesf:"アイスクライマー", tess:"下強", fighter_id:1150, skill_genre:10502, begin:8, end:11, time:30, base_damage:6, tes_val:"", }
 ,{tesf:"アイスクライマー", tess:"横スマッシュ", fighter_id:1150, skill_genre:10601, begin:11, end:13, time:46, base_damage:12, tes_val:"", }
 ,{tesf:"アイスクライマー", tess:"上スマッシュ", fighter_id:1150, skill_genre:10600, begin:12, end:17, time:49, base_damage:11, damage_no:1, tes_val:"", }
