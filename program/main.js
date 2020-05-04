@@ -8,13 +8,15 @@ $(document).ready( function()
 $("#op_select").select2({
     tags: true,
     tokenSeparators: [',', ' ']
+    ,dropdownAutoWidth: true,
+    width: '100%'
 })
 //$('#op_select').select2().val([8.545,7.65]).trigger("change")
 
 
 $("#op_select").on("select2:select select2:unselect", function (e) {
 
-    const items = $(this).val();       
+    const items = $(this).val();
     const item_nums = items.map(m=>(Number(m)));
 	if(item_nums.length == 0)
 	{
@@ -23,13 +25,13 @@ $("#op_select").on("select2:select select2:unselect", function (e) {
 	const op_sum = item_nums.reduce((a,b)=>(BigNumber(a).plus(b)))
 	const op = BigNumber(100).minus(op_sum).toNumber()
 	$("#op").text(op)
-	
+
 	}
-	
+
 	if($(".row_frame_view_mode").hasClass("attack"))
 	{
 	run("attack")
-		
+
 	}else if($(".row_frame_view_mode").hasClass("defend"))
 	{
 	run("defend")
@@ -45,21 +47,21 @@ $("#op_select").on("select2:select select2:unselect", function (e) {
   $("input").change(function() {
     run()
   });
-  
+
 
 
    $(".js-modal-open").each(function(){
         $(this).on("click",function(i){
             winScrollTop = $(window).scrollTop()
             const target = $(this).attr('data-target')
-                 ,player = $(this).attr('data-player')			
+                 ,player = $(this).attr('data-player')
                  ,modal = document.getElementById(target)
 			$(modal).attr('data-player',player)
             $(modal).fadeIn(100)
 			$("#fighter_search").val("")
 			fighterSearchInput()
 			$("body").addClass('fixed')
-			$("#fighter_search").focus()			
+			$("#fighter_search").focus()
             return false;
         });
     });
@@ -69,7 +71,7 @@ $("#op_select").on("select2:select select2:unselect", function (e) {
 		$("body").removeClass('fixed')
         return false;
     });
-	
+
 $("#fighter_search").keypress((e)=>{
   if(e.which!=13)
   {
@@ -88,7 +90,7 @@ $("#fighter_search").keypress((e)=>{
 	  {
 	    $(e).click()
 		$("#fighter_search").blur()
-        return false 
+        return false
 	  }
 	})
   })
@@ -97,5 +99,3 @@ $("#fighter_search").keypress((e)=>{
      e.clearSelection();
      });
 });
-
-
