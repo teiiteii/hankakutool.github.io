@@ -149,6 +149,9 @@ const skills =
 ,{tesf:"サムス", tess:"空上", fighter_id:1040, skill_genre:10900, begin:16, end:17, time:39, base_damage:4, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:33, persistence_num:9, tes_val:"〆", }
 ,{tesf:"サムス", tess:"空下", fighter_id:1040, skill_genre:10902, begin:17, end:18, time:48, base_damage:10, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:33, persistence_num:0, tes_val:"始", }
 ,{tesf:"サムス", tess:"空下", fighter_id:1040, skill_genre:10902, begin:19, end:21, time:48, base_damage:14, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:33, tes_val:"メテオ", }
+,{tess:"その場投げ", fighter_id:1040, skill_genre:10200, base_damage:0, begin:15, end:22, time:59,detail_name:"うねうね"}
+,{tess:"ダッシュ投げ", fighter_id:1040, skill_genre:10201, base_damage:0, begin:17, end:24, time:67,detail_name:"うねうね"}
+,{tess:"ふりむき投げ", fighter_id:1040, skill_genre:10202, base_damage:0, begin:18, end:25, time:62,detail_name:"うねうね"}
 
 , {tesf:"ダークサムス", tess:"弱攻撃", fighter_id:1041, skill_genre:10300, begin:3, end:4, time:17, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ダークサムス", tess:"弱攻撃", fighter_id:1041, skill_genre:10300, begin:6, end:9, time:29, base_damage:8, alias:"弱2", tes_val:"弱2", }
@@ -194,6 +197,9 @@ const skills =
 ,{tesf:"ダークサムス", tess:"空上", fighter_id:1041, skill_genre:10900, begin:16, end:17, time:39, base_damage:4, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:33, persistence_num:9, tes_val:"〆", }
 ,{tesf:"ダークサムス", tess:"空下", fighter_id:1041, skill_genre:10902, begin:17, end:18, time:48, base_damage:10, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:33, persistence_num:0, tes_val:"始", }
 ,{tesf:"ダークサムス", tess:"空下", fighter_id:1041, skill_genre:10902, begin:19, end:21, time:48, base_damage:14, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:33, tes_val:"メテオ", }
+,{tess:"その場投げ", fighter_id:1041, skill_genre:10200, base_damage:0, begin:15, end:22, time:59,detail_name:"うねうね"}
+,{tess:"ダッシュ投げ", fighter_id:1041, skill_genre:10201, base_damage:0, begin:17, end:24, time:67,detail_name:"うねうね"}
+,{tess:"ふりむき投げ", fighter_id:1041, skill_genre:10202, base_damage:0, begin:18, end:25, time:62,detail_name:"うねうね"}
 
 , {tesf:"ヨッシー", tess:"弱攻撃", fighter_id:1050, skill_genre:10300, begin:3, end:3, time:17, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ヨッシー", tess:"弱攻撃", fighter_id:1050, skill_genre:10300, begin:3, end:4, time:19, base_damage:4, alias:"弱2", tes_val:"弱2", }
@@ -225,6 +231,10 @@ const skills =
 ,{tesf:"ヨッシー", tess:"空下", fighter_id:1050, skill_genre:10902, begin:28, end:28, time:56, base_damage:1.9, landing_lag:17, landing_occurrence_begin:14, landing_occurrence_end:49, serial_num_str:"7-12", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"28, 30, 32, 34, 36, 38", tes_val:"Hit 7-12", }
 ,{tesf:"ヨッシー", tess:"空下", fighter_id:1050, skill_genre:10902, begin:41, end:41, time:56, base_damage:2.8, landing_lag:17, landing_occurrence_begin:14, landing_occurrence_end:49, serial_num_str:"13", tes_message:"(連続ヒットする技)", tes_val:"Hit 13", }
 ,{tesf:"ヨッシー", tess:"空下", fighter_id:1050, skill_genre:10902, begin:1, end:1, time:56, base_damage:1, landing_lag:17, landing_occurrence_begin:14, landing_occurrence_end:49, is_landing_attack:true, defend_position:"ground_only", tes_val:"着地, 対地のみ", }
+
+,{tess:"その場投げ", fighter_id:1050 , skill_genre:10200, base_damage:0,begin:14, end:21, time:48,detail_name:"ベロ"}
+,{tess:"ダッシュ投げ", fighter_id:1050 , skill_genre:10201, base_damage:0,begin:16, end:23, time:56,detail_name:"ベロ"}
+,{tess:"ふりむき投げ", fighter_id:1050 , skill_genre:10202, base_damage:0,begin:17, end:24, time:51,detail_name:"ベロ"}
 
 , {tesf:"カービィ", tess:"弱攻撃", fighter_id:1060, skill_genre:10300, begin:2, end:2, time:14, base_damage:1.8, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"カービィ", tess:"弱攻撃", fighter_id:1060, skill_genre:10300, begin:2, end:2, time:4, base_damage:1.8, alias:"弱1", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", cancel:"empty_attack_again"}
@@ -263,6 +273,10 @@ const skills =
 ,{tesf:"カービィ", tess:"空下", fighter_id:1060, skill_genre:10902, begin:18, end:19, time:54, base_damage:1.3, landing_lag:16, landing_occurrence_begin:18, landing_occurrence_end:47, serial_num_str:"1-5", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"18-19, 21-22, 24-25, 27-28, 30-31", tes_val:"Hit 1-5", }
 ,{tesf:"カービィ", tess:"空下", fighter_id:1060, skill_genre:10902, begin:34, end:34, time:54, base_damage:2, landing_lag:16, landing_occurrence_begin:18, landing_occurrence_end:47, serial_num_str:"6", tes_message:"(連続ヒットする技)", tes_val:"Hit 6", }
 ,{tesf:"カービィ", tess:"空下", fighter_id:1060, skill_genre:10902, begin:1, end:2, time:54, base_damage:2, landing_lag:16, landing_occurrence_begin:18, landing_occurrence_end:47, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1060 , skill_genre:10200, base_damage:0,begin:6, end:7, time:33}
+,{tess:"ダッシュ投げ", fighter_id:1060 , skill_genre:10201, base_damage:0,begin:9, end:10, time:41}
+,{tess:"ふりむき投げ", fighter_id:1060 , skill_genre:10202, base_damage:0,begin:10, end:11, time:36}
+
 
 , {tesf:"ピカチュウ", tess:"弱攻撃", fighter_id:1080, skill_genre:10300, begin:2, end:3, time:17, base_damage:1.4, damage_no:1, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ピカチュウ", tess:"弱攻撃", fighter_id:1080, skill_genre:10300, begin:2, end:3, time:6, base_damage:1.4, damage_no:1, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -299,6 +313,9 @@ const skills =
 ,{tesf:"ピカチュウ", tess:"空下", fighter_id:1080, skill_genre:10902, begin:14, end:15, time:47, base_damage:13, landing_lag:22, landing_occurrence_begin:1, landing_occurrence_end:38, tes_val:"メテオ", }
 ,{tesf:"ピカチュウ", tess:"空下", fighter_id:1080, skill_genre:10902, begin:16, end:26, time:47, base_damage:12, landing_lag:22, landing_occurrence_begin:1, landing_occurrence_end:38, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ピカチュウ", tess:"空下", fighter_id:1080, skill_genre:10902, begin:1, end:2, time:47, base_damage:4, landing_lag:22, landing_occurrence_begin:1, landing_occurrence_end:38, is_landing_attack:true, defend_position:"ground_only", tes_val:"着地, 対地のみ", }
+,{tess:"その場投げ", fighter_id:1080 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1080 , skill_genre:10201, base_damage:0,begin:11, end:12, time:44}
+,{tess:"ふりむき投げ", fighter_id:1080 , skill_genre:10202, base_damage:0,begin:12, end:13, time:39}
 
 , {tesf:"フォックス", tess:"弱攻撃", fighter_id:1070, skill_genre:10300, begin:2, end:2, time:17, base_damage:1.8, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"フォックス", tess:"弱攻撃", fighter_id:1070, skill_genre:10300, begin:2, end:2, time:5, base_damage:1.8, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -338,6 +355,9 @@ const skills =
 ,{tesf:"フォックス", tess:"空下", fighter_id:1070, skill_genre:10902, begin:5, end:6, time:49, base_damage:1.4, landing_lag:17, landing_occurrence_begin:5, landing_occurrence_end:27, serial_num_str:"1-6", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"5-6, 8-9, 11-12, 14-15, 17-18, 20-21", tes_val:"Hit 1-6", }
 ,{tesf:"フォックス", tess:"空下", fighter_id:1070, skill_genre:10902, begin:23, end:23, time:49, base_damage:3, landing_lag:17, landing_occurrence_begin:5, landing_occurrence_end:27, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", }
 ,{tesf:"フォックス", tess:"空下", fighter_id:1070, skill_genre:10902, begin:1, end:2, time:49, base_damage:1, landing_lag:17, landing_occurrence_begin:5, landing_occurrence_end:27, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1070 , skill_genre:10200, base_damage:0,begin:6, end:8, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1070 , skill_genre:10201, base_damage:0,begin:10, end:11, time:44}
+,{tess:"ふりむき投げ", fighter_id:1070 , skill_genre:10202, base_damage:0,begin:11, end:13, time:39}
 
 , {tesf:"ルイージ", tess:"弱攻撃", fighter_id:1090, skill_genre:10300, begin:2, end:3, time:18, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ルイージ", tess:"弱攻撃", fighter_id:1090, skill_genre:10300, begin:2, end:3, time:6, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -370,6 +390,9 @@ const skills =
 ,{tesf:"ルイージ", tess:"空下", fighter_id:1090, skill_genre:10902, begin:11, end:14, time:28, base_damage:8, landing_lag:12, landing_occurrence_begin:6, landing_occurrence_end:23, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ルイージ", tess:"空中ワイヤー", fighter_id:1090, skill_genre:10905, begin:14, end:68, time:52, base_damage:5, landing_lag:20, landing_occurrence_begin:1, landing_occurrence_end:48, tes_val:"", }
 ,{tesf:"ルイージ", tess:"空中ワイヤー", fighter_id:1090, skill_genre:10905, begin:6, end:30, time:20, base_damage:5, landing_lag:20, landing_occurrence_begin:1, landing_occurrence_end:48, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1090 , skill_genre:10200, base_damage:0,begin:14, end:20, time:47}
+,{tess:"ダッシュ投げ", fighter_id:1090 , skill_genre:10201, base_damage:0,begin:16, end:22, time:51}
+,{tess:"ふりむき投げ", fighter_id:1090 , skill_genre:10202, base_damage:0,begin:17, end:23, time:49}
 
 , {tesf:"キャプテン・ファルコン", tess:"弱攻撃", fighter_id:1110, skill_genre:10300, begin:3, end:3, time:17, base_damage:1.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"キャプテン・ファルコン", tess:"弱攻撃", fighter_id:1110, skill_genre:10300, begin:3, end:3, time:6, base_damage:1.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -411,6 +434,9 @@ const skills =
 ,{tesf:"キャプテン・ファルコン", tess:"空上", fighter_id:1110, skill_genre:10900, begin:11, end:12, time:31, base_damage:9, landing_lag:10, landing_occurrence_begin:1, landing_occurrence_end:23, damage_no:1, persistence_num:1, tes_val:"持続", }
 ,{tesf:"キャプテン・ファルコン", tess:"空上", fighter_id:1110, skill_genre:10900, begin:11, end:12, time:31, base_damage:8, landing_lag:10, landing_occurrence_begin:1, landing_occurrence_end:23, damage_no:2, persistence_num:1, tes_val:"持続", }
 ,{tesf:"キャプテン・ファルコン", tess:"空下", fighter_id:1110, skill_genre:10902, begin:16, end:18, time:44, base_damage:14, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:38, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1110 , skill_genre:10200, base_damage:0,begin:6, end:7, time:35}
+,{tess:"ダッシュ投げ", fighter_id:1110 , skill_genre:10201, base_damage:0,begin:9, end:10, time:43}
+,{tess:"ふりむき投げ", fighter_id:1110 , skill_genre:10202, base_damage:0,begin:10, end:11, time:38}
 
 , {tesf:"プリン", tess:"弱攻撃", fighter_id:1120, skill_genre:10300, begin:5, end:6, time:16, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"プリン", tess:"弱攻撃", fighter_id:1120, skill_genre:10300, begin:5, end:6, time:11, base_damage:3, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -433,6 +459,9 @@ const skills =
 ,{tesf:"プリン", tess:"空上", fighter_id:1120, skill_genre:10900, begin:9, end:21, time:39, base_damage:9, landing_lag:9, landing_occurrence_begin:4, landing_occurrence_end:34, tes_val:"", }
 ,{tesf:"プリン", tess:"空下", fighter_id:1120, skill_genre:10902, begin:7, end:8, time:52, base_damage:1.5, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:41, serial_num_str:"1-8", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"7-8, 10-11, 13-14, 16-17, 19-20, 22-23, 25-26, 28-29", tes_val:"Hit 1-8", }
 ,{tesf:"プリン", tess:"空下", fighter_id:1120, skill_genre:10902, begin:31, end:32, time:52, base_damage:2, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:41, serial_num_str:"9", tes_message:"(連続ヒットする技)", tes_val:"Hit 9", }
+,{tess:"その場投げ", fighter_id:1120 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1120 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42}
+,{tess:"ふりむき投げ", fighter_id:1120 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37}
 
 
 , {tesf:"ピーチ", tess:"弱攻撃", fighter_id:1130, skill_genre:10300, begin:2, end:2, time:27, base_damage:2, alias:"弱1", tes_val:"弱1", }
@@ -472,6 +501,10 @@ const skills =
 ,{tesf:"ピーチ", tess:"空下", fighter_id:1130, skill_genre:10902, begin:12, end:13, time:38, base_damage:2, landing_lag:8, landing_occurrence_begin:12, landing_occurrence_end:37, damage_no:1, serial_num_str:"1-3", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"12-13, 18-19, 24-25", tes_val:"Hit 1-3", }
 ,{tesf:"ピーチ", tess:"空下", fighter_id:1130, skill_genre:10902, begin:12, end:13, time:38, base_damage:1, landing_lag:8, landing_occurrence_begin:12, landing_occurrence_end:37, damage_no:2, serial_num_str:"1-3", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"12-13, 18-19, 24-25", tes_val:"Hit 1-3", }
 ,{tesf:"ピーチ", tess:"空下", fighter_id:1130, skill_genre:10902, begin:30, end:31, time:38, base_damage:5, landing_lag:8, landing_occurrence_begin:12, landing_occurrence_end:37, serial_num_str:"4", tes_message:"(連続ヒットする技)", tes_val:"Hit 4", }
+,{tess:"その場投げ", fighter_id:1130 , skill_genre:10200, base_damage:0,begin:6, end:7, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1130 , skill_genre:10201, base_damage:0,begin:9, end:10, time:44}
+,{tess:"ふりむき投げ", fighter_id:1130 , skill_genre:10202, base_damage:0,begin:10, end:11, time:39}
+
 , {tesf:"デイジー", tess:"空N", fighter_id:1131, skill_genre:10904, begin:5, end:8, time:48, base_damage:13, landing_lag:7, landing_occurrence_begin:5, landing_occurrence_end:35, tes_val:"", }
 ,{tesf:"デイジー", tess:"空N", fighter_id:1131, skill_genre:10904, begin:9, end:19, time:48, base_damage:6, landing_lag:7, landing_occurrence_begin:5, landing_occurrence_end:35, damage_no:1, persistence_num:1, tes_val:"持続", }
 ,{tesf:"デイジー", tess:"空N", fighter_id:1131, skill_genre:10904, begin:9, end:19, time:48, base_damage:5, landing_lag:7, landing_occurrence_begin:5, landing_occurrence_end:35, damage_no:2, persistence_num:1, tes_val:"持続", }
@@ -488,7 +521,6 @@ const skills =
 ,{tesf:"デイジー", tess:"空下", fighter_id:1131, skill_genre:10902, begin:12, end:13, time:38, base_damage:2, landing_lag:8, landing_occurrence_begin:12, landing_occurrence_end:37, damage_no:1, serial_num_str:"1-3", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"12-13, 18-19, 24-25", tes_val:"Hit 1-3", }
 ,{tesf:"デイジー", tess:"空下", fighter_id:1131, skill_genre:10902, begin:12, end:13, time:38, base_damage:1, landing_lag:8, landing_occurrence_begin:12, landing_occurrence_end:37, damage_no:2, serial_num_str:"1-3", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"12-13, 18-19, 24-25", tes_val:"Hit 1-3", }
 ,{tesf:"デイジー", tess:"空下", fighter_id:1131, skill_genre:10902, begin:30, end:31, time:38, base_damage:5, landing_lag:8, landing_occurrence_begin:12, landing_occurrence_end:37, serial_num_str:"4", tes_message:"(連続ヒットする技)", tes_val:"Hit 4", }
-
 
 
 , {tesf:"デイジー", tess:"弱攻撃", fighter_id:1131, skill_genre:10300, begin:2, end:2, time:27, base_damage:2, alias:"弱1", tes_val:"弱1", }
@@ -512,6 +544,9 @@ const skills =
 ,{tesf:"デイジー", tess:"上スマッシュ", fighter_id:1131, skill_genre:10600, begin:17, end:20, time:44, base_damage:10, damage_no:2, persistence_num:1, tes_val:"持続", }
 ,{tesf:"デイジー", tess:"下スマッシュ", fighter_id:1131, skill_genre:10602, begin:6, end:7, time:54, base_damage:2, serial_num_str:"1-6", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"6-7, 10-11, 14-15, 18-19,22-12, 26-27", tes_val:"Hit 1-6", }
 ,{tesf:"デイジー", tess:"下スマッシュ", fighter_id:1131, skill_genre:10602, begin:30, end:31, time:54, base_damage:3, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", }
+,{tess:"その場投げ", fighter_id:1131 , skill_genre:10200, base_damage:0,begin:6, end:7, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1131 , skill_genre:10201, base_damage:0,begin:9, end:10, time:44}
+,{tess:"ふりむき投げ", fighter_id:1131 , skill_genre:10202, base_damage:0,begin:10, end:11, time:39}
 
 , {tesf:"クッパ", tess:"弱攻撃", fighter_id:1140, skill_genre:10300, begin:7, end:8, time:25, base_damage:4, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"クッパ", tess:"弱攻撃", fighter_id:1140, skill_genre:10300, begin:9, end:11, time:25, base_damage:7, alias:"弱2", tes_val:"弱2", }
@@ -542,6 +577,9 @@ const skills =
 ,{tesf:"クッパ", tess:"空下", fighter_id:1140, skill_genre:10902, begin:17, end:24, time:77, base_damage:16, landing_lag:34, landing_occurrence_begin:14, landing_occurrence_end:69, tes_val:"メテオ", }
 ,{tesf:"クッパ", tess:"空下", fighter_id:1140, skill_genre:10902, begin:25, end:49, time:77, base_damage:16, landing_lag:34, landing_occurrence_begin:14, landing_occurrence_end:69, persistence_num:1, tes_val:"持続", }
 ,{tesf:"クッパ", tess:"空下", fighter_id:1140, skill_genre:10902, begin:1, end:6, time:77, base_damage:2, landing_lag:34, landing_occurrence_begin:14, landing_occurrence_end:69, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1140 , skill_genre:10200, base_damage:0,begin:8, end:10, time:40}
+,{tess:"ダッシュ投げ", fighter_id:1140 , skill_genre:10201, base_damage:0,begin:11, end:13, time:48}
+,{tess:"ふりむき投げ", fighter_id:1140 , skill_genre:10202, base_damage:0,begin:12, end:14, time:43}
 
 , {tesf:"シーク", tess:"弱攻撃", fighter_id:1160, skill_genre:10300, begin:2, end:2, time:17, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"シーク", tess:"弱攻撃", fighter_id:1160, skill_genre:10300, begin:3, end:3, time:17, base_damage:1.6, alias:"弱2", tes_val:"弱2", }
@@ -574,6 +612,9 @@ const skills =
 ,{tesf:"シーク", tess:"空下", fighter_id:1160, skill_genre:10902, begin:15, end:18, time:54, base_damage:10, landing_lag:22, landing_occurrence_begin:3, landing_occurrence_end:52, tes_val:"メテオ", }
 ,{tesf:"シーク", tess:"空下", fighter_id:1160, skill_genre:10902, begin:19, end:33, time:54, base_damage:10, landing_lag:22, landing_occurrence_begin:3, landing_occurrence_end:52, persistence_num:1, tes_val:"持続", }
 ,{tesf:"シーク", tess:"空下", fighter_id:1160, skill_genre:10902, begin:1, end:2, time:54, base_damage:2, landing_lag:22, landing_occurrence_begin:3, landing_occurrence_end:52, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1160 , skill_genre:10200, base_damage:0,begin:6, end:7, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1160 , skill_genre:10201, base_damage:0,begin:9, end:10, time:44}
+,{tess:"ふりむき投げ", fighter_id:1160 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39}
 
 , {tesf:"ゼルダ", tess:"弱攻撃", fighter_id:1170, skill_genre:10300, begin:4, end:5, time:24, base_damage:2.5, landing_lag:6, landing_occurrence_begin:3, landing_occurrence_end:30, alias:"弱1", serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"弱1, Hit 1", }
 ,{tesf:"ゼルダ", tess:"弱攻撃", fighter_id:1170, skill_genre:10300, begin:7, end:7, time:24, base_damage:2.5, landing_lag:6, landing_occurrence_begin:3, landing_occurrence_end:30, alias:"弱1", serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"弱1, Hit 2", }
@@ -608,6 +649,9 @@ const skills =
 ,{tesf:"ゼルダ", tess:"空下", fighter_id:1170, skill_genre:10902, begin:14, end:14, time:44, base_damage:16, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:39, tes_val:"", }
 ,{tesf:"ゼルダ", tess:"空下", fighter_id:1170, skill_genre:10902, begin:15, end:24, time:44, base_damage:5, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:39, damage_no:1, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ゼルダ", tess:"空下", fighter_id:1170, skill_genre:10902, begin:15, end:24, time:44, base_damage:4, landing_lag:12, landing_occurrence_begin:4, landing_occurrence_end:39, damage_no:2, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1170 , skill_genre:10200, base_damage:0,begin:10, end:11, time:39}
+,{tess:"ダッシュ投げ", fighter_id:1170 , skill_genre:10201, base_damage:0,begin:13, end:14, time:47}
+,{tess:"ふりむき投げ", fighter_id:1170 , skill_genre:10202, base_damage:0,begin:14, end:15, time:42}
 
 , {tesf:"ドクターマリオ", tess:"弱攻撃", fighter_id:1180, skill_genre:10300, begin:2, end:3, time:19, base_damage:2.94, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ドクターマリオ", tess:"弱攻撃", fighter_id:1180, skill_genre:10300, begin:2, end:3, time:6, base_damage:2.94, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -633,6 +677,9 @@ const skills =
 ,{tesf:"ドクターマリオ", tess:"空後", fighter_id:1180, skill_genre:10903, begin:9, end:13, time:33, base_damage:8.232, landing_lag:6, landing_occurrence_begin:6, landing_occurrence_end:18, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ドクターマリオ", tess:"空上", fighter_id:1180, skill_genre:10900, begin:4, end:7, time:30, base_damage:10.2312, landing_lag:6, landing_occurrence_begin:2, landing_occurrence_end:16, tes_val:"", }
 ,{tesf:"ドクターマリオ", tess:"空下", fighter_id:1180, skill_genre:10902, begin:16, end:19, time:44, base_damage:14.112, landing_lag:15, landing_occurrence_begin:6, landing_occurrence_end:34, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1180 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1180 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42}
+,{tess:"ふりむき投げ", fighter_id:1180 , skill_genre:10202, base_damage:0,begin:10, end:11, time:36}
 
 , {tesf:"ピチュー", tess:"弱攻撃", fighter_id:1190, skill_genre:10300, begin:2, end:3, time:16, base_damage:1.2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ピチュー", tess:"弱攻撃", fighter_id:1190, skill_genre:10300, begin:2, end:3, time:6, base_damage:1.2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
@@ -657,6 +704,9 @@ const skills =
 ,{tesf:"ピチュー", tess:"空下", fighter_id:1190, skill_genre:10902, begin:14, end:17, time:47, base_damage:13, landing_lag:22, landing_occurrence_begin:1, landing_occurrence_end:31, tes_val:"", }
 ,{tesf:"ピチュー", tess:"空下", fighter_id:1190, skill_genre:10902, begin:18, end:26, time:47, base_damage:12, landing_lag:22, landing_occurrence_begin:1, landing_occurrence_end:31, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ピチュー", tess:"空下", fighter_id:1190, skill_genre:10902, begin:1, end:2, time:47, base_damage:4, landing_lag:22, landing_occurrence_begin:1, landing_occurrence_end:31, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1190 , skill_genre:10200, base_damage:0,begin:6, end:7, time:31}
+,{tess:"ダッシュ投げ", fighter_id:1190 , skill_genre:10201, base_damage:0,begin:8, end:9, time:39}
+,{tess:"ふりむき投げ", fighter_id:1190 , skill_genre:10202, base_damage:0,begin:9, end:10, time:36}
 
 , {tesf:"ファルコ", tess:"弱攻撃", fighter_id:1200, skill_genre:10300, begin:2, end:2, time:22, base_damage:1.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ファルコ", tess:"弱攻撃", fighter_id:1200, skill_genre:10300, begin:3, end:4, time:25, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -693,6 +743,9 @@ const skills =
 ,{tesf:"ファルコ", tess:"空下", fighter_id:1200, skill_genre:10902, begin:10, end:14, time:51, base_damage:13, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:29, defend_position:"ground", tes_val:"本当て, 対地", }
 ,{tesf:"ファルコ", tess:"空下", fighter_id:1200, skill_genre:10902, begin:10, end:14, time:51, base_damage:0, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:29, defend_position:"air", tes_val:"本当て, 対空", }
 ,{tesf:"ファルコ", tess:"空下", fighter_id:1200, skill_genre:10902, begin:15, end:24, time:51, base_damage:8, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:29, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1200 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1200 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42}
+,{tess:"ふりむき投げ", fighter_id:1200 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37}
 
 , {tesf:"ルキナ", tess:"弱攻撃", fighter_id:1211, skill_genre:10300, begin:5, end:6, time:25, base_damage:3.325, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ルキナ", tess:"弱攻撃", fighter_id:1211, skill_genre:10300, begin:4, end:5, time:28, base_damage:4.75, alias:"弱2", tes_val:"弱2", }
@@ -713,6 +766,9 @@ const skills =
 ,{tesf:"ルキナ", tess:"空上", fighter_id:1211, skill_genre:10900, begin:5, end:9, time:45, base_damage:11.4, landing_lag:6, landing_occurrence_begin:3, landing_occurrence_end:37, tes_val:"", }
 ,{tesf:"ルキナ", tess:"空下", fighter_id:1211, skill_genre:10902, begin:9, end:13, time:59, base_damage:12.35, landing_lag:15, landing_occurrence_begin:3, landing_occurrence_end:54, tes_val:"", }
 ,{tesf:"ルキナ", tess:"空下", fighter_id:1211, skill_genre:10902, begin:11, end:11, time:59, base_damage:14.25, landing_lag:15, landing_occurrence_begin:3, landing_occurrence_end:54, tes_val:"メテオ", }
+,{tess:"その場投げ", fighter_id:1211 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1211 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42}
+,{tess:"ふりむき投げ", fighter_id:1211 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37}
 
 , {tesf:"マルス", tess:"弱攻撃", fighter_id:1210, skill_genre:10300, begin:5, end:6, time:25, base_damage:5, damage_no:1, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"マルス", tess:"弱攻撃", fighter_id:1210, skill_genre:10300, begin:5, end:6, time:25, base_damage:3, damage_no:2, alias:"弱1", tes_val:"弱1", }
@@ -759,6 +815,9 @@ const skills =
 ,{tesf:"マルス", tess:"空下", fighter_id:1210, skill_genre:10902, begin:9, end:13, time:59, base_damage:14, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:54, damage_no:1, tes_val:"", }
 ,{tesf:"マルス", tess:"空下", fighter_id:1210, skill_genre:10902, begin:9, end:13, time:59, base_damage:12, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:54, damage_no:2, tes_val:"", }
 ,{tesf:"マルス", tess:"空下", fighter_id:1210, skill_genre:10902, begin:11, end:11, time:59, base_damage:15, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:54, tes_val:"メテオ", }
+,{tess:"その場投げ", fighter_id:1210 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1210 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42}
+,{tess:"ふりむき投げ", fighter_id:1210 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37}
 
 , {tesf:"こどもリンク", tess:"弱攻撃", fighter_id:1220, skill_genre:10300, begin:4, end:5, time:17, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"こどもリンク", tess:"弱攻撃", fighter_id:1220, skill_genre:10300, begin:6, end:7, time:16, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -798,6 +857,9 @@ const skills =
 ,{tesf:"こどもリンク", tess:"空下", fighter_id:1220, skill_genre:10902, begin:16, end:64, time:79, base_damage:15, landing_lag:17, landing_occurrence_begin:13, landing_occurrence_end:64, persistence_num:1, tes_val:"持続", }
 ,{tesf:"こどもリンク", tess:"空下", fighter_id:1220, skill_genre:10902, begin:16, end:64, time:79, base_damage:9, landing_lag:17, landing_occurrence_begin:13, landing_occurrence_end:64, tes_val:"バウンド", }
 ,{tesf:"こどもリンク", tess:"空中ワイヤー", fighter_id:1220, skill_genre:10905, begin:9, end:16, time:71, base_damage:4, landing_lag:8, landing_occurrence_begin:13, landing_occurrence_end:64, detail_name:"バウンド", tes_val:"", }
+,{tess:"その場投げ", fighter_id:1220 , skill_genre:10200, base_damage:0,begin:12, end:18, time:52}
+,{tess:"ダッシュ投げ", fighter_id:1220 , skill_genre:10201, base_damage:0,begin:14, end:20, time:60}
+,{tess:"ふりむき投げ", fighter_id:1220 , skill_genre:10202, base_damage:0,begin:15, end:21, time:55}
 
 , {tesf:"ガノンドロフ", tess:"弱攻撃", fighter_id:1230, skill_genre:10300, begin:7, end:8, time:26, base_damage:11, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ガノンドロフ", tess:"ダッシュ攻撃", fighter_id:1230, skill_genre:10400, begin:10, end:12, time:37, base_damage:15, tes_val:"", }
@@ -829,6 +891,9 @@ const skills =
 ,{tesf:"ガノンドロフ", tess:"空上", fighter_id:1230, skill_genre:10900, begin:14, end:16, time:33, base_damage:6, landing_lag:11, landing_occurrence_begin:1, landing_occurrence_end:24, damage_no:2, persistence_num:2, tes_val:"持続2", }
 ,{tesf:"ガノンドロフ", tess:"空下", fighter_id:1230, skill_genre:10902, begin:16, end:18, time:44, base_damage:19, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:31, damage_no:1, tes_val:"", }
 ,{tesf:"ガノンドロフ", tess:"空下", fighter_id:1230, skill_genre:10902, begin:16, end:18, time:44, base_damage:17, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:31, damage_no:2, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1230 , skill_genre:10200, base_damage:0,begin:12, end:18, time:52}
+,{tess:"ダッシュ投げ", fighter_id:1230 , skill_genre:10201, base_damage:0,begin:14, end:20, time:60}
+,{tess:"ふりむき投げ", fighter_id:1230 , skill_genre:10202, base_damage:0,begin:15, end:21, time:55}
 
 , {tesf:"ミュウツー", tess:"弱攻撃", fighter_id:1240, skill_genre:10300, begin:5, end:6, time:21, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ミュウツー", tess:"弱攻撃", fighter_id:1240, skill_genre:10300, begin:5, end:6, time:2, base_damage:0, alias:"百裂始", persistence_num:0, tes_val:"百裂, 始", }
@@ -870,6 +935,9 @@ const skills =
 ,{tesf:"ミュウツー", tess:"空下", fighter_id:1240, skill_genre:10902, begin:15, end:18, time:47, base_damage:14, landing_lag:11, landing_occurrence_begin:4, landing_occurrence_end:41, defend_position:"ground", tes_val:"対地", }
 ,{tesf:"ミュウツー", tess:"空下", fighter_id:1240, skill_genre:10902, begin:15, end:18, time:47, base_damage:15, landing_lag:11, landing_occurrence_begin:4, landing_occurrence_end:41, damage_no:1, defend_position:"air", tes_val:"対空", }
 ,{tesf:"ミュウツー", tess:"空下", fighter_id:1240, skill_genre:10902, begin:15, end:18, time:47, base_damage:14, landing_lag:11, landing_occurrence_begin:4, landing_occurrence_end:41, damage_no:2, defend_position:"air", tes_val:"対空", }
+,{tess:"その場投げ", fighter_id:1240 , skill_genre:10200, base_damage:0,begin:7, end:8, time:39}
+,{tess:"ダッシュ投げ", fighter_id:1240 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47}
+,{tess:"ふりむき投げ", fighter_id:1240 , skill_genre:10202, base_damage:0,begin:11, end:12, time:42}
 
 , {tesf:"ロイ", tess:"弱攻撃", fighter_id:1250, skill_genre:10300, begin:5, end:7, time:22, base_damage:7.5, damage_no:1, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ロイ", tess:"弱攻撃", fighter_id:1250, skill_genre:10300, begin:5, end:7, time:22, base_damage:4.8, damage_no:2, alias:"弱1", tes_val:"弱1", }
@@ -909,6 +977,9 @@ const skills =
 ,{tesf:"ロイ", tess:"空上", fighter_id:1250, skill_genre:10900, begin:5, end:12, time:41, base_damage:6, landing_lag:8, landing_occurrence_begin:3, landing_occurrence_end:37, damage_no:2, tes_val:"", }
 ,{tesf:"ロイ", tess:"空下", fighter_id:1250, skill_genre:10902, begin:16, end:17, time:51, base_damage:15, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:51, damage_no:1, tes_val:"", }
 ,{tesf:"ロイ", tess:"空下", fighter_id:1250, skill_genre:10902, begin:16, end:17, time:51, base_damage:10, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:51, damage_no:2, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1250 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1250 , skill_genre:10201, base_damage:0,begin:10, end:11, time:44}
+,{tess:"ふりむき投げ", fighter_id:1250 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39}
 
 , {tesf:"メタナイト", tess:"弱攻撃", fighter_id:1270, skill_genre:10300, begin:0, end:0, time:2, base_damage:0, alias:"百裂始", persistence_num:0, tes_val:"百裂, 始", }
 ,{tesf:"メタナイト", tess:"弱攻撃", fighter_id:1270, skill_genre:10300, begin:2, end:2, time:22, base_damage:1, alias:"百裂", detail_name:"連", tes_message:"(連続ヒットまとめ技)", test_serial_num_strs:"2, 5, 8, 11, 14, 17, 20", tes_val:"百裂, 連", }
@@ -940,6 +1011,10 @@ const skills =
 ,{tesf:"メタナイト", tess:"空後", fighter_id:1270, skill_genre:10903, begin:20, end:21, time:51, base_damage:4, landing_lag:11, landing_occurrence_begin:7, landing_occurrence_end:39, serial_num_str:"3", tes_message:"(連続ヒットする技)", tes_val:"Hit 3", }
 ,{tesf:"メタナイト", tess:"空上", fighter_id:1270, skill_genre:10900, begin:6, end:6, time:26, base_damage:4, landing_lag:9, landing_occurrence_begin:6, landing_occurrence_end:23, tes_val:"", }
 ,{tesf:"メタナイト", tess:"空下", fighter_id:1270, skill_genre:10902, begin:4, end:4, time:27, base_damage:6, landing_lag:9, landing_occurrence_begin:4, landing_occurrence_end:25, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1270 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1270 , skill_genre:10201, base_damage:0,begin:11, end:12, time:44}
+,{tess:"ふりむき投げ", fighter_id:1270 , skill_genre:10202, base_damage:0,begin:12, end:13, time:39}
+
 , {tesf:"ブラックピット", tess:"弱攻撃", fighter_id:1281, skill_genre:10300, begin:4, end:5, time:25, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ブラックピット", tess:"弱攻撃", fighter_id:1281, skill_genre:10300, begin:5, end:6, time:29, base_damage:2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ブラックピット", tess:"弱攻撃", fighter_id:1281, skill_genre:10300, begin:3, end:3, time:31, base_damage:4, alias:"弱3", tes_val:"弱3", }
@@ -974,6 +1049,10 @@ const skills =
 ,{tesf:"ブラックピット", tess:"空上", fighter_id:1281, skill_genre:10900, begin:24, end:25, time:49, base_damage:5, landing_lag:14, landing_occurrence_begin:5, landing_occurrence_end:36, serial_num_str:"5", tes_message:"(連続ヒットする技)", tes_val:"Hit 5", }
 ,{tesf:"ブラックピット", tess:"空下", fighter_id:1281, skill_genre:10902, begin:10, end:10, time:36, base_damage:10, landing_lag:12, landing_occurrence_begin:7, landing_occurrence_end:35, tes_val:"", }
 ,{tesf:"ブラックピット", tess:"空下", fighter_id:1281, skill_genre:10902, begin:11, end:12, time:36, base_damage:10, landing_lag:12, landing_occurrence_begin:7, landing_occurrence_end:35, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1281 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1281 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42}
+,{tess:"ふりむき投げ", fighter_id:1281 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37}
+
 , {tesf:"ゼロスーツサムス", tess:"弱攻撃", fighter_id:1290, skill_genre:10300, begin:1, end:1, time:23, base_damage:1.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ゼロスーツサムス", tess:"弱攻撃", fighter_id:1290, skill_genre:10300, begin:1, end:1, time:7, base_damage:1.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ゼロスーツサムス", tess:"弱攻撃", fighter_id:1290, skill_genre:10300, begin:2, end:2, time:25, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -1006,6 +1085,11 @@ const skills =
 ,{tesf:"ゼロスーツサムス", tess:"空後", fighter_id:1290, skill_genre:10903, begin:8, end:9, time:39, base_damage:10, landing_lag:6, landing_occurrence_begin:4, landing_occurrence_end:30, damage_no:2, tes_val:"", }
 ,{tesf:"ゼロスーツサムス", tess:"空上", fighter_id:1290, skill_genre:10900, begin:6, end:12, time:34, base_damage:6.5, landing_lag:6, landing_occurrence_begin:1, landing_occurrence_end:24, tes_val:"", }
 ,{tesf:"ゼロスーツサムス", tess:"空下", fighter_id:1290, skill_genre:10902, begin:14, end:49, time:67, base_damage:5, landing_lag:15, landing_occurrence_begin:4, landing_occurrence_end:49, defend_position:"ground", tes_val:"対地", }
+,{tess:"その場投げ", fighter_id:1290 , skill_genre:10200, base_damage:0,begin:15, end:25, time:58}
+,{tess:"ダッシュ投げ", fighter_id:1290 , skill_genre:10201, base_damage:0,begin:17, end:26, time:66}
+,{tess:"ふりむき投げ", fighter_id:1290 , skill_genre:10202, base_damage:0,begin:18, end:26, time:61}
+
+
 , {tesf:"ワリオ", tess:"弱攻撃", fighter_id:1300, skill_genre:10300, begin:8, end:9, time:29, base_damage:4, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ワリオ", tess:"弱攻撃", fighter_id:1300, skill_genre:10300, begin:4, end:5, time:33, base_damage:5, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ワリオ", tess:"ダッシュ攻撃", fighter_id:1300, skill_genre:10400, begin:5, end:8, time:48, base_damage:11, damage_no:1, tes_val:"", }
@@ -1033,6 +1117,31 @@ const skills =
 ,{tesf:"ワリオ", tess:"空上", fighter_id:1300, skill_genre:10900, begin:8, end:9, time:46, base_damage:13, landing_lag:7, landing_occurrence_begin:4, landing_occurrence_end:36, tes_val:"", }
 ,{tesf:"ワリオ", tess:"空下", fighter_id:1300, skill_genre:10902, begin:9, end:9, time:47, base_damage:1.3, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:41, serial_num_str:"1-6", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"9, 11, 13, 15, 17, 19", tes_val:"Hit 1-6", }
 ,{tesf:"ワリオ", tess:"空下", fighter_id:1300, skill_genre:10902, begin:21, end:21, time:47, base_damage:4, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:41, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", }
+,{tess:"その場投げ", fighter_id:1300 , skill_genre:10200, base_damage:0,begin:8, end:10, time:35}
+,{tess:"ダッシュ投げ", fighter_id:1300 , skill_genre:10201, base_damage:0,begin:11, end:13, time:43}
+,{tess:"ふりむき投げ", fighter_id:1300 , skill_genre:10202, base_damage:0,begin:12, end:14, time:38}
+
+, {tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:3, end:4, time:15, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
+,{tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:3, end:4, time:6, base_damage:2.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
+,{tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:4, end:5, time:24, base_damage:2.5, alias:"弱2", tes_val:"弱2", }
+,{tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:8, end:9, time:46, base_damage:6, alias:"弱3", tes_val:"弱3", }
+,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:5, end:8, time:41, base_damage:11, damage_no:1, tes_val:"", }
+,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:5, end:8, time:41, base_damage:9, damage_no:2, tes_val:"", }
+,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:9, end:12, time:41, base_damage:8, damage_no:1, persistence_num:1, tes_val:"持続", }
+,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:9, end:12, time:41, base_damage:6, damage_no:2, persistence_num:1, tes_val:"持続", }
+,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:4, end:5, time:31, base_damage:4, alias:"横強1", tes_val:"横強1", }
+,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:8, end:8, time:39, base_damage:11, damage_no:1, alias:"横強2", tes_val:"横強2", }
+,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:8, end:8, time:39, base_damage:10, damage_no:2, alias:"横強2", tes_val:"横強2", }
+,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:8, end:8, time:39, base_damage:9, damage_no:3, alias:"横強2", tes_val:"横強2", }
+,{tesf:"スネーク", tess:"上強", fighter_id:1310, skill_genre:10500, begin:6, end:8, time:37, base_damage:14.5, tes_val:"", }
+,{tesf:"スネーク", tess:"上強", fighter_id:1310, skill_genre:10500, begin:9, end:13, time:37, base_damage:13.5, persistence_num:1, tes_val:"持続", }
+,{tesf:"スネーク", tess:"下強", fighter_id:1310, skill_genre:10502, begin:6, end:7, time:30, base_damage:12, tes_val:"", }
+,{tesf:"スネーク", tess:"横スマッシュ", fighter_id:1310, skill_genre:10601, begin:41, end:43, time:73, base_damage:22, tes_val:"", }
+,{tesf:"スネーク", tess:"上スマッシュ", fighter_id:1310, skill_genre:10600, begin:11, end:12, time:54, base_damage:4, tes_val:"打ち上げ対地のみ", }
+,{tesf:"スネーク", tess:"上スマッシュ", fighter_id:1310, skill_genre:10600, begin:1, end:NaN, time:54, base_damage:14, detail_name:"爆発", tes_val:"爆発", }
+,{tesf:"スネーク", tess:"下スマッシュ", fighter_id:1310, skill_genre:10602, begin:8, end:10, time:44, base_damage:12, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
+,{tesf:"スネーク", tess:"下スマッシュ", fighter_id:1310, skill_genre:10602, begin:20, end:22, time:44, base_damage:14, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
+
 , {tesf:"スネーク", tess:"空N", fighter_id:1310, skill_genre:10904, begin:10, end:11, time:59, base_damage:3, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:49, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
 ,{tesf:"スネーク", tess:"空N", fighter_id:1310, skill_genre:10904, begin:18, end:19, time:59, base_damage:3, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:49, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
 ,{tesf:"スネーク", tess:"空N", fighter_id:1310, skill_genre:10904, begin:26, end:27, time:59, base_damage:3, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:49, serial_num_str:"3", tes_message:"(連続ヒットする技)", tes_val:"Hit 3", }
@@ -1049,6 +1158,10 @@ const skills =
 ,{tesf:"スネーク", tess:"空下", fighter_id:1310, skill_genre:10902, begin:10, end:11, time:59, base_damage:3, landing_lag:20, landing_occurrence_begin:2, landing_occurrence_end:52, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
 ,{tesf:"スネーク", tess:"空下", fighter_id:1310, skill_genre:10902, begin:17, end:18, time:59, base_damage:3, landing_lag:20, landing_occurrence_begin:2, landing_occurrence_end:52, serial_num_str:"3", tes_message:"(連続ヒットする技)", tes_val:"Hit 3", }
 ,{tesf:"スネーク", tess:"空下", fighter_id:1310, skill_genre:10902, begin:25, end:26, time:59, base_damage:10, landing_lag:20, landing_occurrence_begin:2, landing_occurrence_end:52, serial_num_str:"4", tes_message:"(連続ヒットする技)", tes_val:"Hit 4", }
+,{tess:"その場投げ", fighter_id:1310 , skill_genre:10200, base_damage:0,begin:8, end:9, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1310 , skill_genre:10201, base_damage:0,begin:11, end:12, time:42}
+,{tess:"ふりむき投げ", fighter_id:1310 , skill_genre:10202, base_damage:0,begin:9, end:10, time:37}
+
 , {tesf:"アイク", tess:"弱攻撃", fighter_id:1320, skill_genre:10300, begin:4, end:5, time:23, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"アイク", tess:"弱攻撃", fighter_id:1320, skill_genre:10300, begin:4, end:5, time:15, base_damage:2.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"アイク", tess:"弱攻撃", fighter_id:1320, skill_genre:10300, begin:3, end:4, time:27, base_damage:2.5, alias:"弱2", tes_val:"弱2", }
@@ -1074,6 +1187,10 @@ const skills =
 ,{tesf:"アイク", tess:"空後", fighter_id:1320, skill_genre:10903, begin:7, end:9, time:54, base_damage:14, landing_lag:11, landing_occurrence_begin:3, landing_occurrence_end:34, tes_val:"", }
 ,{tesf:"アイク", tess:"空上", fighter_id:1320, skill_genre:10900, begin:13, end:18, time:56, base_damage:11, landing_lag:15, landing_occurrence_begin:6, landing_occurrence_end:50, tes_val:"", }
 ,{tesf:"アイク", tess:"空下", fighter_id:1320, skill_genre:10902, begin:16, end:17, time:54, base_damage:15, landing_lag:14, landing_occurrence_begin:5, landing_occurrence_end:47, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1320 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1320 , skill_genre:10201, base_damage:0,begin:10, end:11, time:44}
+,{tess:"ふりむき投げ", fighter_id:1320 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39}
+
 , {tesf:"ゼニガメ", tess:"弱攻撃", fighter_id:1330, skill_genre:10300, begin:2, end:3, time:16, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ゼニガメ", tess:"弱攻撃", fighter_id:1330, skill_genre:10300, begin:2, end:3, time:6, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ゼニガメ", tess:"弱攻撃", fighter_id:1330, skill_genre:10300, begin:4, end:5, time:24, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -1102,6 +1219,10 @@ const skills =
 ,{tesf:"ゼニガメ", tess:"空上", fighter_id:1330, skill_genre:10900, begin:5, end:9, time:29, base_damage:7, landing_lag:6, landing_occurrence_begin:2, landing_occurrence_end:19, tes_val:"", }
 ,{tesf:"ゼニガメ", tess:"空下", fighter_id:1330, skill_genre:10902, begin:6, end:20, time:44, base_damage:1.5, landing_lag:16, landing_occurrence_begin:6, landing_occurrence_end:34, detail_name:"連", rehit:3, tes_val:"連", }
 ,{tesf:"ゼニガメ", tess:"空下", fighter_id:1330, skill_genre:10902, begin:22, end:22, time:44, base_damage:4, landing_lag:16, landing_occurrence_begin:6, landing_occurrence_end:34, persistence_num:9, tes_val:"〆", }
+,{tess:"その場投げ", fighter_id:1330 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34}
+,{tess:"ダッシュ投げ", fighter_id:1330 , skill_genre:10201, base_damage:0,begin:8, end:9, time:39}
+,{tess:"ふりむき投げ", fighter_id:1330 , skill_genre:10202, base_damage:0,begin:9, end:10, time:37}
+
 , {tesf:"フシギソウ", tess:"弱攻撃", fighter_id:1340, skill_genre:10300, begin:7, end:8, time:27, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"フシギソウ", tess:"弱攻撃", fighter_id:1340, skill_genre:10300, begin:5, end:6, time:27, base_damage:2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"フシギソウ", tess:"弱攻撃", fighter_id:1340, skill_genre:10300, begin:5, end:6, time:19, base_damage:2, alias:"弱2", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱2", }
@@ -1127,6 +1248,10 @@ const skills =
 ,{tesf:"フシギソウ", tess:"空後", fighter_id:1340, skill_genre:10903, begin:13, end:15, time:43, base_damage:6, landing_lag:7, landing_occurrence_begin:7, landing_occurrence_end:42, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
 ,{tesf:"フシギソウ", tess:"空上", fighter_id:1340, skill_genre:10900, begin:12, end:13, time:51, base_damage:15, landing_lag:11, landing_occurrence_begin:1, landing_occurrence_end:40, tes_val:"", }
 ,{tesf:"フシギソウ", tess:"空下", fighter_id:1340, skill_genre:10902, begin:11, end:12, time:63, base_damage:10, landing_lag:13, landing_occurrence_begin:3, landing_occurrence_end:51, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1340 , skill_genre:10200, base_damage:0,begin:13, end:14, time:42}
+,{tess:"ダッシュ投げ", fighter_id:1340 , skill_genre:10201, base_damage:0,begin:13, end:14, time:48}
+,{tess:"ふりむき投げ", fighter_id:1340 , skill_genre:10202, base_damage:0,begin:13, end:14, time:44}
+
 , {tesf:"リザードン", tess:"弱攻撃", fighter_id:1350, skill_genre:10300, begin:4, end:5, time:22, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"リザードン", tess:"弱攻撃", fighter_id:1350, skill_genre:10300, begin:5, end:6, time:25, base_damage:2.5, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"リザードン", tess:"弱攻撃", fighter_id:1350, skill_genre:10300, begin:7, end:8, time:33, base_damage:5, alias:"弱3", tes_val:"弱3", }
@@ -1158,6 +1283,10 @@ const skills =
 ,{tesf:"リザードン", tess:"空上", fighter_id:1350, skill_genre:10900, begin:12, end:15, time:45, base_damage:13, landing_lag:13, landing_occurrence_begin:4, landing_occurrence_end:37, tes_val:"", }
 ,{tesf:"リザードン", tess:"空下", fighter_id:1350, skill_genre:10902, begin:18, end:21, time:51, base_damage:14, landing_lag:21, landing_occurrence_begin:6, landing_occurrence_end:41, tes_val:"", }
 ,{tesf:"リザードン", tess:"空下", fighter_id:1350, skill_genre:10902, begin:22, end:25, time:51, base_damage:8, landing_lag:21, landing_occurrence_begin:6, landing_occurrence_end:41, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1350 , skill_genre:10200, base_damage:0,begin:8, end:10, time:39}
+,{tess:"ダッシュ投げ", fighter_id:1350 , skill_genre:10201, base_damage:0,begin:11, end:13, time:45}
+,{tess:"ふりむき投げ", fighter_id:1350 , skill_genre:10202, base_damage:0,begin:12, end:14, time:42}
+
 , {tesf:"ディディーコング", tess:"弱攻撃", fighter_id:1360, skill_genre:10300, begin:3, end:3, time:19, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ディディーコング", tess:"弱攻撃", fighter_id:1360, skill_genre:10300, begin:3, end:3, time:9, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ディディーコング", tess:"弱攻撃", fighter_id:1360, skill_genre:10300, begin:5, end:5, time:20, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -1188,6 +1317,10 @@ const skills =
 ,{tesf:"ディディーコング", tess:"空上", fighter_id:1360, skill_genre:10900, begin:4, end:7, time:35, base_damage:7, landing_lag:9, landing_occurrence_begin:1, landing_occurrence_end:26, tes_val:"", }
 ,{tesf:"ディディーコング", tess:"空下", fighter_id:1360, skill_genre:10902, begin:15, end:16, time:46, base_damage:13, landing_lag:17, landing_occurrence_begin:15, landing_occurrence_end:34, detail_name:"本当て", tes_val:"本当て", }
 ,{tesf:"ディディーコング", tess:"空下", fighter_id:1360, skill_genre:10902, begin:15, end:15, time:46, base_damage:10, landing_lag:17, landing_occurrence_begin:15, landing_occurrence_end:34, detail_name:"カス当て", tes_val:"カス当て", }
+,{tess:"その場投げ", fighter_id:1360 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36}
+,{tess:"ダッシュ投げ", fighter_id:1360 , skill_genre:10201, base_damage:0,begin:10, end:11, time:44}
+,{tess:"ふりむき投げ", fighter_id:1360 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39}
+
 , {tesf:"ソニック", tess:"弱攻撃", fighter_id:1380, skill_genre:10300, begin:3, end:3, time:19, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ソニック", tess:"弱攻撃", fighter_id:1380, skill_genre:10300, begin:3, end:3, time:9, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ソニック", tess:"弱攻撃", fighter_id:1380, skill_genre:10300, begin:2, end:2, time:21, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -1218,6 +1351,10 @@ const skills =
 ,{tesf:"ソニック", tess:"空下", fighter_id:1380, skill_genre:10902, begin:17, end:19, time:45, base_damage:8, landing_lag:21, landing_occurrence_begin:4, landing_occurrence_end:40, tes_val:"メテオ", }
 ,{tesf:"ソニック", tess:"空下", fighter_id:1380, skill_genre:10902, begin:20, end:32, time:45, base_damage:7, landing_lag:21, landing_occurrence_begin:4, landing_occurrence_end:40, damage_no:1, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ソニック", tess:"空下", fighter_id:1380, skill_genre:10902, begin:20, end:32, time:45, base_damage:5, landing_lag:21, landing_occurrence_begin:4, landing_occurrence_end:40, damage_no:2, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1380 , skill_genre:10200, base_damage:0,begin:7, end:8, time:37}
+,{tess:"ダッシュ投げ", fighter_id:1380 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47}
+,{tess:"ふりむき投げ", fighter_id:1380 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39}
+
 , {tesf:"ピクミン&オリマー", tess:"弱攻撃", fighter_id:1400, skill_genre:10300, begin:4, end:4, time:19, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ピクミン&オリマー", tess:"弱攻撃", fighter_id:1400, skill_genre:10300, begin:5, end:5, time:19, base_damage:4, damage_no:1, alias:"弱1", persistence_num:1, tes_val:"弱1, 持続", }
 ,{tesf:"ピクミン&オリマー", tess:"弱攻撃", fighter_id:1400, skill_genre:10300, begin:5, end:5, time:19, base_damage:3, damage_no:2, alias:"弱1", persistence_num:1, tes_val:"弱1, 持続", }
@@ -1283,6 +1420,20 @@ const skills =
 ,{tesf:"ピクミン&オリマー", tess:"空下", fighter_id:1400, skill_genre:10902, begin:9, end:16, time:51, base_damage:9, landing_lag:18, landing_occurrence_begin:6, landing_occurrence_end:30, detail_name:"黄青", tes_val:"非メテオ, 黄青", }
 ,{tesf:"ピクミン&オリマー", tess:"空下", fighter_id:1400, skill_genre:10902, begin:9, end:16, time:51, base_damage:7.2, landing_lag:18, landing_occurrence_begin:6, landing_occurrence_end:30, detail_name:"白", tes_val:"非メテオ, 白", }
 ,{tesf:"ピクミン&オリマー", tess:"空下", fighter_id:1400, skill_genre:10902, begin:9, end:16, time:51, base_damage:14.4, landing_lag:18, landing_occurrence_begin:6, landing_occurrence_end:30, detail_name:"紫", tes_val:"非メテオ, 紫", }
+,{tess:"その場投げ", fighter_id:1400 , skill_genre:10200, base_damage:0,begin:12, end:23, time:41,detail_name:"0匹"}
+,{tess:"ダッシュ投げ", fighter_id:1400 , skill_genre:10201, base_damage:0,begin:12, end:23, time:49,detail_name:"0匹"}
+,{tess:"ふりむき投げ", fighter_id:1400 , skill_genre:10202, base_damage:0,begin:12, end:23, time:44,detail_name:"0匹"}
+,{tess:"その場投げ", fighter_id:1400 , skill_genre:10200, base_damage:0,begin:12, end:23, time:41,detail_name:"1匹"}
+,{tess:"ダッシュ投げ", fighter_id:1400 , skill_genre:10201, base_damage:0,begin:12, end:23, time:49,detail_name:"1匹"}
+,{tess:"ふりむき投げ", fighter_id:1400 , skill_genre:10202, base_damage:0,begin:12, end:23, time:44,detail_name:"1匹"}
+,{tess:"その場投げ", fighter_id:1400 , skill_genre:10200, base_damage:0,begin:12, end:23, time:47,detail_name:"2匹"}
+,{tess:"ダッシュ投げ", fighter_id:1400 , skill_genre:10201, base_damage:0,begin:12, end:23, time:57,detail_name:"2匹"}
+,{tess:"ふりむき投げ", fighter_id:1400 , skill_genre:10202, base_damage:0,begin:12, end:23, time:51,detail_name:"2匹"}
+,{tess:"その場投げ", fighter_id:1400 , skill_genre:10200, base_damage:0,begin:12, end:23, time:56,detail_name:"3匹"}
+,{tess:"ダッシュ投げ", fighter_id:1400 , skill_genre:10201, base_damage:0,begin:12, end:23, time:67,detail_name:"3匹"}
+,{tess:"ふりむき投げ", fighter_id:1400 , skill_genre:10202, base_damage:0,begin:12, end:23, time:60,detail_name:"3匹"}
+
+
 , {tesf:"ルカリオ", tess:"弱攻撃", fighter_id:1410, skill_genre:10300, begin:7, end:8, time:26, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ルカリオ", tess:"弱攻撃", fighter_id:1410, skill_genre:10300, begin:5, end:6, time:26, base_damage:2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ルカリオ", tess:"弱攻撃", fighter_id:1410, skill_genre:10300, begin:9, end:10, time:35, base_damage:3, alias:"弱3", tes_val:"弱3", }
@@ -1312,6 +1463,10 @@ const skills =
 ,{tesf:"ルカリオ", tess:"空上", fighter_id:1410, skill_genre:10900, begin:12, end:13, time:38, base_damage:6, landing_lag:13, landing_occurrence_begin:2, landing_occurrence_end:28, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ルカリオ", tess:"空下", fighter_id:1410, skill_genre:10902, begin:4, end:5, time:30, base_damage:5, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:24, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
 ,{tesf:"ルカリオ", tess:"空下", fighter_id:1410, skill_genre:10902, begin:11, end:12, time:30, base_damage:6, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:24, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
+,{tess:"その場投げ", fighter_id:1410 , skill_genre:10200, base_damage:0,begin:7, end:8, time:39,}
+,{tess:"ダッシュ投げ", fighter_id:1410 , skill_genre:10201, base_damage:0,begin:10, end:11, time:46,}
+,{tess:"ふりむき投げ", fighter_id:1410 , skill_genre:10202, base_damage:0,begin:11, end:12, time:42,}
+
 , {tesf:"ロボット", tess:"弱攻撃", fighter_id:1420, skill_genre:10300, begin:3, end:4, time:20, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ロボット", tess:"弱攻撃", fighter_id:1420, skill_genre:10300, begin:3, end:4, time:13, base_damage:3, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ロボット", tess:"弱攻撃", fighter_id:1420, skill_genre:10300, begin:3, end:4, time:20, base_damage:3, alias:"弱2", tes_val:"弱2", }
@@ -1349,6 +1504,10 @@ const skills =
 ,{tesf:"ロボット", tess:"空下", fighter_id:1420, skill_genre:10902, begin:22, end:26, time:69, base_damage:8, landing_lag:13, landing_occurrence_begin:1, landing_occurrence_end:44, persistence_num:1, defend_position:"ground", tes_val:"持続, 対地", }
 ,{tesf:"ロボット", tess:"空下", fighter_id:1420, skill_genre:10902, begin:22, end:26, time:69, base_damage:11, landing_lag:13, landing_occurrence_begin:1, landing_occurrence_end:44, damage_no:1, persistence_num:1, defend_position:"air", tes_val:"持続, 対空", }
 ,{tesf:"ロボット", tess:"空下", fighter_id:1420, skill_genre:10902, begin:22, end:26, time:69, base_damage:8, landing_lag:13, landing_occurrence_begin:1, landing_occurrence_end:44, damage_no:2, persistence_num:1, defend_position:"air", tes_val:"持続, 対空", }
+,{tess:"その場投げ", fighter_id:1420 , skill_genre:10200, base_damage:0,begin:6, end:7, time:37,}
+,{tess:"ダッシュ投げ", fighter_id:1420 , skill_genre:10201, base_damage:0,begin:9, end:10, time:45,}
+,{tess:"ふりむき投げ", fighter_id:1420 , skill_genre:10202, base_damage:0,begin:10, end:11, time:40,}
+
 , {tesf:"トゥーンリンク", tess:"弱攻撃", fighter_id:1430, skill_genre:10300, begin:5, end:6, time:18, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"トゥーンリンク", tess:"弱攻撃", fighter_id:1430, skill_genre:10300, begin:6, end:7, time:20, base_damage:2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"トゥーンリンク", tess:"弱攻撃", fighter_id:1430, skill_genre:10300, begin:6, end:7, time:36, base_damage:4, alias:"弱3", tes_val:"弱3", }
@@ -1370,6 +1529,10 @@ const skills =
 ,{tesf:"トゥーンリンク", tess:"空上", fighter_id:1430, skill_genre:10900, begin:11, end:13, time:59, base_damage:14, landing_lag:13, landing_occurrence_begin:6, landing_occurrence_end:46, tes_val:"", }
 ,{tesf:"トゥーンリンク", tess:"空上", fighter_id:1430, skill_genre:10900, begin:14, end:40, time:59, base_damage:11, landing_lag:13, landing_occurrence_begin:6, landing_occurrence_end:46, persistence_num:1, tes_val:"持続", }
 ,{tesf:"トゥーンリンク", tess:"空下", fighter_id:1430, skill_genre:10902, begin:17, end:25, time:79, base_damage:16, landing_lag:23, landing_occurrence_begin:6, landing_occurrence_end:64, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1430 , skill_genre:10200, base_damage:0,begin:12, end:18, time:52,}
+,{tess:"ダッシュ投げ", fighter_id:1430 , skill_genre:10201, base_damage:0,begin:14, end:20, time:60,}
+,{tess:"ふりむき投げ", fighter_id:1430 , skill_genre:10202, base_damage:0,begin:15, end:21, time:55,}
+
 , {tesf:"ウルフ", tess:"弱攻撃", fighter_id:1440, skill_genre:10300, begin:4, end:4, time:21, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ウルフ", tess:"弱攻撃", fighter_id:1440, skill_genre:10300, begin:4, end:4, time:10, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ウルフ", tess:"弱攻撃", fighter_id:1440, skill_genre:10300, begin:4, end:4, time:21, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -1402,6 +1565,10 @@ const skills =
 ,{tesf:"ウルフ", tess:"空下", fighter_id:1440, skill_genre:10902, begin:16, end:17, time:53, base_damage:15, landing_lag:19, landing_occurrence_begin:5, landing_occurrence_end:35, damage_no:1, tes_val:"", }
 ,{tesf:"ウルフ", tess:"空下", fighter_id:1440, skill_genre:10902, begin:16, end:17, time:53, base_damage:13, landing_lag:19, landing_occurrence_begin:5, landing_occurrence_end:35, damage_no:2, tes_val:"", }
 ,{tesf:"ウルフ", tess:"空下", fighter_id:1440, skill_genre:10902, begin:16, end:17, time:53, base_damage:0, landing_lag:19, landing_occurrence_begin:5, landing_occurrence_end:35, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1440 , skill_genre:10200, base_damage:0,begin:6, end:7, time:36,}
+,{tess:"ダッシュ投げ", fighter_id:1440 , skill_genre:10201, base_damage:0,begin:8, end:9, time:44,}
+,{tess:"ふりむき投げ", fighter_id:1440 , skill_genre:10202, base_damage:0,begin:9, end:10, time:39,}
+
 , {tesf:"むらびと", tess:"弱攻撃", fighter_id:1450, skill_genre:10300, begin:3, end:4, time:21, base_damage:1, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"むらびと", tess:"弱攻撃", fighter_id:1450, skill_genre:10300, begin:4, end:5, time:35, base_damage:2, alias:"弱1", persistence_num:9, tes_val:"弱1, 〆", }
 ,{tesf:"むらびと", tess:"弱攻撃", fighter_id:1450, skill_genre:10300, begin:3, end:4, time:23, base_damage:1, alias:"弱2", tes_val:"弱2", }
@@ -1443,6 +1610,9 @@ const skills =
 ,{tesf:"むらびと", tess:"空下", fighter_id:1450, skill_genre:10902, begin:16, end:29, time:45, base_damage:4, landing_lag:12, landing_occurrence_begin:14, landing_occurrence_end:38, detail_name:"カブ1", persistence_num:1, tes_val:"蕪1, 持続", }
 ,{tesf:"むらびと", tess:"空下", fighter_id:1450, skill_genre:10902, begin:16, end:29, time:45, base_damage:5, landing_lag:12, landing_occurrence_begin:14, landing_occurrence_end:38, detail_name:"カブ2", persistence_num:1, tes_val:"蕪2, 持続", }
 ,{tesf:"むらびと", tess:"空下", fighter_id:1450, skill_genre:10902, begin:16, end:29, time:45, base_damage:6, landing_lag:12, landing_occurrence_begin:14, landing_occurrence_end:38, detail_name:"カブ3", persistence_num:1, tes_val:"蕪3, 持続", }
+,{tess:"その場投げ", fighter_id:1450 , skill_genre:10200, base_damage:0,begin:14, end:16, time:43,}
+,{tess:"ダッシュ投げ", fighter_id:1450 , skill_genre:10201, base_damage:0,begin:16, end:18, time:47,}
+,{tess:"ふりむき投げ", fighter_id:1450 , skill_genre:10202, base_damage:0,begin:17, end:19, time:44,}
 , {tesf:"Wii Fit トレーナー", tess:"弱攻撃", fighter_id:1470, skill_genre:10300, begin:4, end:5, time:25, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"Wii Fit トレーナー", tess:"弱攻撃", fighter_id:1470, skill_genre:10300, begin:4, end:5, time:9, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"Wii Fit トレーナー", tess:"弱攻撃", fighter_id:1470, skill_genre:10300, begin:5, end:5, time:25, base_damage:2, alias:"弱1", tes_val:"弱1, 前方下", }
@@ -1480,6 +1650,9 @@ const skills =
 ,{tesf:"Wii Fit トレーナー", tess:"空下", fighter_id:1470, skill_genre:10902, begin:15, end:17, time:39, base_damage:13, landing_lag:12, landing_occurrence_begin:1, landing_occurrence_end:34, detail_name:"本当て", defend_position:"ground", tes_val:"本当て, 対地", }
 ,{tesf:"Wii Fit トレーナー", tess:"空下", fighter_id:1470, skill_genre:10902, begin:15, end:17, time:39, base_damage:14, landing_lag:12, landing_occurrence_begin:1, landing_occurrence_end:34, detail_name:"本当て", defend_position:"air", tes_val:"本当て, 対空", }
 ,{tesf:"Wii Fit トレーナー", tess:"空下", fighter_id:1470, skill_genre:10902, begin:18, end:20, time:39, base_damage:10, landing_lag:12, landing_occurrence_begin:1, landing_occurrence_end:34, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1470 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1470 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1470 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"ロゼッタ&チコ", tess:"弱攻撃", fighter_id:1480, skill_genre:10300, begin:5, end:5, time:20, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ロゼッタ&チコ", tess:"弱攻撃", fighter_id:1480, skill_genre:10300, begin:4, end:4, time:20, base_damage:1, alias:"弱1", detail_name:"チコ", tes_val:"弱1, チコ", }
 ,{tesf:"ロゼッタ&チコ", tess:"弱攻撃", fighter_id:1480, skill_genre:10300, begin:6, end:7, time:24, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -1534,6 +1707,9 @@ const skills =
 ,{tesf:"ロゼッタ&チコ", tess:"空下", fighter_id:1480, skill_genre:10902, begin:23, end:25, time:49, base_damage:6, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:49, persistence_num:2, tes_val:"持続2", }
 ,{tesf:"ロゼッタ&チコ", tess:"空下", fighter_id:1480, skill_genre:10902, begin:26, end:32, time:49, base_damage:2, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:49, persistence_num:3, tes_val:"持続3", }
 ,{tesf:"ロゼッタ&チコ", tess:"空下", fighter_id:1480, skill_genre:10902, begin:15, end:19, time:49, base_damage:5, landing_lag:12, landing_occurrence_begin:2, landing_occurrence_end:49, detail_name:"チコ", tes_val:"チコ", }
+,{tess:"その場投げ", fighter_id:1480 , skill_genre:10200, base_damage:0,begin:6, end:7, time:39,}
+,{tess:"ダッシュ投げ", fighter_id:1480 , skill_genre:10201, base_damage:0,begin:9, end:10, time:46,}
+,{tess:"ふりむき投げ", fighter_id:1480 , skill_genre:10202, base_damage:0,begin:10, end:11, time:41,}
 , {tesf:"リトル・マック", tess:"弱攻撃", fighter_id:1490, skill_genre:10300, begin:1, end:1, time:16, base_damage:1.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"リトル・マック", tess:"弱攻撃", fighter_id:1490, skill_genre:10300, begin:1, end:1, time:6, base_damage:1.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"リトル・マック", tess:"弱攻撃", fighter_id:1490, skill_genre:10300, begin:1, end:1, time:16, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -1565,6 +1741,9 @@ const skills =
 ,{tesf:"リトル・マック", tess:"空上", fighter_id:1490, skill_genre:10900, begin:5, end:8, time:41, base_damage:4, landing_lag:13, landing_occurrence_begin:1, landing_occurrence_end:39, damage_no:2, tes_val:"", }
 ,{tesf:"リトル・マック", tess:"空下", fighter_id:1490, skill_genre:10902, begin:7, end:10, time:27, base_damage:5, landing_lag:18, landing_occurrence_begin:1, landing_occurrence_end:24, damage_no:1, tes_val:"", }
 ,{tesf:"リトル・マック", tess:"空下", fighter_id:1490, skill_genre:10902, begin:7, end:10, time:27, base_damage:4, landing_lag:18, landing_occurrence_begin:1, landing_occurrence_end:24, damage_no:2, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1490 , skill_genre:10200, base_damage:0,begin:9, end:10, time:38,}
+,{tess:"ダッシュ投げ", fighter_id:1490 , skill_genre:10201, base_damage:0,begin:13, end:14, time:46,}
+,{tess:"ふりむき投げ", fighter_id:1490 , skill_genre:10202, base_damage:0,begin:14, end:15, time:41,}
 , {tesf:"ゲッコウガ", tess:"弱攻撃", fighter_id:1500, skill_genre:10300, begin:3, end:3, time:21, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ゲッコウガ", tess:"弱攻撃", fighter_id:1500, skill_genre:10300, begin:3, end:4, time:21, base_damage:2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ゲッコウガ", tess:"弱攻撃", fighter_id:1500, skill_genre:10300, begin:5, end:6, time:35, base_damage:3, alias:"弱3", tes_val:"弱3", }
@@ -1599,6 +1778,9 @@ const skills =
 ,{tesf:"ゲッコウガ", tess:"空下", fighter_id:1500, skill_genre:10902, begin:17, end:19, time:51, base_damage:8, landing_lag:30, landing_occurrence_begin:3, landing_occurrence_end:52, tes_val:"", }
 ,{tesf:"ゲッコウガ", tess:"空下", fighter_id:1500, skill_genre:10902, begin:20, end:45, time:51, base_damage:8, landing_lag:30, landing_occurrence_begin:3, landing_occurrence_end:52, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ゲッコウガ", tess:"空下", fighter_id:1500, skill_genre:10902, begin:20, end:45, time:20, base_damage:0, landing_lag:30, landing_occurrence_begin:3, landing_occurrence_end:52, detail_name:"バウンド", tes_val:"バウンド", }
+,{tess:"その場投げ", fighter_id:1500 , skill_genre:10200, base_damage:0,begin:10, end:11, time:38,}
+,{tess:"ダッシュ投げ", fighter_id:1500 , skill_genre:10201, base_damage:0,begin:13, end:14, time:46,}
+,{tess:"ふりむき投げ", fighter_id:1500 , skill_genre:10202, base_damage:0,begin:114, end:15, time:41,}
 , {tesf:"格闘Mii", tess:"弱攻撃", fighter_id:1510, skill_genre:10300, begin:2, end:3, time:15, base_damage:1.8, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"格闘Mii", tess:"弱攻撃", fighter_id:1510, skill_genre:10300, begin:2, end:3, time:6, base_damage:1.8, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"格闘Mii", tess:"弱攻撃", fighter_id:1510, skill_genre:10300, begin:2, end:3, time:18, base_damage:1, alias:"弱2", tes_val:"弱2", }
@@ -1623,6 +1805,9 @@ const skills =
 ,{tesf:"格闘Mii", tess:"空後", fighter_id:1510, skill_genre:10903, begin:7, end:9, time:39, base_damage:12, landing_lag:11, landing_occurrence_begin:2, landing_occurrence_end:27, tes_val:"", }
 ,{tesf:"格闘Mii", tess:"空上", fighter_id:1510, skill_genre:10900, begin:6, end:10, time:35, base_damage:9, landing_lag:10, landing_occurrence_begin:2, landing_occurrence_end:22, tes_val:"", }
 ,{tesf:"格闘Mii", tess:"空下", fighter_id:1510, skill_genre:10902, begin:16, end:17, time:49, base_damage:13, landing_lag:18, landing_occurrence_begin:5, landing_occurrence_end:36, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1510 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1510 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1510 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"剣術Mii", tess:"弱攻撃", fighter_id:1520, skill_genre:10300, begin:6, end:7, time:19, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"剣術Mii", tess:"弱攻撃", fighter_id:1520, skill_genre:10300, begin:6, end:7, time:22, base_damage:3, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"剣術Mii", tess:"弱攻撃", fighter_id:1520, skill_genre:10300, begin:6, end:8, time:38, base_damage:5, alias:"弱3", tes_val:"弱3", }
@@ -1645,6 +1830,9 @@ const skills =
 ,{tesf:"剣術Mii", tess:"空上", fighter_id:1520, skill_genre:10900, begin:11, end:13, time:44, base_damage:16, landing_lag:10, landing_occurrence_begin:11, landing_occurrence_end:29, tes_val:"", }
 ,{tesf:"剣術Mii", tess:"空上", fighter_id:1520, skill_genre:10900, begin:14, end:23, time:44, base_damage:10, landing_lag:10, landing_occurrence_begin:11, landing_occurrence_end:29, persistence_num:1, tes_val:"持続", }
 ,{tesf:"剣術Mii", tess:"空下", fighter_id:1520, skill_genre:10902, begin:14, end:37, time:58, base_damage:1.5, landing_lag:18, landing_occurrence_begin:5, landing_occurrence_end:49, rehit:5, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1520 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1520 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1520 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"射撃Mii", tess:"弱攻撃", fighter_id:1530, skill_genre:10300, begin:5, end:6, time:25, base_damage:1.7, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"射撃Mii", tess:"弱攻撃", fighter_id:1530, skill_genre:10300, begin:5, end:6, time:9, base_damage:1.7, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"射撃Mii", tess:"弱攻撃", fighter_id:1530, skill_genre:10300, begin:4, end:5, time:25, base_damage:1.8, alias:"弱2", tes_val:"弱2", }
@@ -1677,6 +1865,9 @@ const skills =
 ,{tesf:"射撃Mii", tess:"空上", fighter_id:1530, skill_genre:10900, begin:34, end:34, time:59, base_damage:4, landing_lag:13, landing_occurrence_begin:11, landing_occurrence_end:57, persistence_num:9, tes_val:"〆", }
 ,{tesf:"射撃Mii", tess:"空下", fighter_id:1530, skill_genre:10902, begin:20, end:21, time:54, base_damage:15, landing_lag:17, landing_occurrence_begin:4, landing_occurrence_end:53, damage_no:1, tes_val:"", }
 ,{tesf:"射撃Mii", tess:"空下", fighter_id:1530, skill_genre:10902, begin:20, end:21, time:54, base_damage:10, landing_lag:17, landing_occurrence_begin:4, landing_occurrence_end:53, damage_no:2, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1530 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1530 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1530 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"パルテナ", tess:"弱攻撃", fighter_id:1540, skill_genre:10300, begin:8, end:9, time:24, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"パルテナ", tess:"弱攻撃", fighter_id:1540, skill_genre:10300, begin:8, end:9, time:2, base_damage:0, alias:"百裂始", persistence_num:0, tes_val:"百裂, 始", }
 ,{tesf:"パルテナ", tess:"弱攻撃", fighter_id:1540, skill_genre:10300, begin:2, end:2, time:21, base_damage:0.6, alias:"百裂", detail_name:"連", tes_message:"(連続ヒットまとめ技)", test_serial_num_strs:"2, 5, 8, 11, 14, 17, 20", tes_val:"百裂, 連", }
@@ -1709,6 +1900,9 @@ const skills =
 ,{tesf:"パルテナ", tess:"空上", fighter_id:1540, skill_genre:10900, begin:10, end:22, time:51, base_damage:1, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:41, detail_name:"連", rehit:3, tes_val:"連", }
 ,{tesf:"パルテナ", tess:"空上", fighter_id:1540, skill_genre:10900, begin:24, end:25, time:51, base_damage:5, landing_lag:14, landing_occurrence_begin:3, landing_occurrence_end:41, persistence_num:9, tes_val:"〆", }
 ,{tesf:"パルテナ", tess:"空下", fighter_id:1540, skill_genre:10902, begin:10, end:11, time:58, base_damage:11, landing_lag:11, landing_occurrence_begin:3, landing_occurrence_end:47, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1540 , skill_genre:10200, base_damage:0,begin:7, end:8, time:379}
+,{tess:"ダッシュ投げ", fighter_id:1540 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47,}
+,{tess:"ふりむき投げ", fighter_id:1540 , skill_genre:10202, base_damage:0,begin:11, end:12, time:42,}
 , {tesf:"パックマン", tess:"弱攻撃", fighter_id:1550, skill_genre:10300, begin:4, end:4, time:19, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"パックマン", tess:"弱攻撃", fighter_id:1550, skill_genre:10300, begin:4, end:4, time:9, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"パックマン", tess:"弱攻撃", fighter_id:1550, skill_genre:10300, begin:4, end:4, time:21, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -1736,6 +1930,9 @@ const skills =
 ,{tesf:"パックマン", tess:"空上", fighter_id:1550, skill_genre:10900, begin:9, end:16, time:36, base_damage:10, landing_lag:6, landing_occurrence_begin:2, landing_occurrence_end:31, tes_val:"", }
 ,{tesf:"パックマン", tess:"空下", fighter_id:1550, skill_genre:10902, begin:6, end:7, time:49, base_damage:2, landing_lag:15, landing_occurrence_begin:2, landing_occurrence_end:49, serial_num_str:"1-3", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"6-7, 13-14, 20-21", tes_val:"Hit 1-3", }
 ,{tesf:"パックマン", tess:"空下", fighter_id:1550, skill_genre:10902, begin:27, end:28, time:49, base_damage:7, landing_lag:15, landing_occurrence_begin:2, landing_occurrence_end:49, serial_num_str:"4", tes_message:"(連続ヒットする技)", tes_val:"Hit 4", }
+,{tess:"その場投げ", fighter_id:1550 , skill_genre:10200, base_damage:0,begin:7, end:8, time:39,}
+,{tess:"ダッシュ投げ", fighter_id:1550 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47,}
+,{tess:"ふりむき投げ", fighter_id:1550 , skill_genre:10202, base_damage:0,begin:11, end:12, time:42,}
 , {tesf:"ルフレ", tess:"弱攻撃", fighter_id:1560, skill_genre:10300, begin:4, end:5, time:31, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ルフレ", tess:"弱攻撃", fighter_id:1560, skill_genre:10300, begin:5, end:6, time:34, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ルフレ", tess:"弱攻撃", fighter_id:1560, skill_genre:10300, begin:6, end:7, time:35, base_damage:5, alias:"弱3", tes_val:"弱3", }
@@ -1778,6 +1975,10 @@ const skills =
 ,{tesf:"ルフレ", tess:"空下", fighter_id:1560, skill_genre:10902, begin:18, end:24, time:59, base_damage:8, landing_lag:16, landing_occurrence_begin:2, landing_occurrence_end:47, detail_name:"サンダー", persistence_num:1, tes_val:"サンダー, 持続", }
 ,{tesf:"ルフレ", tess:"空下", fighter_id:1560, skill_genre:10902, begin:13, end:15, time:59, base_damage:7.2, landing_lag:16, landing_occurrence_begin:2, landing_occurrence_end:47, detail_name:"青銅", tes_val:"青銅", }
 ,{tesf:"ルフレ", tess:"空下", fighter_id:1560, skill_genre:10902, begin:16, end:24, time:59, base_damage:6, landing_lag:16, landing_occurrence_begin:2, landing_occurrence_end:47, detail_name:"青銅", persistence_num:1, tes_val:"青銅, 持続", }
+,{tess:"その場投げ", fighter_id:1560 , skill_genre:10200, base_damage:0,begin:7, end:8, time:39,}
+,{tess:"ダッシュ投げ", fighter_id:1560 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47,}
+,{tess:"ふりむき投げ", fighter_id:1560 , skill_genre:10202, base_damage:0,begin:11, end:12, time:42,}
+
 , {tesf:"クッパ Jr.", tess:"弱攻撃", fighter_id:1580, skill_genre:10300, begin:4, end:5, time:19, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"クッパ Jr.", tess:"弱攻撃", fighter_id:1580, skill_genre:10300, begin:4, end:5, time:11, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"クッパ Jr.", tess:"弱攻撃", fighter_id:1580, skill_genre:10300, begin:4, end:5, time:29, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -1828,6 +2029,9 @@ const skills =
 ,{tesf:"クッパ Jr.", tess:"空下", fighter_id:1580, skill_genre:10902, begin:1, end:2, time:56, base_damage:0, landing_lag:15, landing_occurrence_begin:2, landing_occurrence_end:54, tes_val:"", }
 ,{tesf:"クッパ Jr.", tess:"空下", fighter_id:1580, skill_genre:10902, begin:1, end:2, time:56, base_damage:0, landing_lag:15, landing_occurrence_begin:2, landing_occurrence_end:54, tes_val:"", }
 ,{tesf:"クッパ Jr.", tess:"空下", fighter_id:1580, skill_genre:10902, begin:1, end:2, time:56, base_damage:0, landing_lag:15, landing_occurrence_begin:2, landing_occurrence_end:54, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1580 , skill_genre:10200, base_damage:0,begin:11, end:13, time:40,}
+,{tess:"ダッシュ投げ", fighter_id:1580 , skill_genre:10201, base_damage:0,begin:14, end:16, time:48,}
+,{tess:"ふりむき投げ", fighter_id:1580 , skill_genre:10202, base_damage:0,begin:15, end:17, time:43,}
 , {tesf:"ダックハント", tess:"弱攻撃", fighter_id:1590, skill_genre:10300, begin:4, end:4, time:25, base_damage:1.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ダックハント", tess:"弱攻撃", fighter_id:1590, skill_genre:10300, begin:5, end:6, time:27, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ダックハント", tess:"弱攻撃", fighter_id:1590, skill_genre:10300, begin:6, end:7, time:33, base_damage:5, alias:"弱3", tes_val:"弱3", }
@@ -1862,6 +2066,9 @@ const skills =
 ,{tesf:"ダックハント", tess:"空上", fighter_id:1590, skill_genre:10900, begin:20, end:21, time:39, base_damage:6, landing_lag:11, landing_occurrence_begin:2, landing_occurrence_end:31, serial_num_str:"3", tes_message:"(連続ヒットする技)", tes_val:"Hit 3", }
 ,{tesf:"ダックハント", tess:"空下", fighter_id:1590, skill_genre:10902, begin:14, end:15, time:49, base_damage:5, landing_lag:15, landing_occurrence_begin:4, landing_occurrence_end:44, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
 ,{tesf:"ダックハント", tess:"空下", fighter_id:1590, skill_genre:10902, begin:20, end:21, time:49, base_damage:10, landing_lag:15, landing_occurrence_begin:4, landing_occurrence_end:44, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
+,{tess:"その場投げ", fighter_id:1590 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1590 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1590 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"リュウ", tess:"弱攻撃", fighter_id:1600, skill_genre:10300, begin:9, end:10, time:32, base_damage:10, alias:"弱1 (強)", tes_val:"弱1 (強)", }
 ,{tesf:"リュウ", tess:"弱攻撃", fighter_id:1600, skill_genre:10300, begin:7, end:7, time:37, base_damage:12, damage_no:1, alias:"弱1 (強)", detail_name:"密着", tes_val:"弱1 (強), 密着", }
 ,{tesf:"リュウ", tess:"弱攻撃", fighter_id:1600, skill_genre:10300, begin:7, end:7, time:37, base_damage:8, damage_no:2, alias:"弱1 (強)", detail_name:"密着", tes_val:"弱1 (強), 密着", }
@@ -1905,6 +2112,9 @@ const skills =
 ,{tesf:"リュウ", tess:"空下", fighter_id:1600, skill_genre:10902, begin:8, end:12, time:45, base_damage:12, landing_lag:15, landing_occurrence_begin:3, landing_occurrence_end:32, defend_position:"ground", tes_val:"対地", }
 ,{tesf:"リュウ", tess:"空下", fighter_id:1600, skill_genre:10902, begin:8, end:12, time:45, base_damage:15, landing_lag:15, landing_occurrence_begin:3, landing_occurrence_end:32, damage_no:1, defend_position:"air", tes_val:"対空", }
 ,{tesf:"リュウ", tess:"空下", fighter_id:1600, skill_genre:10902, begin:8, end:12, time:45, base_damage:11, landing_lag:15, landing_occurrence_begin:3, landing_occurrence_end:32, damage_no:2, defend_position:"air", tes_val:"対空", }
+,{tess:"その場投げ", fighter_id:1600 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1600 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1600 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"クラウド", tess:"弱攻撃", fighter_id:1610, skill_genre:10300, begin:4, end:5, time:29, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"クラウド", tess:"弱攻撃", fighter_id:1610, skill_genre:10300, begin:4, end:5, time:15, base_damage:2.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"クラウド", tess:"弱攻撃", fighter_id:1610, skill_genre:10300, begin:5, end:6, time:32, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -1942,6 +2152,9 @@ const skills =
 ,{tesf:"クラウド", tess:"空下", fighter_id:1610, skill_genre:10902, begin:11, end:13, time:64, base_damage:15, landing_lag:16, landing_occurrence_begin:5, landing_occurrence_end:45, damage_no:1, defend_position:"air", tes_val:"対空", }
 ,{tesf:"クラウド", tess:"空下", fighter_id:1610, skill_genre:10902, begin:11, end:13, time:64, base_damage:13, landing_lag:16, landing_occurrence_begin:5, landing_occurrence_end:45, damage_no:2, defend_position:"air", tes_val:"対空", }
 ,{tesf:"クラウド", tess:"空下", fighter_id:1610, skill_genre:10902, begin:14, end:39, time:64, base_damage:8, landing_lag:16, landing_occurrence_begin:5, landing_occurrence_end:45, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1610 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1610 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1610 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"カムイ", tess:"弱攻撃", fighter_id:1620, skill_genre:10300, begin:5, end:6, time:27, base_damage:2.5, damage_no:1, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"カムイ", tess:"弱攻撃", fighter_id:1620, skill_genre:10300, begin:5, end:6, time:27, base_damage:2, damage_no:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"カムイ", tess:"弱攻撃", fighter_id:1620, skill_genre:10300, begin:4, end:5, time:29, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -1975,6 +2188,9 @@ const skills =
 ,{tesf:"カムイ", tess:"空上", fighter_id:1620, skill_genre:10900, begin:7, end:12, time:37, base_damage:9, landing_lag:9, landing_occurrence_begin:4, landing_occurrence_end:37, tes_val:"", }
 ,{tesf:"カムイ", tess:"空下", fighter_id:1620, skill_genre:10902, begin:12, end:28, time:51, base_damage:2, landing_lag:26, landing_occurrence_begin:12, landing_occurrence_end:40, detail_name:"連", rehit:2, tes_val:"連", }
 ,{tesf:"カムイ", tess:"空下", fighter_id:1620, skill_genre:10902, begin:1, end:5, time:51, base_damage:3, landing_lag:26, landing_occurrence_begin:12, landing_occurrence_end:40, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1620 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36,}
+,{tess:"ダッシュ投げ", fighter_id:1620 , skill_genre:10201, base_damage:0,begin:10, end:11, time:44,}
+,{tess:"ふりむき投げ", fighter_id:1620 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39,}
 , {tesf:"ベヨネッタ", tess:"弱攻撃", fighter_id:1630, skill_genre:10300, begin:9, end:12, time:31, base_damage:1.4, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ベヨネッタ", tess:"弱攻撃", fighter_id:1630, skill_genre:10300, begin:7, end:8, time:31, base_damage:1.4, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ベヨネッタ", tess:"弱攻撃", fighter_id:1630, skill_genre:10300, begin:7, end:8, time:39, base_damage:2.2, alias:"弱3", tes_val:"弱3", }
@@ -2024,6 +2240,9 @@ const skills =
 ,{tesf:"ベヨネッタ", tess:"空下", fighter_id:1630, skill_genre:10902, begin:25, end:35, time:52, base_damage:8, landing_lag:30, landing_occurrence_begin:17, landing_occurrence_end:49, damage_no:2, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ベヨネッタ", tess:"空下", fighter_id:1630, skill_genre:10902, begin:25, end:35, time:52, base_damage:7, landing_lag:30, landing_occurrence_begin:17, landing_occurrence_end:49, damage_no:3, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ベヨネッタ", tess:"空下", fighter_id:1630, skill_genre:10902, begin:1, end:2, time:52, base_damage:5, landing_lag:30, landing_occurrence_begin:17, landing_occurrence_end:49, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1630 , skill_genre:10200, base_damage:0,begin:7, end:8, time:37,}
+,{tess:"ダッシュ投げ", fighter_id:1630 , skill_genre:10201, base_damage:0,begin:10, end:11, time:45,}
+,{tess:"ふりむき投げ", fighter_id:1630 , skill_genre:10202, base_damage:0,begin:11, end:12, time:40,}
 , {tesf:"リドリー", tess:"弱攻撃", fighter_id:1650, skill_genre:10300, begin:4, end:5, time:23, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"リドリー", tess:"弱攻撃", fighter_id:1650, skill_genre:10300, begin:5, end:6, time:26, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"リドリー", tess:"弱攻撃", fighter_id:1650, skill_genre:10300, begin:4, end:5, time:35, base_damage:5, alias:"弱3", tes_val:"弱3", }
@@ -2056,6 +2275,9 @@ const skills =
 ,{tesf:"リドリー", tess:"空上", fighter_id:1650, skill_genre:10900, begin:13, end:13, time:39, base_damage:12, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:34, persistence_num:1, tes_val:"持続", }
 ,{tesf:"リドリー", tess:"空下", fighter_id:1650, skill_genre:10902, begin:11, end:18, time:55, base_damage:14, landing_lag:32, landing_occurrence_begin:4, landing_occurrence_end:49, tes_val:"メテオ", }
 ,{tesf:"リドリー", tess:"空下", fighter_id:1650, skill_genre:10902, begin:11, end:40, time:55, base_damage:12, landing_lag:32, landing_occurrence_begin:4, landing_occurrence_end:49, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1650 , skill_genre:10200, base_damage:0,begin:8, end:10, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1650 , skill_genre:10201, base_damage:0,begin:11, end:13, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1650 , skill_genre:10202, base_damage:0,begin:12, end:14, time:39,}
 , {tesf:"キングクルール", tess:"弱攻撃", fighter_id:1670, skill_genre:10300, begin:4, end:5, time:24, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"キングクルール", tess:"弱攻撃", fighter_id:1670, skill_genre:10300, begin:4, end:5, time:15, base_damage:2.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"キングクルール", tess:"弱攻撃", fighter_id:1670, skill_genre:10300, begin:3, end:4, time:27, base_damage:2.5, alias:"弱2", tes_val:"弱2", }
@@ -2100,6 +2322,9 @@ const skills =
 ,{tesf:"キングクルール", tess:"空上", fighter_id:1670, skill_genre:10900, begin:14, end:19, time:71, base_damage:10, landing_lag:13, landing_occurrence_begin:3, landing_occurrence_end:69, persistence_num:1, tes_val:"持続", }
 ,{tesf:"キングクルール", tess:"空下", fighter_id:1670, skill_genre:10902, begin:14, end:15, time:61, base_damage:12, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:39, tes_val:"", }
 ,{tesf:"キングクルール", tess:"空下", fighter_id:1670, skill_genre:10902, begin:16, end:21, time:61, base_damage:9, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:39, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1670 , skill_genre:10200, base_damage:0,begin:8, end:10, time:40,}
+,{tess:"ダッシュ投げ", fighter_id:1670 , skill_genre:10201, base_damage:0,begin:11, end:13, time:48,}
+,{tess:"ふりむき投げ", fighter_id:1670 , skill_genre:10202, base_damage:0,begin:12, end:14, time:43,}
 , {tesf:"しずえ", tess:"弱攻撃", fighter_id:1680, skill_genre:10300, begin:3, end:4, time:19, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"しずえ", tess:"弱攻撃", fighter_id:1680, skill_genre:10300, begin:3, end:4, time:12, base_damage:2, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"しずえ", tess:"ダッシュ攻撃", fighter_id:1680, skill_genre:10400, begin:9, end:14, time:41, base_damage:10, tes_val:"", }
@@ -2127,6 +2352,9 @@ const skills =
 ,{tesf:"しずえ", tess:"空上", fighter_id:1680, skill_genre:10900, begin:8, end:31, time:42, base_damage:5, landing_lag:9, landing_occurrence_begin:6, landing_occurrence_end:38, persistence_num:1, tes_val:"持続", }
 ,{tesf:"しずえ", tess:"空下", fighter_id:1680, skill_genre:10902, begin:14, end:15, time:45, base_damage:10, landing_lag:9, landing_occurrence_begin:14, landing_occurrence_end:38, tes_val:"", }
 ,{tesf:"しずえ", tess:"空下", fighter_id:1680, skill_genre:10902, begin:16, end:31, time:45, base_damage:5, landing_lag:9, landing_occurrence_begin:14, landing_occurrence_end:38, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1680 , skill_genre:10200, base_damage:0,begin:14, end:16, time:43,}
+,{tess:"ダッシュ投げ", fighter_id:1680 , skill_genre:10201, base_damage:0,begin:15 ,end:17, time:46}
+,{tess:"ふりむき投げ", fighter_id:1680 , skill_genre:10202, base_damage:0,begin:17, end:19, time:44,}
 , {tesf:"ガオガエン", tess:"弱攻撃", fighter_id:1690, skill_genre:10300, begin:5, end:6, time:23, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ガオガエン", tess:"弱攻撃", fighter_id:1690, skill_genre:10300, begin:4, end:5, time:31, base_damage:2.8, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"ガオガエン", tess:"弱攻撃", fighter_id:1690, skill_genre:10300, begin:4, end:5, time:37, base_damage:6.7, alias:"弱3", tes_val:"弱3", }
@@ -2154,6 +2382,9 @@ const skills =
 ,{tesf:"ガオガエン", tess:"空下", fighter_id:1690, skill_genre:10902, begin:16, end:19, time:44, base_damage:14, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:44, damage_no:2, tes_val:"", }
 ,{tesf:"ガオガエン", tess:"空下", fighter_id:1690, skill_genre:10902, begin:20, end:21, time:44, base_damage:9, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:44, damage_no:1, persistence_num:1, tes_val:"持続", }
 ,{tesf:"ガオガエン", tess:"空下", fighter_id:1690, skill_genre:10902, begin:20, end:21, time:44, base_damage:8, landing_lag:16, landing_occurrence_begin:4, landing_occurrence_end:44, damage_no:2, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1690 , skill_genre:10200, base_damage:0,begin:8, end:10, time:38,}
+,{tess:"ダッシュ投げ", fighter_id:1690 , skill_genre:10201, base_damage:0,begin:12, end:14, time:46,}
+,{tess:"ふりむき投げ", fighter_id:1690 , skill_genre:10202, base_damage:0,begin:13, end:15, time:44,}
 , {tesf:"パックンフラワー", tess:"弱攻撃", fighter_id:1700, skill_genre:10300, begin:2, end:3, time:19, base_damage:2.4, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"パックンフラワー", tess:"弱攻撃", fighter_id:1700, skill_genre:10300, begin:2, end:3, time:6, base_damage:2.4, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"パックンフラワー", tess:"弱攻撃", fighter_id:1700, skill_genre:10300, begin:2, end:3, time:20, base_damage:2.2, alias:"弱2", tes_val:"弱2", }
@@ -2183,6 +2414,9 @@ const skills =
 ,{tesf:"パックンフラワー", tess:"空上", fighter_id:1700, skill_genre:10900, begin:7, end:9, time:38, base_damage:8, landing_lag:10, landing_occurrence_begin:2, landing_occurrence_end:21, tes_val:"", }
 ,{tesf:"パックンフラワー", tess:"空下", fighter_id:1700, skill_genre:10902, begin:9, end:10, time:44, base_damage:11, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:32, tes_val:"", }
 ,{tesf:"パックンフラワー", tess:"空下", fighter_id:1700, skill_genre:10902, begin:11, end:14, time:44, base_damage:9, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:32, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1700 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1700 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1700 , skill_genre:10202, base_damage:0,begin:9, end:10, time:36,}
 , {tesf:"ジョーカー", tess:"弱攻撃", fighter_id:1710, skill_genre:10300, begin:4, end:5, time:23, base_damage:2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ジョーカー", tess:"弱攻撃", fighter_id:1710, skill_genre:10300, begin:4, end:5, time:23, base_damage:0.7, alias:"弱1", detail_name:"アルセーヌ", tes_val:"弱1, アルセーヌ", }
 ,{tesf:"ジョーカー", tess:"弱攻撃", fighter_id:1710, skill_genre:10300, begin:3, end:4, time:23, base_damage:1.5, alias:"弱2", tes_val:"弱2", }
@@ -2226,6 +2460,9 @@ const skills =
 ,{tesf:"ジョーカー", tess:"空上", fighter_id:1710, skill_genre:10900, begin:20, end:21, time:39, base_damage:7, landing_lag:14, landing_occurrence_begin:5, landing_occurrence_end:39, detail_name:"アルセーヌ", persistence_num:9, tes_val:"〆, アルセーヌ", }
 ,{tesf:"ジョーカー", tess:"空下", fighter_id:1710, skill_genre:10902, begin:13, end:16, time:46, base_damage:8, landing_lag:11, landing_occurrence_begin:4, landing_occurrence_end:39, tes_val:"", }
 ,{tesf:"ジョーカー", tess:"空下", fighter_id:1710, skill_genre:10902, begin:15, end:16, time:46, base_damage:8, landing_lag:11, landing_occurrence_begin:4, landing_occurrence_end:39, detail_name:"アルセーヌ", tes_val:"アルセーヌ", }
+,{tess:"その場投げ", fighter_id:1710 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1710 , skill_genre:10201, base_damage:0,begin:8, end:9, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1710 , skill_genre:10202, base_damage:0,begin:9, end:10, time:37,}
 , {tesf:"勇者", tess:"弱攻撃", fighter_id:1720, skill_genre:10300, begin:6, end:7, time:25, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"勇者", tess:"弱攻撃", fighter_id:1720, skill_genre:10300, begin:6, end:7, time:25, base_damage:3, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"勇者", tess:"弱攻撃", fighter_id:1720, skill_genre:10300, begin:7, end:9, time:37, base_damage:4, alias:"弱3", tes_val:"弱3", }
@@ -2260,6 +2497,9 @@ const skills =
 ,{tesf:"勇者", tess:"空上", fighter_id:1720, skill_genre:10900, begin:6, end:10, time:32, base_damage:7, landing_lag:8, landing_occurrence_begin:2, landing_occurrence_end:29, tes_val:"", }
 ,{tesf:"勇者", tess:"空下", fighter_id:1720, skill_genre:10902, begin:16, end:18, time:62, base_damage:16, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:44, tes_val:"メテオ", }
 ,{tesf:"勇者", tess:"空下", fighter_id:1720, skill_genre:10902, begin:19, end:24, time:62, base_damage:10, landing_lag:18, landing_occurrence_begin:3, landing_occurrence_end:44, persistence_num:1, tes_val:"持続", }
+,{tess:"その場投げ", fighter_id:1720 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1720 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1720 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"バンジョー&カズーイ", tess:"弱攻撃", fighter_id:1730, skill_genre:10300, begin:4, end:6, time:27, base_damage:2.2, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"バンジョー&カズーイ", tess:"弱攻撃", fighter_id:1730, skill_genre:10300, begin:4, end:6, time:24, base_damage:2.2, alias:"弱2", tes_val:"弱2", }
 ,{tesf:"バンジョー&カズーイ", tess:"弱攻撃", fighter_id:1730, skill_genre:10300, begin:5, end:7, time:31, base_damage:3.8, alias:"弱3", tes_val:"弱3", }
@@ -2292,6 +2532,9 @@ const skills =
 ,{tesf:"バンジョー&カズーイ", tess:"空下", fighter_id:1730, skill_genre:10902, begin:15, end:17, time:56, base_damage:10, landing_lag:27, landing_occurrence_begin:3, landing_occurrence_end:54, tes_val:"メテオ", }
 ,{tesf:"バンジョー&カズーイ", tess:"空下", fighter_id:1730, skill_genre:10902, begin:18, end:45, time:56, base_damage:10, landing_lag:27, landing_occurrence_begin:3, landing_occurrence_end:54, persistence_num:1, tes_val:"持続", }
 ,{tesf:"バンジョー&カズーイ", tess:"空下", fighter_id:1730, skill_genre:10902, begin:1, end:3, time:56, base_damage:2, landing_lag:27, landing_occurrence_begin:3, landing_occurrence_end:54, is_landing_attack:true, tes_val:"着地", }
+,{tess:"その場投げ", fighter_id:1730 , skill_genre:10200, base_damage:0,begin:7, end:8, time:36,}
+,{tess:"ダッシュ投げ", fighter_id:1730 , skill_genre:10201, base_damage:0,begin:10, end:11, time:44,}
+,{tess:"ふりむき投げ", fighter_id:1730 , skill_genre:10202, base_damage:0,begin:11, end:12, time:39,}
 , {tesf:"テリー", tess:"弱攻撃", fighter_id:1740, skill_genre:10300, begin:3, end:4, time:13, base_damage:3, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"テリー", tess:"弱攻撃", fighter_id:1740, skill_genre:10300, begin:3, end:4, time:9, base_damage:3, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"テリー", tess:"弱攻撃", fighter_id:1740, skill_genre:10300, begin:3, end:3, time:24, base_damage:1, alias:"弱2", serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"弱2, Hit 1", }
@@ -2317,6 +2560,9 @@ const skills =
 ,{tesf:"テリー", tess:"空上", fighter_id:1740, skill_genre:10900, begin:7, end:9, time:35, base_damage:9, landing_lag:6, landing_occurrence_begin:2, landing_occurrence_end:17, tes_val:"", }
 ,{tesf:"テリー", tess:"空下", fighter_id:1740, skill_genre:10902, begin:12, end:15, time:32, base_damage:17, landing_lag:15, landing_occurrence_begin:12, landing_occurrence_end:23, damage_no:1, tes_val:"", }
 ,{tesf:"テリー", tess:"空下", fighter_id:1740, skill_genre:10902, begin:12, end:15, time:32, base_damage:15, landing_lag:15, landing_occurrence_begin:12, landing_occurrence_end:23, damage_no:2, tes_val:"", }
+,{tess:"その場投げ", fighter_id:1740 , skill_genre:10200, base_damage:0,begin:6, end:7, time:34,}
+,{tess:"ダッシュ投げ", fighter_id:1740 , skill_genre:10201, base_damage:0,begin:9, end:10, time:42,}
+,{tess:"ふりむき投げ", fighter_id:1740 , skill_genre:10202, base_damage:0,begin:10, end:11, time:37,}
 , {tesf:"ベレト／ベレス", tess:"弱攻撃", fighter_id:1750, skill_genre:10300, begin:4, end:5, time:22, base_damage:1.5, alias:"弱1", tes_val:"弱1", }
 ,{tesf:"ベレト／ベレス", tess:"弱攻撃", fighter_id:1750, skill_genre:10300, begin:4, end:5, time:15, base_damage:1.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
 ,{tesf:"ベレト／ベレス", tess:"弱攻撃", fighter_id:1750, skill_genre:10300, begin:4, end:5, time:24, base_damage:2, alias:"弱2", tes_val:"弱2", }
@@ -2352,25 +2598,5 @@ const skills =
 ,{tesf:"ベレト／ベレス", tess:"空上", fighter_id:1750, skill_genre:10900, begin:10, end:19, time:48, base_damage:3, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:48, detail_name:"連", rehit:5, tes_val:"連", }
 ,{tesf:"ベレト／ベレス", tess:"空上", fighter_id:1750, skill_genre:10900, begin:20, end:23, time:48, base_damage:5.5, landing_lag:14, landing_occurrence_begin:4, landing_occurrence_end:48, persistence_num:9, tes_val:"〆", }
 ,{tesf:"ベレト／ベレス", tess:"空下", fighter_id:1750, skill_genre:10902, begin:22, end:24, time:59, base_damage:19, landing_lag:28, landing_occurrence_begin:2, landing_occurrence_end:52, tes_val:"", }
-, {tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:3, end:4, time:15, base_damage:2.5, alias:"弱1", tes_val:"弱1", }
-,{tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:3, end:4, time:6, base_damage:2.5, alias:"弱1", cancel:"empty_attack_again", tes_message:"(全体フレームのカッコ外した行)", tes_val:"弱1", }
-,{tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:4, end:5, time:24, base_damage:2.5, alias:"弱2", tes_val:"弱2", }
-,{tesf:"スネーク", tess:"弱攻撃", fighter_id:1310, skill_genre:10300, begin:8, end:9, time:46, base_damage:6, alias:"弱3", tes_val:"弱3", }
-,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:5, end:8, time:41, base_damage:11, damage_no:1, tes_val:"", }
-,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:5, end:8, time:41, base_damage:9, damage_no:2, tes_val:"", }
-,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:9, end:12, time:41, base_damage:8, damage_no:1, persistence_num:1, tes_val:"持続", }
-,{tesf:"スネーク", tess:"ダッシュ攻撃", fighter_id:1310, skill_genre:10400, begin:9, end:12, time:41, base_damage:6, damage_no:2, persistence_num:1, tes_val:"持続", }
-,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:4, end:5, time:31, base_damage:4, alias:"横強1", tes_val:"横強1", }
-,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:8, end:8, time:39, base_damage:11, damage_no:1, alias:"横強2", tes_val:"横強2", }
-,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:8, end:8, time:39, base_damage:10, damage_no:2, alias:"横強2", tes_val:"横強2", }
-,{tesf:"スネーク", tess:"横強", fighter_id:1310, skill_genre:10501, begin:8, end:8, time:39, base_damage:9, damage_no:3, alias:"横強2", tes_val:"横強2", }
-,{tesf:"スネーク", tess:"上強", fighter_id:1310, skill_genre:10500, begin:6, end:8, time:37, base_damage:14.5, tes_val:"", }
-,{tesf:"スネーク", tess:"上強", fighter_id:1310, skill_genre:10500, begin:9, end:13, time:37, base_damage:13.5, persistence_num:1, tes_val:"持続", }
-,{tesf:"スネーク", tess:"下強", fighter_id:1310, skill_genre:10502, begin:6, end:7, time:30, base_damage:12, tes_val:"", }
-,{tesf:"スネーク", tess:"横スマッシュ", fighter_id:1310, skill_genre:10601, begin:41, end:43, time:73, base_damage:22, tes_val:"", }
-,{tesf:"スネーク", tess:"上スマッシュ", fighter_id:1310, skill_genre:10600, begin:11, end:12, time:54, base_damage:4, tes_val:"打ち上げ対地のみ", }
-,{tesf:"スネーク", tess:"上スマッシュ", fighter_id:1310, skill_genre:10600, begin:1, end:NaN, time:54, base_damage:14, detail_name:"爆発", tes_val:"爆発", }
-,{tesf:"スネーク", tess:"下スマッシュ", fighter_id:1310, skill_genre:10602, begin:8, end:10, time:44, base_damage:12, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
-,{tesf:"スネーク", tess:"下スマッシュ", fighter_id:1310, skill_genre:10602, begin:20, end:22, time:44, base_damage:14, serial_num_str:"2", tes_message:"(連続ヒットする技)", tes_val:"Hit 2", }
 
 ]
