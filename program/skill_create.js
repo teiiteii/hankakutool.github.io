@@ -274,6 +274,10 @@ function run5(frame_data) {
     if (name2s.some(t => (t.trim() == "衝撃"))) {
       alias = "衝撃"
     }
+    if (name2s.some(t => (t.trim() == "衝撃波"))) {
+      alias = "衝撃"
+    }
+
     if (name2s.some(t => (t.trim() == "剣ビーム"))) {
       alias = "剣ビーム"
     }
@@ -445,6 +449,52 @@ function run5(frame_data) {
     if (name2s.some(t => (t.trim() == "会心の一撃"))) {
       detail_name = "会心の一撃"
     }
+    if (name2s.some(t => (t.trim() == "溜め"))) {
+      detail_name = "溜め"
+    }
+    if (name2s.some(t => (t.trim() == "最大溜め"))) {
+      detail_name = "最大溜め"
+    }
+    if (name2s.some(t => (t.trim() == "溜め無し"))) {
+      detail_name = "溜め無し"
+    }
+    if (name2s.some(t => (t.trim() == "弾1"))) {
+      detail_name = "弾1"
+    }
+    if (name2s.some(t => (t.trim() == "弾2"))) {
+      detail_name = "弾2"
+    }
+    if (name2s.some(t => (t.trim() == "弾3"))) {
+      detail_name = "弾3"
+    }
+    if (name2s.some(t => (t.trim() == "本体"))) {
+      detail_name = "本体"
+    }
+    if (name2s.some(t => (t.trim() == "上下"))) {
+      detail_name = "上下"
+    }
+    if (name2s.some(t => (t.trim() == "無"))) {
+      detail_name = "無"
+    }
+    if (name2s.some(t => (t.trim() == "盾"))) {
+      detail_name = "盾"
+    }
+    if (name2s.some(t => (t.trim() == "疾"))) {
+      detail_name = "疾"
+    }
+    if (name2s.some(t => (t.trim() == "撃"))) {
+      detail_name = "撃"
+    }
+    if (name2s.some(t => (t.trim() == "斬"))) {
+      detail_name = "斬"
+    }
+    if (name2s.some(t => (t.trim() == "後方1"))) {
+      detail_name = "後方1"
+    }
+    if (name2s.some(t => (t.trim() == "後方2"))) {
+      detail_name = "後方2"
+    }
+
     if (name2s.some(t => (t.trim() == "空前1"))) {
       alias = "空前1"
     }
@@ -453,6 +503,18 @@ function run5(frame_data) {
     }
     if (name2s.some(t => (t.trim() == "空前3"))) {
       alias = "空前3"
+    }
+    if (name2s.some(t => (t.trim() == "インク切れ"))) {
+      detail_name = "インク切れ"
+    }
+    if (name2s.some(t => (t.trim() == "最短"))) {
+      detail_name = "最短"
+    }
+    if (name2s.some(t => (t.trim() == "解除"))) {
+      detail_name = "解除"
+    }
+    if (name2s.some(t => (t.trim() == "派生なし"))) {
+      detail_name = "派生なし"
     }
 
     name2s.forEach(t => {
@@ -551,7 +613,8 @@ function getFrameData({
   landing_occurrence_begin,
   landing_occurrence_end,
   rehit,
-  detail_name
+  detail_name,
+  is_hidden
 }) {
 
   const getStr = ((name, val) => {
@@ -598,6 +661,7 @@ function getFrameData({
   d += getStr("tes_message", test_message) //テストメッセージ
   d += getStr("test_serial_num_strs", test_serial_num_strs) //テスト用Hit文字を除いた連続ヒットまとめ技
   d += getStr("tes_val", name2) //技種類属性
+  d += getBol("is_hidden", is_hidden) //表示非表示
   d = d.replace(/\r?\n/g, "") //改行コード削除
   return d + "}\n"
 }

@@ -39,6 +39,8 @@ const skill_genres =
  ,{skill_genre:11101, name:"横アピ", guard_cancel:11, full_name:"横アピール" ,sort_no:999}
  ,{skill_genre:11102, name:"下アピ", guard_cancel:11, full_name:"下アピール" ,sort_no:999}
  ,{skill_genre:11200, name:"避け攻撃", guard_cancel:11, full_name:"避け攻撃" ,sort_no:999}
+ ,{skill_genre:11300, name:"インク補給", guard_cancel:11, full_name:"インク補給" ,sort_no:999}
+ ,{skill_genre:11400, name:"コマンド", guard_cancel:11, full_name:"コマンド" ,sort_no:999}
  
 ]
 const fighters = 
