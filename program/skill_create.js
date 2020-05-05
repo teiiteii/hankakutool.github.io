@@ -236,7 +236,9 @@ function run5(frame_data) {
       defend_position = undefined,
       landing_occurrence_begin = undefined,
       landing_occurrence_end = undefined,
-      detail_name = undefined
+      detail_name = undefined,
+      is_b_ground = undefined,
+      is_b_air = undefined
 
     if (name2s.some(t => (t.trim() == "弱1"))) {
       alias = "弱1"
@@ -516,7 +518,16 @@ function run5(frame_data) {
     if (name2s.some(t => (t.trim() == "派生なし"))) {
       detail_name = "派生なし"
     }
-
+    if (name2s.some(t => (t.trim() == "地上"))) {
+      is_b_ground = true
+    }
+    if (name2s.some(t => (t.trim() == "空中"))) {
+      is_b_air = true
+    }
+    if (name2s.some(t => (t.trim() == "地上・空中"))) {
+      is_b_air = true
+      is_b_ground = true
+    }
     name2s.forEach(t => {
       if (t.includes("Hit")) {
         serial_num_str = t.replace("Hit", "").trim();
@@ -579,7 +590,9 @@ function run5(frame_data) {
       defend_position,
       landing_occurrence_begin,
       landing_occurrence_end,
-      detail_name
+      detail_name,
+      is_b_air,
+      is_b_ground
     }
   })
   return result_frame_data
@@ -614,7 +627,9 @@ function getFrameData({
   landing_occurrence_end,
   rehit,
   detail_name,
-  is_hidden
+  is_hidden,
+  is_b_ground,
+  is_b_air
 }) {
 
   const getStr = ((name, val) => {
@@ -652,6 +667,8 @@ function getFrameData({
   d += getStr("alias", alias) //別名
   d += getStr("detail_name", detail_name) //別名（カッコ内）
   d += getNum("rehit", rehit) //再ヒット
+  d += getBol("is_b_ground", is_b_ground) //地上B攻撃
+  d += getBol("is_b_air", is_b_air) //空中B攻撃
   d += getNum("persistence_num", persistence_num) //持続技
   d += getStr("serial_num_str", serial_num_str) //Hit文字を除いた連続ヒット技
   d += getStr("shift", shift) // シフト攻撃

@@ -3037,7 +3037,7 @@ const skills =
 ,{tesf:"ロックマン", tess:"上強", fighter_id:1460, skill_genre:10500, begin:10, end:16, time:70, base_damage:8, persistence_num:2, tes_val:"持続2", }
 ,{tesf:"ロックマン", tess:"下強", fighter_id:1460, skill_genre:10502, begin:5, end:8, time:46, base_damage:8, tes_val:"", }
 ,{tesf:"ロックマン", tess:"下強", fighter_id:1460, skill_genre:10502, begin:9, end:21, time:46, base_damage:5, persistence_num:1, tes_val:"持続", }
-,{tesf:"ロックマン", tess:"横スマッシュ", fighter_id:1460, skill_genre:10601, begin:19, end:42, time:54, base_damage:11.5, detail_name:"溜め無し", tes_val:"溜め無し", correction:0.232}
+,{tesf:"ロックマン", tess:"横スマッシュ", fighter_id:1460, skill_genre:10601, begin:19, end:42, time:54, base_damage:11.5, detail_name:"溜め無し", tes_val:"溜め無し", correction:0.232,is_item_throw:true}
 ,{tesf:"ロックマン", tess:"上スマッシュ", fighter_id:1460, skill_genre:10600, begin:8, end:8, time:68, base_damage:2, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
 ,{tesf:"ロックマン", tess:"上スマッシュ", fighter_id:1460, skill_genre:10600, begin:11, end:12, time:68, base_damage:1.5, serial_num_str:"2-6", tes_message:"(連続ヒットする技)(連続ヒットまとめ技)", test_serial_num_strs:"11-12, 15-16, 19-20, 23-24, 27-28", tes_val:"Hit 2-6", }
 ,{tesf:"ロックマン", tess:"上スマッシュ", fighter_id:1460, skill_genre:10600, begin:31, end:31, time:68, base_damage:6, serial_num_str:"7", tes_message:"(連続ヒットする技)", tes_val:"Hit 7", }
@@ -3188,4 +3188,7 @@ const skills =
 ,{tess:"その場投げ", fighter_id:1150 , skill_genre:10200, base_damage:0,begin:8, end:9, time:39,}
 ,{tess:"ダッシュ投げ", fighter_id:1150 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47,}
 ,{tess:"ふりむき投げ", fighter_id:1150 , skill_genre:10202, base_damage:0,begin:11, end:11, time:40,}
+, {tesf:"リンク", tess:"上B", fighter_id:1030, skill_genre:10700, begin:7, end:8, time:76, base_damage:14, damage_no:1, is_b_ground:true, tes_val:"地上", }
+,{tesf:"リンク", tess:"上B", fighter_id:1030, skill_genre:10700, begin:7, end:8, time:76, base_damage:11.2, damage_no:2, is_b_ground:true, tes_val:"地上", }
+
 ]
