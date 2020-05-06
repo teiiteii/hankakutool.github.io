@@ -3188,7 +3188,22 @@ const skills =
 ,{tess:"その場投げ", fighter_id:1150 , skill_genre:10200, base_damage:0,begin:8, end:9, time:39,}
 ,{tess:"ダッシュ投げ", fighter_id:1150 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47,}
 ,{tess:"ふりむき投げ", fighter_id:1150 , skill_genre:10202, base_damage:0,begin:11, end:11, time:40,}
+, {tesf:"リンク", tess:"NB", fighter_id:1030, skill_genre:10703, begin:16, end:61, time:44, base_damage:4, is_item_throw:true, detail_name:"溜め無し",is_item_throw:true,	 tes_val:"溜め無し",hit_stop_correction:0.8 }
+,{tesf:"リンク", tess:"NB", fighter_id:1030, skill_genre:10703, begin:1, end:1, time:29, base_damage:12,  is_not_defend:true,detail_name:"最大溜め後", is_unknown_end:true,tes_val:"最大溜め後",hit_stop_correction:0.8 }
+, {tesf:"リンク", tess:"横B", fighter_id:1030, skill_genre:10701, begin:27, end:36, time:45, base_damage:9.6, is_item_throw:true, detail_name:"行き弾き", tes_val:"行き", }
+, {tesf:"リンク", tess:"横B", fighter_id:1030, skill_genre:10701, begin:27, end:36, time:45, base_damage:8, is_item_throw:true, detail_name:"行き", tes_val:"行き", }
+, {tesf:"リンク", tess:"横B", fighter_id:1030, skill_genre:10701, begin:37, end:37, time:45, base_damage:7.2, is_item_throw:true, detail_name:"行き弾き", persistence_num:1, tes_val:"行き, 持続", }
+
+, {tesf:"リンク", tess:"横B", fighter_id:1030, skill_genre:10701, begin:37, end:37, time:45, base_damage:6, is_item_throw:true,  is_unknown_end:true, detail_name:"行き", persistence_num:1, tes_val:"行き, 持続", }
+, {tesf:"リンク", tess:"横B", fighter_id:1030, skill_genre:10701, begin:37, end:37, time:45, base_damage:3, is_item_throw:true,  is_unknown_end:true, detail_name:"行き", persistence_num:1, tes_val:"行き, 持続", }
+, {tesf:"リンク", tess:"下B", fighter_id:1030, skill_genre:10702, begin:12, end:13, time:39, base_damage:7, is_item_throw:true, detail_name:"起爆", tes_val:"起爆", }
+, {tesf:"リンク", tess:"ボム前投げ", fighter_id:1030, skill_genre:10101, begin:7, end:7, time:24, base_damage:1, is_item_throw:true,alias:"ボム投げ"}
+, {tesf:"リンク", tess:"ボム落とし", fighter_id:1030, skill_genre:11000, begin:1, end:1, time:1, base_damage:1, is_item_throw:true,alias:"ボム落とし"}
+
 , {tesf:"リンク", tess:"上B", fighter_id:1030, skill_genre:10700, begin:7, end:8, time:76, base_damage:14, damage_no:1, is_b_ground:true, tes_val:"地上", }
 ,{tesf:"リンク", tess:"上B", fighter_id:1030, skill_genre:10700, begin:7, end:8, time:76, base_damage:11.2, damage_no:2, is_b_ground:true, tes_val:"地上", }
+,{tesf:"リンク", tess:"上B", fighter_id:1030, skill_genre:10700, begin:7, end:8, time:76, base_damage:11.2, damage_no:2, is_b_ground:true, tes_val:"地上", }
+
+
 
 ]

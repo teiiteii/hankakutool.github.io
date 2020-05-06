@@ -1,20 +1,14 @@
 const skill_genres =
 [
   {skill_genre:10100, name:"ダッシュ投げ", guard_cancel:11, is_item_throw:true,full_name:"?アイテム投げなど準備中" ,sort_no:31}
- ,{skill_genre:10101, name:"アイテム上投げ", guard_cancel:11, is_item_throw:true,full_name:"?" ,sort_no:32}
- ,{skill_genre:10102, name:"アイテム前投げ", guard_cancel:11, is_item_throw:true,full_name:"?" ,sort_no:33}
- ,{skill_genre:10103, name:"アイテム後投げ", guard_cancel:11, is_item_throw:true,full_name:"?" ,sort_no:35}
- ,{skill_genre:10104, name:"アイテム下投げ", guard_cancel:11, is_item_throw:true,full_name:"?" ,sort_no:34}
+ ,{skill_genre:10101, name:"アイテム投げ", guard_cancel:0, is_item_throw:true,full_name:"アイテム投げ" ,sort_no:32}
+
  ,{skill_genre:10105, name:"攻撃上がり", is_get_up:true,full_name:"?" ,sort_no:50}
  ,{skill_genre:10106, name:"起き上がり攻撃", is_get_up:true,full_name:"?" ,sort_no:51}
  ,{skill_genre:10200, name:"その場投げ", guard_cancel:0, shield_add_frame:4, throw_minus_frame:-2, is_throw:true,full_name:"その場" ,sort_no:18}
  ,{skill_genre:10201, name:"ダッシュ投げ", guard_cancel:0, shield_add_frame:11, throw_minus_frame:-2, is_throw:true,full_name:"ダッシュ" ,sort_no:19}
  ,{skill_genre:10202, name:"ふりむき投げ", guard_cancel:0, shield_add_frame:11, throw_minus_frame:-2, is_throw:true,full_name:"ふりむき" ,sort_no:20}
  
- ,{skill_genre:10201, name:"アイテム弾き上投げ", guard_cancel:0, is_item_throw:true,full_name:"?" ,sort_no:36}
- ,{skill_genre:10202, name:"アイテム弾き前投げ", guard_cancel:0, is_item_throw:true,full_name:"?" ,sort_no:37}
- ,{skill_genre:10203, name:"アイテム弾き後投げ", guard_cancel:0, is_item_throw:true,full_name:"?" ,sort_no:39}
- ,{skill_genre:10204, name:"アイテム弾き下投げ", guard_cancel:0, is_item_throw:true,full_name:"?" ,sort_no:38}
  ,{skill_genre:10300, name:"弱", guard_cancel:11, is_jab:true,full_name:"弱攻撃" ,sort_no:1}
  ,{skill_genre:10400, name:"DA", guard_cancel:11, is_da:true,full_name:"ダッシュ攻撃" ,sort_no:2}
  ,{skill_genre:10500, name:"上強", guard_cancel:11, is_tilt:true,full_name:"上強" ,sort_no:3}
@@ -34,7 +28,7 @@ const skill_genres =
  ,{skill_genre:10904, name:"空N", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空N" ,sort_no:9}
  ,{skill_genre:10905, name:"空中ワイヤー", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空中ワイヤー" ,sort_no:14}
  
- ,{skill_genre:11000, name:"アイテム落とし", guard_cancel:0, jump_frame:3, is_item_throw:true,full_name:"?" ,sort_no:30}
+ ,{skill_genre:11000, name:"アイテム落とし", guard_cancel:0, jump_frame:3, is_item_throw:true,full_name:"アイテム落とし" ,sort_no:30}
  ,{skill_genre:11100, name:"上アピ", guard_cancel:11, full_name:"上アピール" ,sort_no:999}
  ,{skill_genre:11101, name:"横アピ", guard_cancel:11, full_name:"横アピール" ,sort_no:999}
  ,{skill_genre:11102, name:"下アピ", guard_cancel:11, full_name:"下アピール" ,sort_no:999}

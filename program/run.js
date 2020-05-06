@@ -342,13 +342,13 @@ function run(frame_view_mode = "") {
     if (attack_skill.base_damage == 0) {
       return 0
     }
-    const correction = 1.0,
+    const correction = (isUndefined(attack_skill.hit_stop_correction) == false)? 0.8 : 1
       op = getOP(attack_skill)
 
     const calc1 = BigNumber(attack_skill.base_damage).times(op),
-      calc2 = calc1.times(0.65).plus(6).times(correction),
+      calc2 = calc1.times(0.65).plus(6).times(correction)
       calc_result = calc2.minus(1),
-      guard_stop_correction = (defend.action == action_shield && isUndefined(attack_skill.is_item_throw) && isUndefined(attack_skill.is_not_guard_stop)) ? 0.67:1
+      guard_stop_correction = (defend.action == action_shield && attack_skill.is_item_throw == true && isUndefined(attack_skill.is_not_guard_stop)) ? 0.67:1
       hit_stop = Math.floor(calc_result.times(guard_stop_correction).toNumber())
     return hit_stop
   }
@@ -367,11 +367,12 @@ function run(frame_view_mode = "") {
   function getBlockStun(attack_skill) {
     const skill_genre = skill_genres.find(s => (s.skill_genre == attack_skill.skill_genre)),
       op = getOP(attack_skill)
+
     if (isUndefined(attack_skill.base_damage)) {
       return "基礎ダメージ未登録"
     }
     if (attack_skill.base_damage == 0) {
-      return 0
+      return attack_skill.time
     }
     let correction = 1.0
 
@@ -390,11 +391,12 @@ function run(frame_view_mode = "") {
       calc_result = calc2.plus(2).toNumber()
 
     let block_stun = Math.floor(calc_result)
+    let result = block_stun
     if (attack_skill.is_item_throw == true && defend.action == action_shield) {
       const hit_stop = getHitStop(attack_skill)
-      block_stun += hit_stop
+      result += hit_stop
     }
-    return defend.action == action_just_shield ? block_stun + 3 : block_stun
+    return defend.action == action_just_shield ? result + 3 : result
 
   }
 

@@ -129,7 +129,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
         sm_txt: `${(attack_skill.skill_detail_name == "")? "": "(" + attack_skill.skill_detail_name + ")"}`,
         cls_td: `tr_th_left`
       }, {
-        txt: `${attack_skill.begin}-${attack_skill.end}F`,
+        txt: `${(attack_skill.is_unknown_end == true) ? attack_skill.begin + "-" + "?":attack_skill.begin + "-" + attack_skill.end}F`,
         cls: ``,
         sm_txt: ``,
         cls_td: `tr_th_right`
