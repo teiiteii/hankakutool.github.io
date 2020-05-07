@@ -369,6 +369,12 @@ function run5(frame_data) {
     if (name2s.some(t => (t.trim() == "本当て2"))) {
       detail_name = "本当て2"
     }
+    if (name2s.some(t => (t.trim() == "スーパーミサイル"))) {
+      detail_name = "直進"
+    }
+    if (name2s.some(t => (t.trim() == "ホーミングミサイル"))) {
+      detail_name = "ホーミング"
+    }
 
     if (name2s.some(t => (t.trim() == "赤"))) {
       detail_name = "赤"
@@ -521,6 +527,12 @@ function run5(frame_data) {
     if (name2s.some(t => (t.trim() == "インク切れ"))) {
       detail_name = "インク切れ"
     }
+    if (name2s.some(t => (t.trim() == "ボム"))) {
+      detail_name = "ボム"
+    }
+    if (name2s.some(t => (t.trim() == "爆風"))) {
+      detail_name = "爆風"
+    }
     if (name2s.some(t => (t.trim() == "最短"))) {
       detail_name = "最短"
     }
@@ -644,7 +656,9 @@ function getFrameData({
   is_b_air,
   is_item_throw,
   is_not_defend,
-  is_unknown_end
+  is_unknown_end,
+  correction,
+  hit_stop_correction
 }) {
 
   const getStr = ((name, val) => {
@@ -654,7 +668,7 @@ function getFrameData({
     return `${name}:"${val.toString().trim()}", `
   })
   const getNum = ((name, val) => {
-    if (isUndefined(val)  || val == "") {
+    if (isUndefined(val)  ||val == null ||val.toString() == "") {
       return ""
     }
     return `${name}:${Number(val.toString().trim())}, `
@@ -695,7 +709,11 @@ function getFrameData({
   d += getStr("tes_message", test_message) //テストメッセージ
   d += getStr("test_serial_num_strs", test_serial_num_strs) //テスト用Hit文字を除いた連続ヒットまとめ技
   d += getStr("tes_val", name2) //技種類属性
+  d += getNum("correction", correction) //ガード補正倍率
+  d += getNum("hit_stop_correction", hit_stop_correction) //ヒットストップ補正倍率
   d += getBol("is_hidden", is_hidden) //表示非表示
+
+
   d = d.replace(/\r?\n/g, "") //改行コード削除
   return d + "}\n"
 }

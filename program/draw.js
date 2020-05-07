@@ -54,12 +54,20 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
       $(result_row).find(".error_message").html(`攻撃側が特殊な技のため結果なしです。`)
       $(result_row).find(".error_message").removeClass("d-none");
     }
+    if (is_defend_tr_draw == true && attack_skill.not_attack_view == "help") {
+      $(result_row).find(".error_message").html(`攻撃側が特殊な技のため参考にしないで下さい。（${attack_skill.help_text}）`)
+      $(result_row).find(".error_message").removeClass("d-none");
+    }
     drawMemo(attack_skill, is_frame_view_mode)
   })
   $(".row_frame_view_mode").removeClass("attack")
   $(".row_frame_view_mode").removeClass("defend")
 
   //最終処理
+  if(attack.skills.length == 0){
+    const attack_skills_empty = $("<span>", {text:"攻撃側が未実装か特殊な技です。"})
+    $("#attacks_result").append($(attack_skills_empty))
+  }
   if (is_frame_view_mode == true) {
     frameViewMode()
     $(".row_frame_view_mode").addClass(frame_view_mode_player)
@@ -149,7 +157,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
         sm_txt: ``,
         cls_td: `tr_th_right`
       }, {
-        txt: `${BigNumber(attack_skill.base_damage) == 0? "-":damage}`,
+        txt: `${BigNumber(attack_skill.base_damage) == 0? "-":damage}%`,
         cls: ``,
         sm_txt: ``,
         cls_td: `${(is_add_info_draw == true) ? "tr_th_right":"d-none"}`

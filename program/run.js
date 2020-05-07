@@ -342,11 +342,12 @@ function run(frame_view_mode = "") {
     if (attack_skill.base_damage == 0) {
       return 0
     }
-    const correction = (isUndefined(attack_skill.hit_stop_correction) == false)? 0.8 : 1
+    const correction = (isUndefined(attack_skill.hit_stop_correction) == false)? attack_skill.hit_stop_correction : 1
       op = getOP(attack_skill)
+    const electrical_correction = (attack_skill.is_electrical == true)? 1.5:1
 
     const calc1 = BigNumber(attack_skill.base_damage).times(op),
-      calc2 = calc1.times(0.65).plus(6).times(correction)
+      calc2 = calc1.times(0.65).plus(6).times(correction).times(electrical_correction)
       calc_result = calc2.minus(1),
       guard_stop_correction = (defend.action == action_shield && attack_skill.is_item_throw == true && isUndefined(attack_skill.is_not_guard_stop)) ? 0.67:1
       hit_stop = Math.floor(calc_result.times(guard_stop_correction).toNumber())
@@ -385,7 +386,9 @@ function run(frame_view_mode = "") {
     } else if (skill_genre.is_smach == true) {
       correction = 0.725
     }
-
+if(attack_skill.is_smash_correction == true) {
+    correction = 0.725
+   }
     const calc1 = BigNumber(attack_skill.base_damage).times(op),
       calc2 = calc1.times(0.8).times(correction),
       calc_result = calc2.plus(2).toNumber()
