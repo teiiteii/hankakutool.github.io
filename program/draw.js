@@ -49,6 +49,14 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
       $(result_row).find(".error_message").html(`硬直差${block_stun_difference}に反撃できません。or 未登録技`)
       $(result_row).find(".error_message").removeClass("d-none");
     }
+    const is_frame_trap_ng = ($(trs).find(".frame_trap_label").length >= 1)
+    if (is_frame_trap_ng == true && is_frame_view_mode == false) {
+      const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
+      const block_stun_difference = attack_block_stun_difference.text()
+      $(result_row).find(".error_message").html(`その場回避${defend.error_draw_spot_dodge_time}F<br>その場回避キャンセル${defend.error_draw_spot_dodge_cancel_time}F<br>硬直差が赤いと発生が潰されます`)
+      $(result_row).find(".error_message").removeClass("d-none");
+    }
+
     if (is_defend_tr_draw == true && attack_skill.not_attack_view == "serial") {
       $(result_row).find(".defend_table").hide();
       $(result_row).find(".error_message").html(`攻撃側が特殊な技のため結果なしです。`)
@@ -118,8 +126,11 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
   }
 
   function view_frame(attack, defend, attack_skill, defend_skill, result_row, index, is_frame_view_mode) {
-    const is_add_info_draw = is_frame_view_mode,
-      block_stun_difference = attack_skill.block_stun_difference //硬直差 硬直差の基本[全体F - 発生F - ガード硬直]
+    const action_spot_dodge = 3
+        , is_action_spot_dodge = (defend.action == action_spot_dodge && is_frame_view_mode == false)
+        , is_add_info_draw = is_frame_view_mode,
+        //硬直差 硬直差の基本[全体F - 発生F - ガード硬直]
+      block_stun_difference = (is_action_spot_dodge == true) ? attack_skill.block_stun_difference - defend_skill.spot_dodge_time : attack_skill.block_stun_difference
       ,
       block_stun = attack_skill.block_stun //ガード硬直
       ,
@@ -181,8 +192,6 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
       }
 
     ]
-    const action_spot_dodge = 3
-        , is_action_spot_dodge = (defend.action == action_spot_dodge && is_frame_view_mode == false)
     const defend_tr = $("<tr>", {
         class: "defend_tr"
       }),
@@ -199,11 +208,11 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
         cls_td: `tr_th_right`
       }, {
         txt: `${block_stun_difference}F`,
-        cls: ``,
+        cls: `${(defend_skill.spot_dodge_time <= attack_skill.end) ? "frame_trap_label frame_trap_ng":"frame_trap_label frame_trap_ok"}`,
         sm_txt: ``,
         cls_td: ``
       }, {
-        txt: `${(is_action_spot_dodge && occurrence == attack_skill.begin) ? "相打ち":(is_action_spot_dodge && occurrence < attack_skill.begin)?"先出":"" }${occurrence}F`,
+        txt: `${(is_action_spot_dodge && occurrence == attack_skill.begin) ? "相打ち":(is_action_spot_dodge && occurrence < attack_skill.begin)?"先出":(is_action_spot_dodge && occurrence <= attack_skill.end)?"負け":"" }${occurrence}F`,
         cls: ``,
         sm_txt: `${defend_occurrence_text}`,
         cls_td: `tr_th_left`

@@ -82,6 +82,8 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
   if(is_attack == false){
     edit_skills = edit_skills.filter(s => (!(s.is_not_defend == true)))
   }
+
+
   return edit_skills
 }
 
@@ -210,7 +212,8 @@ function run(frame_view_mode = "") {
   const urlParameter = inputToUrlParameter(),
     action_shield = 1,
     action_just_shield = 2,
-    action_spot_dodge = 3
+    action_spot_dodge = 3,
+    action_spot_dodge_not_cancel = -3
 
   const prevUrlParameter = decodeURIComponent(location.search)
   // if(urlParameter == prevUrlParameter)
@@ -227,10 +230,15 @@ function run(frame_view_mode = "") {
     defend_fighter_text = attack_fighter_text
   }
   let tmp_defend_action
+  let tmp_action_conf
   if(defend_action == action_just_shield.toString()){
     tmp_defend_action = action_just_shield
   }else if(defend_action == action_spot_dodge.toString()){
     tmp_defend_action = action_spot_dodge
+    tmp_action_conf = true  // その場回避キャンセル
+  }else if(defend_action == action_spot_dodge_not_cancel.toString()){
+    tmp_defend_action = action_spot_dodge
+    tmp_action_conf = false  // その場回避キャンセル
   }else{
     tmp_defend_action = action_shield
   }
@@ -249,6 +257,7 @@ function run(frame_view_mode = "") {
     ...fighters.find(s => (s.name == defend_fighter_text)),
     skills: null,
     action: tmp_defend_action,
+    action_conf: tmp_action_conf,
     is_ground: true,
     is_jump_b: false,
     minus_grace_max_num
@@ -326,12 +335,21 @@ function run(frame_view_mode = "") {
       }
     })
     defend.skills = defend_skills.map((skill) => {
+    let spot_dodge_time = undefined
+    if(defend.action == action_spot_dodge) {
+      const skill_genre = skill_genres.find(s => (s.skill_genre == skill.skill_genre))
+      const spot_dodge = skills.find(s => (s.fighter_id == defend.fighter_id && s.skill_genre == "11500"))
+      spot_dodge_time = (skill_genre.is_spot_dodge_cancel == true && defend.action_conf == true) ? spot_dodge.cancel_time : spot_dodge.time
+      defend.error_draw_spot_dodge_time = spot_dodge.time
+      defend.error_draw_spot_dodge_cancel_time = spot_dodge.cancel_time
+    }
       return {
         ...skill,
-        add_occurrence: getAddOccurrence(defend, skill),
+        add_occurrence: getAddOccurrence(defend, skill, spot_dodge_time),
         skill_genre_name: getSkillGenreName(skill.skill_genre),
         skill_name: getSkillName(skill, "defend"),
-        skill_detail_name: getSkillDetailName(skill, "defend")
+        skill_detail_name: getSkillDetailName(skill, "defend"),
+        spot_dodge_time
       }
     })
   }
@@ -430,7 +448,7 @@ if(attack_skill.is_smash_correction == true) {
 
   }
 
-  function getAddOccurrence(player, skill) {
+  function getAddOccurrence(player, skill, spot_dodge_time) {
     const skill_genre = skill_genres.find(s => (s.skill_genre == skill.skill_genre))
     var add_frame = 0
 
@@ -446,8 +464,7 @@ if(attack_skill.is_smash_correction == true) {
     add_frame += (isUndefined(skill_genre.throw_minus_frame) == false) ? skill_genre.throw_minus_frame : 0
 
     if(player.action == action_spot_dodge) {
-      const spot_dodge = skills.find(s => (s.fighter_id == defend.fighter_id && s.skill_genre == "11500"))
-      add_frame = (skill_genre.is_spot_dodge_cancel == true) ? spot_dodge.cancel_time : add_frame + spot_dodge.time
+      add_frame += spot_dodge_time
   }
     return add_frame
   }

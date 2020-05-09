@@ -3161,88 +3161,88 @@ const skills =
 ,{tess:"その場投げ", fighter_id:1150 , skill_genre:10200, base_damage:0,begin:8, end:9, time:39,}
 ,{tess:"ダッシュ投げ", fighter_id:1150 , skill_genre:10201, base_damage:0,begin:10, end:11, time:47,}
 ,{tess:"ふりむき投げ", fighter_id:1150 , skill_genre:10202, base_damage:0,begin:11, end:11, time:40,}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1010, tes_name:"マリオ",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1020, tes_name:"ドンキーコング",} 
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1030, tes_name:"リンク",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1040, tes_name:"サムス",} 
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1041, tes_name:"ダークサムス",} 
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1050, tes_name:"ヨッシー",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1060, tes_name:"カービィ",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:14, time:23, cancel_time:18,    base_damage:0,fighter_id:1070, tes_name:"フォックス",} 
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1080, tes_name:"ピカチュウ",} 
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1090, tes_name:"ルイージ",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1010, tes_name:"ネス", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1110, tes_name:"キャプテン・ファルコン",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1120, tes_name:"プリン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1130, tes_name:"ピーチ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1131, tes_name:"デイジー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1140, tes_name:"クッパ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1150, tes_name:"アイスクライマー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:14, time:23, cancel_time:18,    base_damage:0,fighter_id:1160, tes_name:"シーク", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1170, tes_name:"ゼルダ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1180, tes_name:"ドクターマリオ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:24, cancel_time:19,    base_damage:0,fighter_id:1190, tes_name:"ピチュー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1200, tes_name:"ファルコ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1210, tes_name:"マルス", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1211, tes_name:"ルキナ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1220, tes_name:"こどもリンク", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1230, tes_name:"ガノンドロフ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1240, tes_name:"ミュウツー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1250, tes_name:"ロイ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1251, tes_name:"クロム", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1260, tes_name:"Mr.ゲーム&ウォッチ",}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1270, tes_name:"メタナイト", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1280, tes_name:"ピット", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1281, tes_name:"ブラックピット", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1290, tes_name:"ゼロスーツサムス", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1300, tes_name:"ワリオ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1310, tes_name:"スネーク", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1320, tes_name:"アイク", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1330, tes_name:"ゼニガメ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1340, tes_name:"フシギソウ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1350, tes_name:"リザードン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1360, tes_name:"ディディーコング", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1370, tes_name:"リュカ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1380, tes_name:"ソニック", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1390, tes_name:"デデデ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1400, tes_name:"ピクミン&オリマー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1410, tes_name:"ルカリオ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1420, tes_name:"ロボット", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1430, tes_name:"トゥーンリンク", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1440, tes_name:"ウルフ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1450, tes_name:"むらびと", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1460, tes_name:"ロックマン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1470, tes_name:"Wii Fit トレーナー"}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1480, tes_name:"ロゼッタ&チコ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:14, time:23, cancel_time:18,    base_damage:0,fighter_id:1490, tes_name:"リトル・マック", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1500, tes_name:"ゲッコウガ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1510, tes_name:"格闘Mii", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1520, tes_name:"剣術Mii", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1530, tes_name:"射撃Mii", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1540, tes_name:"パルテナ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1550, tes_name:"パックマン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1560, tes_name:"ルフレ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1570, tes_name:"シュルク", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1580, tes_name:"クッパ Jr.", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1590, tes_name:"ダックハント", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1600, tes_name:"リュウ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1601, tes_name:"ケン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1610, tes_name:"クラウド", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1620, tes_name:"カムイ", }
-,{tess:"その場回避", skill_genre:11500, begin:6, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1630, tes_name:"ベヨネッタ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1640, tes_name:"インクリング", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1650, tes_name:"リドリー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1660, tes_name:"シモン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1661, tes_name:"リヒター", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1670, tes_name:"キングクルール", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1680, tes_name:"しずえ", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1690, tes_name:"ガオガエン", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1700, tes_name:"パックンフラワー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1710, tes_name:"ジョーカー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1720, tes_name:"勇者", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1730, tes_name:"バンジョー&カズーイ"}
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1740, tes_name:"テリー", }
-,{tess:"その場回避", skill_genre:11500, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1750, tes_name:"ベレト／ベレス", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1010, tes_name:"マリオ",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1020, tes_name:"ドンキーコング",} 
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1030, tes_name:"リンク",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1040, tes_name:"サムス",} 
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1041, tes_name:"ダークサムス",} 
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1050, tes_name:"ヨッシー",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1060, tes_name:"カービィ",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:14, time:23, cancel_time:18,    base_damage:0,fighter_id:1070, tes_name:"フォックス",} 
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1080, tes_name:"ピカチュウ",} 
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1090, tes_name:"ルイージ",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1010, tes_name:"ネス", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1110, tes_name:"キャプテン・ファルコン",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1120, tes_name:"プリン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1130, tes_name:"ピーチ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1131, tes_name:"デイジー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1140, tes_name:"クッパ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1150, tes_name:"アイスクライマー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:14, time:23, cancel_time:18,    base_damage:0,fighter_id:1160, tes_name:"シーク", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1170, tes_name:"ゼルダ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1180, tes_name:"ドクターマリオ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:24, cancel_time:19,    base_damage:0,fighter_id:1190, tes_name:"ピチュー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1200, tes_name:"ファルコ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1210, tes_name:"マルス", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1211, tes_name:"ルキナ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1220, tes_name:"こどもリンク", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1230, tes_name:"ガノンドロフ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1240, tes_name:"ミュウツー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1250, tes_name:"ロイ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1251, tes_name:"クロム", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1260, tes_name:"Mr.ゲーム&ウォッチ",}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1270, tes_name:"メタナイト", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1280, tes_name:"ピット", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1281, tes_name:"ブラックピット", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1290, tes_name:"ゼロスーツサムス", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1300, tes_name:"ワリオ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1310, tes_name:"スネーク", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1320, tes_name:"アイク", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1330, tes_name:"ゼニガメ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1340, tes_name:"フシギソウ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1350, tes_name:"リザードン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1360, tes_name:"ディディーコング", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1370, tes_name:"リュカ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1380, tes_name:"ソニック", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1390, tes_name:"デデデ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1400, tes_name:"ピクミン&オリマー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1410, tes_name:"ルカリオ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1420, tes_name:"ロボット", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1430, tes_name:"トゥーンリンク", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1440, tes_name:"ウルフ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1450, tes_name:"むらびと", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1460, tes_name:"ロックマン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1470, tes_name:"Wii Fit トレーナー"}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1480, tes_name:"ロゼッタ&チコ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:14, time:23, cancel_time:18,    base_damage:0,fighter_id:1490, tes_name:"リトル・マック", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:16, time:24, cancel_time:19,    base_damage:0,fighter_id:1500, tes_name:"ゲッコウガ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1510, tes_name:"格闘Mii", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1520, tes_name:"剣術Mii", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1530, tes_name:"射撃Mii", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1540, tes_name:"パルテナ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1550, tes_name:"パックマン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1560, tes_name:"ルフレ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1570, tes_name:"シュルク", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1580, tes_name:"クッパ Jr.", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1590, tes_name:"ダックハント", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1600, tes_name:"リュウ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1601, tes_name:"ケン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1610, tes_name:"クラウド", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1620, tes_name:"カムイ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:6, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1630, tes_name:"ベヨネッタ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1640, tes_name:"インクリング", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1650, tes_name:"リドリー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1660, tes_name:"シモン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1661, tes_name:"リヒター", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:18, time:28, cancel_time:23,    base_damage:0,fighter_id:1670, tes_name:"キングクルール", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1680, tes_name:"しずえ", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:26, cancel_time:21,    base_damage:0,fighter_id:1690, tes_name:"ガオガエン", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1700, tes_name:"パックンフラワー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1710, tes_name:"ジョーカー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1720, tes_name:"勇者", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1730, tes_name:"バンジョー&カズーイ"}
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1740, tes_name:"テリー", }
+,{tess:"その場回避", skill_genre:11500, is_not_defend:true, begin:3, end:17, time:25, cancel_time:20,    base_damage:0,fighter_id:1750, tes_name:"ベレト／ベレス", }
 
 
 , {tesf:"マリオ", tess:"NB", fighter_id:1010, skill_genre:10703, begin:17, end:20, time:49, base_damage:5, is_item_throw:true, }

@@ -132,6 +132,17 @@ text-align: right;
   background-color:#CC4327;
 }
 
+.frame_trap_ok{
+  background-color:#008D5C;
+}
+.frame_trap_ng{
+  background-color:#CC4327;
+}
+.frame_trap_label{
+  color: #FFFFFF;
+  border-radius:0.25rem;
+  padding:0 0.4rem;
+}
 .grace_label{
   color: #FFFFFF;
   border-radius:0.25rem;

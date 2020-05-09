@@ -1,0 +1,82 @@
+  {fighter_id:1010, name:"マリオ",}
+ ,{fighter_id:1020, name:"ドンキーコング",} 
+ ,{fighter_id:1030, name:"リンク",}
+ ,{fighter_id:1040, name:"サムス",} 
+ ,{fighter_id:1041, name:"ダークサムス",} 
+ ,{fighter_id:1050, name:"ヨッシー",}
+ ,{fighter_id:1060, name:"カービィ",}
+ ,{fighter_id:1070, name:"フォックス",} 
+ ,{fighter_id:1080, name:"ピカチュウ",} 
+ ,{fighter_id:1090, name:"ルイージ",}
+ ,{fighter_id:1010, name:"ネス", }
+ ,{fighter_id:1110, name:"キャプテン・ファルコン",}
+ ,{fighter_id:1120, name:"プリン", }
+ ,{fighter_id:1130, name:"ピーチ", }
+ ,{fighter_id:1131, name:"デイジー", }
+ ,{fighter_id:1140, name:"クッパ", }
+ ,{fighter_id:1150, name:"アイスクライマー", }
+ ,{fighter_id:1160, name:"シーク", }
+ ,{fighter_id:1170, name:"ゼルダ", }
+ ,{fighter_id:1180, name:"ドクターマリオ", }
+ ,{fighter_id:1190, name:"ピチュー", }
+ ,{fighter_id:1200, name:"ファルコ", }
+ ,{fighter_id:1210, name:"マルス", }
+ ,{fighter_id:1211, name:"ルキナ", }
+ ,{fighter_id:1220, name:"こどもリンク", }
+ ,{fighter_id:1230, name:"ガノンドロフ", }
+ ,{fighter_id:1240, name:"ミュウツー", }
+ ,{fighter_id:1250, name:"ロイ", }
+ ,{fighter_id:1251, name:"クロム", }
+ ,{fighter_id:1260, name:"Mr.ゲーム&ウォッチ",}
+ ,{fighter_id:1270, name:"メタナイト", }
+ ,{fighter_id:1280, name:"ピット", }
+ ,{fighter_id:1281, name:"ブラックピット", }
+ ,{fighter_id:1290, name:"ゼロスーツサムス", }
+ ,{fighter_id:1300, name:"ワリオ", }
+ ,{fighter_id:1310, name:"スネーク", }
+ ,{fighter_id:1320, name:"アイク", }
+ ,{fighter_id:1330, name:"ゼニガメ", }
+ ,{fighter_id:1340, name:"フシギソウ", }
+ ,{fighter_id:1350, name:"リザードン", }
+ ,{fighter_id:1360, name:"ディディーコング", }
+ ,{fighter_id:1370, name:"リュカ", }
+ ,{fighter_id:1380, name:"ソニック", }
+ ,{fighter_id:1390, name:"デデデ", }
+ ,{fighter_id:1400, name:"ピクミン&オリマー", }
+ ,{fighter_id:1410, name:"ルカリオ", }
+ ,{fighter_id:1420, name:"ロボット", }
+ ,{fighter_id:1430, name:"トゥーンリンク", }
+ ,{fighter_id:1440, name:"ウルフ", }
+ ,{fighter_id:1450, name:"むらびと", }
+ ,{fighter_id:1460, name:"ロックマン", }
+ ,{fighter_id:1470, name:"Wii Fit トレーナー"}
+ ,{fighter_id:1480, name:"ロゼッタ&チコ", }
+ ,{fighter_id:1490, name:"リトル・マック", }
+ ,{fighter_id:1500, name:"ゲッコウガ", }
+ ,{fighter_id:1510, name:"格闘Mii", }
+ ,{fighter_id:1520, name:"剣術Mii", }
+ ,{fighter_id:1530, name:"射撃Mii", }
+ ,{fighter_id:1540, name:"パルテナ", }
+ ,{fighter_id:1550, name:"パックマン", }
+ ,{fighter_id:1560, name:"ルフレ", }
+ ,{fighter_id:1570, name:"シュルク", }
+ ,{fighter_id:1580, name:"クッパ Jr.", }
+ ,{fighter_id:1590, name:"ダックハント", }
+ ,{fighter_id:1600, name:"リュウ", }
+ ,{fighter_id:1601, name:"ケン", }
+ ,{fighter_id:1610, name:"クラウド", }
+ ,{fighter_id:1620, name:"カムイ", }
+ ,{fighter_id:1630, name:"ベヨネッタ", }
+ ,{fighter_id:1640, name:"インクリング", }
+ ,{fighter_id:1650, name:"リドリー", }
+ ,{fighter_id:1660, name:"シモン", }
+ ,{fighter_id:1661, name:"リヒター", }
+ ,{fighter_id:1670, name:"キングクルール", }
+ ,{fighter_id:1680, name:"しずえ", }
+ ,{fighter_id:1690, name:"ガオガエン", }
+ ,{fighter_id:1700, name:"パックンフラワー", }
+ ,{fighter_id:1710, name:"ジョーカー", }
+ ,{fighter_id:1720, name:"勇者", }
+ ,{fighter_id:1730, name:"バンジョー&カズーイ"}
+ ,{fighter_id:1740, name:"テリー", }
+ ,{fighter_id:1750, name:"ベレト／ベレス", }
