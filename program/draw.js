@@ -55,7 +55,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
     if (is_frame_trap_ng == true && is_frame_view_mode == false) {
       const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
       const block_stun_difference = attack_block_stun_difference.text()
-      $(result_row).find(".error_message").html(`その場回避${defend.error_draw_spot_dodge_time}F<br>その場回避キャンセル${defend.error_draw_spot_dodge_cancel_time}F<br>硬直差が赤いと発生が潰されます<br>(先出しと相打ちを除く)`)
+      $(result_row).find(".error_message").html(`その場回避${defend.error_draw_spot_dodge_time}F<br>その場回避キャンセル${defend.error_draw_spot_dodge_cancel_time}F<br>硬直差が赤いと発生が潰されます(先出しと相打ちを除く)`)
       $(result_row).find(".error_message").removeClass("d-none");
     }
 
