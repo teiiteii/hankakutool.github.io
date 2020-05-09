@@ -1,7 +1,7 @@
 const skill_genres =
 [
   {skill_genre:10100, name:"ダッシュ投げ", guard_cancel:11, is_item_throw:true,full_name:"?アイテム投げなど準備中" ,sort_no:31}
- ,{skill_genre:10101, name:"アイテム投げ", guard_cancel:0, is_item_throw:true,full_name:"アイテム投げ" ,sort_no:32}
+ ,{skill_genre:10101, name:"アイテム投げ", guard_cancel:0, is_item_throw:true,full_name:"アイテム投げ" ,sort_no:32,is_spot_dodge_cancel:true}
 
  ,{skill_genre:10105, name:"攻撃上がり", is_get_up:true,full_name:"?" ,sort_no:50}
  ,{skill_genre:10106, name:"起き上がり攻撃", is_get_up:true,full_name:"?" ,sort_no:51}
@@ -9,18 +9,18 @@ const skill_genres =
  ,{skill_genre:10201, name:"ダッシュ投げ", guard_cancel:0, shield_add_frame:11, throw_minus_frame:-2, is_throw:true,full_name:"ダッシュ" ,sort_no:19}
  ,{skill_genre:10202, name:"ふりむき投げ", guard_cancel:0, shield_add_frame:11, throw_minus_frame:-2, is_throw:true,full_name:"ふりむき" ,sort_no:20}
  
- ,{skill_genre:10300, name:"弱", guard_cancel:11, is_jab:true,full_name:"弱攻撃" ,sort_no:1}
+ ,{skill_genre:10300, name:"弱", guard_cancel:11, is_jab:true,full_name:"弱攻撃" ,sort_no:1,is_spot_dodge_cancel:true}
  ,{skill_genre:10400, name:"DA", guard_cancel:11, is_da:true,full_name:"ダッシュ攻撃" ,sort_no:2}
- ,{skill_genre:10500, name:"上強", guard_cancel:11, is_tilt:true,full_name:"上強" ,sort_no:3}
- ,{skill_genre:10501, name:"横強", guard_cancel:11, is_tilt:true,full_name:"横強" ,sort_no:4}
- ,{skill_genre:10502, name:"下強", guard_cancel:11, is_tilt:true,full_name:"下強" ,sort_no:5}
- ,{skill_genre:10600, name:"上スマ", guard_cancel:0, is_smach:true,full_name:"上スマッシュ" ,sort_no:6}
- ,{skill_genre:10601, name:"横スマ", guard_cancel:11, is_smach:true,full_name:"横スマッシュ" ,sort_no:7}
- ,{skill_genre:10602, name:"下スマ", guard_cancel:11, is_smach:true,full_name:"下スマッシュ" ,sort_no:8}
- ,{skill_genre:10700, name:"上B", guard_cancel:0, jump_frame:3, is_b:true,full_name:"上B" ,sort_no:15}
- ,{skill_genre:10701, name:"横B", guard_cancel:11, jump_frame:3, is_b:true,full_name:"横B" ,sort_no:16}
- ,{skill_genre:10702, name:"下B", guard_cancel:11, jump_frame:3, is_b:true,full_name:"下B" ,sort_no:17}
- ,{skill_genre:10703, name:"NB", guard_cancel:11, jump_frame:3, is_b:true,full_name:"NB" ,sort_no:14}
+ ,{skill_genre:10500, name:"上強", guard_cancel:11, is_tilt:true,full_name:"上強" ,sort_no:3,is_spot_dodge_cancel:true}
+ ,{skill_genre:10501, name:"横強", guard_cancel:11, is_tilt:true,full_name:"横強" ,sort_no:4,is_spot_dodge_cancel:true}
+ ,{skill_genre:10502, name:"下強", guard_cancel:11, is_tilt:true,full_name:"下強" ,sort_no:5,is_spot_dodge_cancel:true}
+ ,{skill_genre:10600, name:"上スマ", guard_cancel:0, is_smach:true,full_name:"上スマッシュ" ,sort_no:6,is_spot_dodge_cancel:true}
+ ,{skill_genre:10601, name:"横スマ", guard_cancel:11, is_smach:true,full_name:"横スマッシュ" ,sort_no:7,is_spot_dodge_cancel:true}
+ ,{skill_genre:10602, name:"下スマ", guard_cancel:11, is_smach:true,full_name:"下スマッシュ" ,sort_no:8,is_spot_dodge_cancel:true}
+ ,{skill_genre:10700, name:"上B", guard_cancel:0, jump_frame:3, is_b:true,full_name:"上B" ,sort_no:15,is_spot_dodge_cancel:true}
+ ,{skill_genre:10701, name:"横B", guard_cancel:11, jump_frame:3, is_b:true,full_name:"横B" ,sort_no:16,is_spot_dodge_cancel:true}
+ ,{skill_genre:10702, name:"下B", guard_cancel:11, jump_frame:3, is_b:true,full_name:"下B" ,sort_no:17,is_spot_dodge_cancel:true}
+ ,{skill_genre:10703, name:"NB", guard_cancel:11, jump_frame:3, is_b:true,full_name:"NB" ,sort_no:14,is_spot_dodge_cancel:true}
  ,{skill_genre:10900, name:"空上", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空上" ,sort_no:10}
  ,{skill_genre:10901, name:"空前", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空前" ,sort_no:11}
  ,{skill_genre:10902, name:"空下", guard_cancel:0, jump_frame:3, is_air:true,full_name:"空下" ,sort_no:12}
@@ -35,6 +35,7 @@ const skill_genres =
  ,{skill_genre:11200, name:"避け攻撃", guard_cancel:11, full_name:"避け攻撃" ,sort_no:999}
  ,{skill_genre:11300, name:"インク補給", guard_cancel:11, full_name:"インク補給" ,sort_no:999}
  ,{skill_genre:11400, name:"コマンド", guard_cancel:11, full_name:"コマンド" ,sort_no:999}
+ ,{skill_genre:11500, name:"その場回避", guard_cancel:0, full_name:"その場回避未実装" ,sort_no:999}
  
 ]
 const fighters = 

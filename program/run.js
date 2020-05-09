@@ -31,7 +31,7 @@ function getSkillBigGenre(skill) {
   return Number(skill.skill_genre.toString().substr(0, 3))
 }
 
-function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack, is_serial_num_str_include, is_empty_attack_again, is_detail_name) {
+function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack, is_serial_num_str_include, is_empty_attack_again, is_detail_name, is_attack) {
   let edit_skills = skills
   if (isUndefined(fighter_id) == false) {
     edit_skills = edit_skills.filter(s => (s.fighter_id == fighter_id))
@@ -78,6 +78,9 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
 
   if (is_detail_name == false) {
     edit_skills = edit_skills.filter(s => (s.detail_name != "アルセーヌ"))
+  }
+  if(is_attack == false){
+    edit_skills = edit_skills.filter(s => (!(s.is_not_defend == true)))
   }
   return edit_skills
 }
@@ -206,7 +209,8 @@ function selected_fighter(fighter_id, attack_flg) {
 function run(frame_view_mode = "") {
   const urlParameter = inputToUrlParameter(),
     action_shield = 1,
-    action_just_shield = 2
+    action_just_shield = 2,
+    action_spot_dodge = 3
 
   const prevUrlParameter = decodeURIComponent(location.search)
   // if(urlParameter == prevUrlParameter)
@@ -214,11 +218,21 @@ function run(frame_view_mode = "") {
   }
 
   let attack_fighter_text = $("#attack_fighter_text").val(),
-    defend_fighter_text = $("#defend_fighter_text").val()
+  defend_fighter_text = $("#defend_fighter_text").val(),
+  defend_action = $("#defend_action").val()
+
   if (frame_view_mode == "defend") {
     [attack_fighter_text] = [defend_fighter_text]
   } else if (frame_view_mode == "attack") {
     defend_fighter_text = attack_fighter_text
+  }
+  let tmp_defend_action
+  if(defend_action == action_just_shield.toString()){
+    tmp_defend_action = action_just_shield
+  }else if(defend_action == action_spot_dodge.toString()){
+    tmp_defend_action = action_spot_dodge
+  }else{
+    tmp_defend_action = action_shield
   }
 
   const op_val_int = Number($("#op").text())
@@ -234,7 +248,7 @@ function run(frame_view_mode = "") {
   defend = {
     ...fighters.find(s => (s.name == defend_fighter_text)),
     skills: null,
-    action: action_shield,
+    action: tmp_defend_action,
     is_ground: true,
     is_jump_b: false,
     minus_grace_max_num
@@ -286,13 +300,13 @@ function run(frame_view_mode = "") {
     } {
       const select_skill_genre = (frame_view_mode != "") ? "all" : $(attack_skill_genre_select).val();
 
-      attack_skills = frame_view_mode != "" ? getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, true, true) //フレーム表用
+      attack_skills = frame_view_mode != "" ? getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, true, true,true) //フレーム表用
         :
-        getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, false, true); //攻撃側用
+        getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, false, true,true); //攻撃側用
       attack_skills = attack_skills.concat(newShortJumpAirAttackSkills(attack_skills));
     } {
       const select_skill_genre = $(defend_skill_genre_select).val()
-      defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined, false, false, false, false, false, false, false)
+      defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined, false, false, false, false, false, false, false,false)
     }
 
     attack.skills = attack_skills.map((skill) => {
@@ -373,7 +387,7 @@ function run(frame_view_mode = "") {
       return "基礎ダメージ未登録"
     }
     if (attack_skill.base_damage == 0) {
-      return attack_skill.time
+      return 0
     }
     let correction = 1.0
 
@@ -405,11 +419,15 @@ if(attack_skill.is_smash_correction == true) {
 
   function getBlockStunDifference(attack_skill, block_stun) {
     const skill_genre = skill_genres.find(s => (s.skill_genre == attack_skill.skill_genre))
-    if (skill_genre.is_air == true) {
+    if(defend.action == action_spot_dodge) {
+      return attack_skill.time
+    }
+    else if(skill_genre.is_air == true) {
       return attack_skill.landing_lag + attack.until_landing - block_stun
     } else {
       return attack_skill.time - attack_skill.begin - block_stun
     }
+
   }
 
   function getAddOccurrence(player, skill) {
@@ -427,6 +445,10 @@ if(attack_skill.is_smash_correction == true) {
     add_frame += (player.action == action_shield && isUndefined(skill_genre.guard_cancel) == false) ? skill_genre.guard_cancel : 0
     add_frame += (isUndefined(skill_genre.throw_minus_frame) == false) ? skill_genre.throw_minus_frame : 0
 
+    if(player.action == action_spot_dodge) {
+      const spot_dodge = skills.find(s => (s.fighter_id == defend.fighter_id && s.skill_genre == "11500"))
+      add_frame = (skill_genre.is_spot_dodge_cancel == true) ? spot_dodge.cancel_time : add_frame + spot_dodge.time
+  }
     return add_frame
   }
 

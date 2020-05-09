@@ -181,6 +181,8 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
       }
 
     ]
+    const action_spot_dodge = 3
+        , is_action_spot_dodge = (defend.action == action_spot_dodge && is_frame_view_mode == false)
     const defend_tr = $("<tr>", {
         class: "defend_tr"
       }),
@@ -201,9 +203,9 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
         sm_txt: ``,
         cls_td: ``
       }, {
-        txt: `${occurrence}F`,
+        txt: `${(is_action_spot_dodge && occurrence == attack_skill.begin) ? "相打ち":(is_action_spot_dodge && occurrence < attack_skill.begin)?"先出":"" }${occurrence}F`,
         cls: ``,
-        sm_txt: defend_occurrence_text,
+        sm_txt: `${defend_occurrence_text}`,
         cls_td: `tr_th_left`
       }]
     const add_td = (tr, {
