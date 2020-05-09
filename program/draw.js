@@ -1,4 +1,6 @@
 function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_view_mode_player) {
+  const action_spot_dodge = 3
+       ,is_action_spot_dodge = (defend.action == action_spot_dodge && is_frame_view_mode == false)
   $(".memo_row").addClass("d-none")
   $("#attacks_result").children().remove()
 
@@ -79,7 +81,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
   if (is_frame_view_mode == true) {
     frameViewMode()
     $(".row_frame_view_mode").addClass(frame_view_mode_player)
-  } else {
+  } else if(is_action_spot_dodge == false){
     putTogether()
   }
 
@@ -126,11 +128,9 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
   }
 
   function view_frame(attack, defend, attack_skill, defend_skill, result_row, index, is_frame_view_mode) {
-    const action_spot_dodge = 3
-        , is_action_spot_dodge = (defend.action == action_spot_dodge && is_frame_view_mode == false)
-        , is_add_info_draw = is_frame_view_mode,
+    const is_add_info_draw = is_frame_view_mode,
         //硬直差 硬直差の基本[全体F - 発生F - ガード硬直]
-      block_stun_difference = (is_action_spot_dodge == true) ? attack_skill.block_stun_difference - defend_skill.spot_dodge_time : attack_skill.block_stun_difference
+      block_stun_difference = (is_action_spot_dodge == true) ? attack_skill.block_stun_difference: attack_skill.block_stun_difference
       ,
       block_stun = attack_skill.block_stun //ガード硬直
       ,

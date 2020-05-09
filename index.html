@@ -19,13 +19,13 @@
   <script type='text/javascript' src="./program/main.js"></script>
   <script type='text/javascript' src="./program/run.js"></script>
   <script type='text/javascript' src="./data/skill.js"></script>
-  <title>スマブラsp反撃確認</title>
+  <title>スマブラsp反確チェッカー</title>
 </head>
 <body class="page_whole">
   <div class="container">
     <header class="mx-auto">
-      <h1 class="headline"> <a href="https://teiiteii.github.io/hankakutool.github.io/">スマブラsp反撃確認<br>B技(リンク,サムス,マリオ,ドンキ)実装。要望どぞ</a> </h1>
-	</header>	
+      <h1 class="headline"> <a href="https://teiiteii.github.io/hankakutool.github.io/">スマブラsp反確チェッカー<br>B技(リンク,サムス,マリオ,ドンキ)実装。要望どぞ</a> </h1>
+	</header>
     <!--攻撃側-->
     <div class="box_card mx-auto player_box" style="max-width:26rem">
       <div class="box_header attack_background_color" id="attack_header" style="width:100%">
@@ -57,7 +57,7 @@
         </div>
         <div class="row">
           <div class="col"> <select id="op_select" class="form-control js_url_parameter" multiple="multiple">
-  <option value="0">OP無視</option>            
+  <option value="0">OP無視</option>
   <option value="9.0">1番[9.0]</option>
   <option value="7.65">1番ガード [7.65]</option>
   <option value="8.545">2番[8.545]</option>
@@ -113,14 +113,14 @@
         </div>
      <div class="row">
           <div class="col"><label class="input_title">反撃側の行動</label> </div>
-        </div>		
-		 <div class="row">		 
+        </div>
+		 <div class="row">
           <div class="col">
 <select id="defend_action" class="js_url_parameter custom-select custom-select-sm" onchange="run()">
                            <option value="1">ガード</option><option value="3">その場回避(入れ込み・キャンセル)</option><option value="-3">その場回避(入れ込み)</option></select>
-		  
- </div>  </div>		
-		
+
+ </div>  </div>
+
         <div class="row">
           <div class="col"><label class="input_title">空中技-F表示数</label> </div>
         </div>
@@ -128,7 +128,7 @@
           <div class="col"><select id="minus_grace_max_num" class="js_url_parameter custom-select custom-select-sm" onchange="run()">
                            <option value="0">0件</option><option value="1">1件</option><option value="2">2件</option><option value="3" selected>3件</option><option value="4">4件</option><option value="5">5件</option> </select> </div>
         </div>
-   
+
       </div>
     </div>
     <!--フレーム表-->
@@ -177,9 +177,9 @@
             <div class="col">
 		  <p style="text-align:center;" ><a  href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/33/1588756291/" alt="アクセスカウンター"></a></p>
    </div>
-      </div>	
+      </div>
         </div>
-      </div>	    	  		 
+      </div>
     </div>
     <!--HTML終了#############################-->
     <!--start フレームリザルト-->
@@ -251,6 +251,6 @@
       <div id="fighter_search_texts"> </div>
     </div>
   </div>
-  <!--end キャラ選択--> 
+  <!--end キャラ選択-->
 </body>
 </html>
