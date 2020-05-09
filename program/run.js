@@ -31,7 +31,7 @@ function getSkillBigGenre(skill) {
   return Number(skill.skill_genre.toString().substr(0, 3))
 }
 
-function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack, is_serial_num_str_include, is_empty_attack_again, is_detail_name, is_attack) {
+function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_include, is_shift_include, is_persistence_num_include, is_landing_attack, is_serial_num_str_include, is_empty_attack_again, is_detail_name, is_attack,is_include_long_skill) {
   let edit_skills = skills
   if (isUndefined(fighter_id) == false) {
     edit_skills = edit_skills.filter(s => (s.fighter_id == fighter_id))
@@ -49,11 +49,11 @@ function getFilterSkills(fighter_id, skill_genre, skill_big_genre, is_damage_no_
   //	edit_skills = edit_skills.filter(s=>(getSkillBigGenre(s) == skill_big_genre))
   //}
 
-  if (is_persistence_num_include == false) {
+  if (is_persistence_num_include == false || is_include_long_skill == false) {
     edit_skills = edit_skills.filter(s => ((isUndefined(s.persistence_num)) || (s.persistence_num == 0)))
   }
 
-  if (is_serial_num_str_include == false) {
+  if (is_serial_num_str_include == false  || is_include_long_skill == false) {
     edit_skills = edit_skills.filter((s) => ((isUndefined(s.serial_num_str) || s.serial_num_str.substring(0, 1) == "1")))
   }
 
@@ -213,7 +213,8 @@ function run(frame_view_mode = "") {
     action_shield = 1,
     action_just_shield = 2,
     action_spot_dodge = 3,
-    action_spot_dodge_not_cancel = -3
+    action_spot_dodge_not_cancel = -3,
+    action_attack = 4
 
   const prevUrlParameter = decodeURIComponent(location.search)
   // if(urlParameter == prevUrlParameter)
@@ -231,6 +232,7 @@ function run(frame_view_mode = "") {
   }
   let tmp_defend_action
   let tmp_action_conf
+  let tmp_include_long_skill = true
   if(defend_action == action_just_shield.toString()){
     tmp_defend_action = action_just_shield
   }else if(defend_action == action_spot_dodge.toString()){
@@ -239,6 +241,9 @@ function run(frame_view_mode = "") {
   }else if(defend_action == action_spot_dodge_not_cancel.toString()){
     tmp_defend_action = action_spot_dodge
     tmp_action_conf = false  // その場回避キャンセル
+  }else if(defend_action == action_attack.toString()){
+    tmp_defend_action = action_attack
+    tmp_include_long_skill = false
   }else{
     tmp_defend_action = action_shield
   }
@@ -249,7 +254,9 @@ function run(frame_view_mode = "") {
     ...fighters.find(s => (s.name == attack_fighter_text)),
     skills: null,
     op: op_val,
-    until_landing: 0
+    until_landing: 0,
+    is_ground:true,
+    is_include_long_skill:tmp_include_long_skill,
   }
 
   const minus_grace_max_num = $("#minus_grace_max_num").val()
@@ -311,11 +318,15 @@ function run(frame_view_mode = "") {
 
       attack_skills = frame_view_mode != "" ? getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, true, true,true) //フレーム表用
         :
-        getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, false, true,true); //攻撃側用
-      attack_skills = attack_skills.concat(newShortJumpAirAttackSkills(attack_skills));
+        getFilterSkills(attack.fighter_id, select_skill_genre, undefined, true, true, true, true, true, false, true,true, attack.is_include_long_skill); //攻撃側用
+      attack_skills = (attack_skills.concat(newShortJumpAirAttackSkills(attack_skills))).concat(newCancelTimeAttackSkills(attack_skills));
+      if(defend.action == action_attack){
+        attack_skills = attack_skills.concat(newGroundJumpAttackSkills(attack_skills))
+      }
+
     } {
       const select_skill_genre = $(defend_skill_genre_select).val()
-      defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined, false, false, false, false, false, false, false,false)
+      defend_skills = getFilterSkills(defend.fighter_id, select_skill_genre, undefined, false, false, false, false, false, false, false,false,true)
     }
 
     attack.skills = attack_skills.map((skill) => {
@@ -366,7 +377,34 @@ function run(frame_view_mode = "") {
     })
     return sky_skills
   }
-
+  function newGroundJumpAttackSkills(skills) {
+    const sky_skill_genre = 109
+    const filter_skills = skills.filter(s => (getSkillBigGenre(s) == sky_skill_genre && isUndefined(s.is_landing_attack)))
+    const sky_skills = filter_skills.map(f => ({
+      ...f
+    }))
+    sky_skills.forEach(s => {
+      s.base_damage = BigNumber(s.base_damage).times(0.85).toNumber()
+      s.is_short_jump_air_attack = true
+      const occurrence = getAddOccurrence(attack, s, null)
+      s.begin += occurrence
+      s.end += occurrence
+      s.time += occurrence
+      s.is_b_ground = true
+    })
+    return sky_skills
+  }
+  function newCancelTimeAttackSkills(skills) {
+    const filter_skills = skills.filter(s => (isUndefined(s.cancel_time) == false))
+    const clone_skills = filter_skills.map(f => ({
+      ...f
+    }))
+    clone_skills.forEach(s => {
+      s.time = s.cancel_time
+      s.is_cancel_time = true
+    })
+    return clone_skills
+  }
   function getHitStop(attack_skill) {
     if (isUndefined(attack_skill.base_damage)) {
       return "基礎ダメージ未登録"
@@ -404,9 +442,10 @@ function run(frame_view_mode = "") {
     if (isUndefined(attack_skill.base_damage)) {
       return "基礎ダメージ未登録"
     }
-    if (attack_skill.base_damage == 0) {
+    if (defend.action == action_attack || attack_skill.base_damage == 0) {
       return 0
     }
+
     let correction = 1.0
 
     if (isUndefined(attack_skill.correction) == false) {
@@ -439,6 +478,9 @@ if(attack_skill.is_smash_correction == true) {
     const skill_genre = skill_genres.find(s => (s.skill_genre == attack_skill.skill_genre))
     if(defend.action == action_spot_dodge) {
       return attack_skill.time
+    }
+    else if (defend.action == action_attack || attack_skill.base_damage == 0) {
+      return attack_skill.begin
     }
     else if(skill_genre.is_air == true) {
       return attack_skill.landing_lag + attack.until_landing - block_stun
@@ -493,6 +535,7 @@ if(attack_skill.is_smash_correction == true) {
     add_name += (skill.is_short_jump_air_attack == true) ? `SJ` : ""
     add_name += (player == "attack" && isUndefined(skill.detail_name) == false) ? skill.detail_name : ""
     add_name += (isUndefined(skill.persistence_num) == false) ? (["始", "持続", "持続2", "持続3", "持続4", "持続5", "持続6", "持続7", "持続8", "〆"])[skill.persistence_num] : ""
+    add_name += (skill.is_cancel_time == true) ? `キャンセル` : ""
     add_name += (isUndefined(skill.shift) == false) ? {
       "up": "上シフト",
       "under": "下シフト",
@@ -505,7 +548,6 @@ if(attack_skill.is_smash_correction == true) {
       "air_only": "[対空のみ]"
     } [skill.defend_position] : ""
     add_name += (skill.is_landing_attack == true) ? `着地` : ""
-
     add_name += (skill.cancel == "empty_attack_again") ? "空振り再攻撃" : ""
     add_name += (player == "attack" && isUndefined(skill.damage_no) == false) ? `ダメ${skill.damage_no}` : ""
     add_name += (player == "attack" && skill.is_op_invalid == true) ? `OP無効` : ""

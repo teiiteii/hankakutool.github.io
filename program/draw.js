@@ -1,5 +1,6 @@
 function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_view_mode_player) {
   const action_spot_dodge = 3
+       ,action_attack = 4
        ,is_action_spot_dodge = (defend.action == action_spot_dodge && is_frame_view_mode == false)
   $(".memo_row").addClass("d-none")
   $("#attacks_result").children().remove()
