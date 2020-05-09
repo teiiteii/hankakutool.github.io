@@ -53,7 +53,7 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
     if (is_frame_trap_ng == true && is_frame_view_mode == false) {
       const attack_block_stun_difference = $(result_row).find(".val_attack_block_stun_difference")
       const block_stun_difference = attack_block_stun_difference.text()
-      $(result_row).find(".error_message").html(`その場回避${defend.error_draw_spot_dodge_time}F<br>その場回避キャンセル${defend.error_draw_spot_dodge_cancel_time}F<br>硬直差が赤いと発生が潰されます`)
+      $(result_row).find(".error_message").html(`その場回避${defend.error_draw_spot_dodge_time}F<br>その場回避キャンセル${defend.error_draw_spot_dodge_cancel_time}F<br>硬直差が赤いと発生が潰されます<br>(先出しと相打ちを除く)`)
       $(result_row).find(".error_message").removeClass("d-none");
     }
 
@@ -208,11 +208,11 @@ function create_view(attack, defend, is_frame_view_mode, is_attack_color, frame_
         cls_td: `tr_th_right`
       }, {
         txt: `${block_stun_difference}F`,
-        cls: `${(defend_skill.spot_dodge_time <= attack_skill.end) ? "frame_trap_label frame_trap_ng":"frame_trap_label frame_trap_ok"}`,
+        cls: `${(is_action_spot_dodge == true) ? (defend_skill.spot_dodge_time <= attack_skill.end) ? "frame_trap_label frame_trap_ng":"frame_trap_label frame_trap_ok":""}`,
         sm_txt: ``,
         cls_td: ``
       }, {
-        txt: `${(is_action_spot_dodge && occurrence == attack_skill.begin) ? "相打ち":(is_action_spot_dodge && occurrence < attack_skill.begin)?"先出":(is_action_spot_dodge && occurrence <= attack_skill.end)?"負け":"" }${occurrence}F`,
+        txt: `${(is_action_spot_dodge == true && occurrence == attack_skill.begin) ? "相打ち":(is_action_spot_dodge == true && occurrence < attack_skill.begin)?"先出":(is_action_spot_dodge == true && occurrence <= attack_skill.end)?"":"" }${occurrence}F`,
         cls: ``,
         sm_txt: `${defend_occurrence_text}`,
         cls_td: `tr_th_left`
