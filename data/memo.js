@@ -7,6 +7,7 @@ const memo =[
 ,{tesf:"リンク", tess:"アイテム", fighter_id:1030, skill_genre:11000, memo:"ガード硬直6F<br>投げボタンで緊急回避を最速で出せる"} 
 ,{tesf:"スネーク", tess:"上スマ爆発", fighter_id:1310, skill_genre:10600, memo:"爆発はガード硬直12F"} 
 ,{tesf:"インクリング", tess:"上スマ", fighter_id:1640, skill_genre:10600, memo:"1段目のガード硬直差は長いが、ガードを解くと2段目のインクに当たるため注意"} 
+,{tesf:"トゥーｎリンク", tess:"下B", fighter_id:1430, skill_genre:10702, memo:"ガードでボムが弾かれるためデータなし。ボム爆発でガード硬直7F"} 
 
 
 ,{tesf:"ピカチュウ", tess:"下スマッシュ", fighter_id:1080, skill_genre:10602, memo:"クソ技"}
