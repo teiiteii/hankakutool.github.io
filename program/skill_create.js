@@ -457,6 +457,13 @@ function run5(frame_data) {
     if (name2s.some(t => (t.trim() == "戻り"))) {
       detail_name = "戻り"
     }
+    if (name2s.some(t => (t.trim() == "銃口"))) {
+      detail_name = "銃口"
+    }
+    if (name2s.some(t => (t.trim() == "弾"))) {
+      detail_name = "弾"
+    }
+
     if (name2s.some(t => (t.trim() == "起爆"))) {
       detail_name = "起爆"
     }

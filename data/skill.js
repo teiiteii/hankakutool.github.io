@@ -3314,5 +3314,22 @@ const skills =
 ,{tesf:"トゥーンリンク", tess:"上B", fighter_id:1430, skill_genre:10700, begin:18, end:47, time:77, base_damage:1, rehit:5, is_b_ground:true, tes_val:"連2,地上", }
 ,{tesf:"トゥーンリンク", tess:"上B", fighter_id:1430, skill_genre:10700, begin:48, end:48, time:77, base_damage:3, is_b_ground:true, persistence_num:9, tes_val:"〆,地上", }
 
+, {tesf:"ウルフ", tess:"NB", fighter_id:1440, skill_genre:10703, begin:15, end:19, time:52, base_damage:7, is_item_throw:true, detail_name:"銃口", tes_val:"銃口", }
+,{tesf:"ウルフ", tess:"NB", fighter_id:1440, skill_genre:10703, begin:16, end:21, time:52, base_damage:6, is_item_throw:true, detail_name:"弾", tes_val:"弾", }
+,{tesf:"ウルフ", tess:"NB", fighter_id:1440, skill_genre:10703, begin:22, end:35, time:52, base_damage:8, is_item_throw:true, detail_name:"弾", persistence_num:1, tes_val:"弾, 持続1", }
+,{tesf:"ウルフ", tess:"NB", fighter_id:1440, skill_genre:10703, begin:36, end:50, time:52, base_damage:7, is_item_throw:true, detail_name:"弾", persistence_num:2, tes_val:"弾, 持続2", }
+,{tesf:"ウルフ", tess:"NB", fighter_id:1440, skill_genre:10703, begin:1, end:1, time:36, base_damage:7, is_item_throw:true, is_not_defend:true, detail_name:"弾発射してから", tes_val:"弾", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:19, end:19, time:75, base_damage:3, serial_num_str:"1", tes_message:"(連続ヒットする技)", tes_val:"Hit 1", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:20, end:21, time:75, base_damage:15, serial_num_str:"2", defend_position:"ground", tes_message:"(連続ヒットする技)", tes_val:"Hit 2, 対地", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:20, end:21, time:75, base_damage:20, damage_no:1, serial_num_str:"2", defend_position:"air", tes_message:"(連続ヒットする技)", tes_val:"Hit 2, 対空", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:20, end:21, time:75, base_damage:15, damage_no:2, serial_num_str:"2", defend_position:"air", tes_message:"(連続ヒットする技)", tes_val:"Hit 2, 対空", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:19, end:19, time:79, base_damage:3, serial_num_str:"1", shift:"up", tes_message:"(連続ヒットする技)", tes_val:"Hit 1,上シフト", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:20, end:21, time:79, base_damage:15, serial_num_str:"2", shift:"up", defend_position:"ground", tes_message:"(連続ヒットする技)", tes_val:"Hit 2, 対地,上シフト", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:20, end:21, time:79, base_damage:20, damage_no:1, serial_num_str:"2", shift:"up", defend_position:"air", tes_message:"(連続ヒットする技)", tes_val:"Hit 2, 対空,上シフト", }
+,{tesf:"ウルフ", tess:"横B", fighter_id:1440, skill_genre:10701, begin:20, end:21, time:79, base_damage:15, damage_no:2, serial_num_str:"2", shift:"up", defend_position:"air", tes_message:"(連続ヒットする技)", tes_val:"Hit 2, 対空,上シフト", }
+,{tesf:"ウルフ", tess:"上B", fighter_id:1440, skill_genre:10700, begin:18, end:21, time:66, base_damage:4, persistence_num:0, detail_name:"横", tes_val:"始", }
+,{tesf:"ウルフ", tess:"上B", fighter_id:1440, skill_genre:10700, begin:27, end:32, time:66, base_damage:2.5, detail_name:"連横", rehit:2, tes_val:"連", }
+,{tesf:"ウルフ", tess:"上B", fighter_id:1440, skill_genre:10700, begin:37, end:38, time:66, base_damage:5, is_b_ground:true, detail_name:"横", persistence_num:9, tes_val:"〆, 地上", }
+,{tesf:"ウルフ", tess:"上B", fighter_id:1440, skill_genre:10700, begin:37, end:38, time:66, base_damage:6, is_b_air:true, detail_name:"横", persistence_num:9, tes_val:"〆, 空中", }
 
 ]
