@@ -5,7 +5,7 @@ const skill_genres =
 
  ,{skill_genre:10105, name:"攻撃上がり", is_get_up:true,full_name:"?" ,sort_no:50}
  ,{skill_genre:10106, name:"起き上がり攻撃", is_get_up:true,full_name:"?" ,sort_no:51}
- ,{skill_genre:10200, name:"その場投げ", guard_cancel:0, shield_add_frame:4, throw_minus_frame:-2, is_throw:true,full_name:"その場" ,sort_no:18}
+ ,{skill_genre:10200, name:"その場投げ", guard_cancel:0, shield_add_frame:4, throw_minus_frame:-2, is_throw:true,full_name:"その場投げ" ,sort_no:18}
  ,{skill_genre:10201, name:"ダッシュ投げ", guard_cancel:0, shield_add_frame:11, throw_minus_frame:-2, is_throw:true,full_name:"ダッシュ" ,sort_no:19}
  ,{skill_genre:10202, name:"ふりむき投げ", guard_cancel:0, shield_add_frame:11, throw_minus_frame:-2, is_throw:true,full_name:"ふりむき" ,sort_no:20}
  

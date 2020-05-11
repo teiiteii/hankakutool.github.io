@@ -3302,4 +3302,17 @@ const skills =
 ,{tesf:"リンク", tess:"上B", fighter_id:1030, skill_genre:10700, begin:7, end:8, time:76, base_damage:11.2, damage_no:2, is_b_ground:true, tes_val:"地上", }
 
 
+
+, {tesf:"トゥーンリンク", tess:"NB", fighter_id:1430, skill_genre:10703, begin:18, end:77, time:39, base_damage:4, is_item_throw:true, }
+,{tesf:"トゥーンリンク", tess:"NB", fighter_id:1430, skill_genre:10703, begin:1, end:1, time:22, base_damage:12, is_item_throw:true, }
+,{tesf:"トゥーンリンク", tess:"横B", fighter_id:1430, skill_genre:10701, begin:27, end:36, time:45, base_damage:8, is_item_throw:true, detail_name:"行き", tes_val:"行き", }
+,{tesf:"トゥーンリンク", tess:"横B", fighter_id:1430, skill_genre:10701, begin:27, end:36, time:45, base_damage:9.6, is_item_throw:true, detail_name:"行き", tes_val:"行き弾き", }
+
+,{tesf:"トゥーンリンク", tess:"横B", fighter_id:1430, skill_genre:10701, begin:37, end:77, time:45, base_damage:5, is_item_throw:true, detail_name:"行き", persistence_num:1, tes_val:"行き, 持続", }
+,{tesf:"トゥーンリンク", tess:"横B", fighter_id:1430, skill_genre:10701, begin:37, end:77, time:45, base_damage:6, is_item_throw:true, detail_name:"行き弾き", persistence_num:1, tes_val:"行き, 持続", }
+, {tesf:"トゥーンリンク", tess:"上B", fighter_id:1430, skill_genre:10700, begin:6, end:17, time:77, base_damage:1, rehit:4, is_b_ground:true, tes_val:"連1,地上", }
+,{tesf:"トゥーンリンク", tess:"上B", fighter_id:1430, skill_genre:10700, begin:18, end:47, time:77, base_damage:1, rehit:5, is_b_ground:true, tes_val:"連2,地上", }
+,{tesf:"トゥーンリンク", tess:"上B", fighter_id:1430, skill_genre:10700, begin:48, end:48, time:77, base_damage:3, is_b_ground:true, persistence_num:9, tes_val:"〆,地上", }
+
+
 ]
