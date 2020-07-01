@@ -238,7 +238,8 @@ function run5(frame_data) {
       landing_occurrence_end = undefined,
       detail_name = undefined,
       is_b_ground = undefined,
-      is_b_air = undefined
+      is_b_air = undefined,
+      is_electrical = undefined
 
     if (name2s.some(t => (t.trim() == "弱1"))) {
       alias = "弱1"
@@ -288,6 +289,9 @@ function run5(frame_data) {
     }
     if (name2s.some(t => (t.trim() == "着地"))) {
       is_landing_attack = true
+    }
+    if (name2s.some(t => (t.trim() == "電撃"))) {
+      is_electrical = true
     }
 
     if (name2s.some(t => (t.trim() == "始"))) {
@@ -623,7 +627,8 @@ function run5(frame_data) {
       landing_occurrence_end,
       detail_name,
       is_b_air,
-      is_b_ground
+      is_b_ground,
+      is_electrical
     }
   })
   return result_frame_data
@@ -665,7 +670,8 @@ function getFrameData({
   is_not_defend,
   is_unknown_end,
   correction,
-  hit_stop_correction
+  hit_stop_correction,
+  is_electrical
 }) {
 
   const getStr = ((name, val) => {
@@ -699,6 +705,7 @@ function getFrameData({
   d += getNum("landing_occurrence_begin", landing_occurrence_begin) //着地隙発生Fはじめ
   d += getNum("landing_occurrence_end", landing_occurrence_end) //着地隙発生Fおわおわり
   d += getBol("is_item_throw", is_item_throw) //飛び道具
+  d += getBol("is_electrical", is_electrical) //電撃
   d += getBol("is_not_defend", is_not_defend) //反撃技ではない
   d += getBol("is_unknown_end", is_unknown_end) //発生終了時間がナゾ
   d += getNum("damage_no", damage_no) //同技のヒット位置で変わるダメージ順番
